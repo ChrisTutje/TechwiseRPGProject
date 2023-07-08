@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
 
 
 
-        moveDirection = new Vector2(moveX, moveY).normalized;
+        moveDirection = new Vector2(moveX, moveY);
     }
 
     private void FixedUpdate()
