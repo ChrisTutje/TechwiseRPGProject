@@ -39,7 +39,7 @@ AudioMixerController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: AudioMixer
+  m_Name: audioMixer
   m_OutputGroup: {fileID: 0}
   m_MasterGroup: {fileID: 24300002}
   m_Snapshots:
@@ -50,9 +50,9 @@ AudioMixerController:
   m_UpdateMode: 0
   m_ExposedParameters:
   - guid: fe80f409e87602b49bf664453939b2a1
-    name: MusicVolume
+    name: musicVolume
   - guid: c5c33fff53cdf014f9ff2d38dc7a6035
-    name: SFXVolume
+    name: sfxVolume
   m_AudioMixerGroupViews:
   - guids:
     - 9c6f8b974b327d5499abd692d7c2a07d
@@ -71,6 +71,7 @@ AudioMixerGroupController:
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 9c6f8b974b327d5499abd692d7c2a07d
   m_Children:
+  - {fileID: -1757907694663978720}
   - {fileID: 4310400701511240888}
   m_Volume: 7c08dc668fe649341828b6add735e279
   m_Pitch: 5daab686c3cf02b4e92ee7eac6cdf476
@@ -119,7 +120,7 @@ AudioMixerSnapshotController:
     a1183697ef61dc141b4ecac2b0a654bd: 5000
     e2e296f776510624a9a1bbfd72baa1ec: 1
     8f8f64084dcfe2541b496bbbd8d816c5: 0.294
-    fe80f409e87602b49bf664453939b2a1: -0.02577656
+    fe80f409e87602b49bf664453939b2a1: 0
     1110ff993035ae2469987c07baa2c3dc: 0.0105
     cd58c01af142df9479d3b3ea56957d3e: 0.3
     26eb46bba3bff264eb7b46827a12509c: 0
@@ -178,8 +179,7 @@ AudioMixerGroupController:
   m_Name: Music
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: a6c3a54cd900de04c824c2b557bceaac
-  m_Children:
-  - {fileID: -1757907694663978720}
+  m_Children: []
   m_Volume: fe80f409e87602b49bf664453939b2a1
   m_Pitch: dedd5632f18afdc42a8b9605073d7954
   m_Send: 00000000000000000000000000000000

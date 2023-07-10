@@ -1698,8 +1698,9 @@ GameObject:
   m_Component:
   - component: {fileID: 526983890}
   - component: {fileID: 526983891}
+  - component: {fileID: 526983892}
   m_Layer: 5
-  m_Name: SFX Volume Slider
+  m_Name: sfxVolumeSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1773,13 +1774,40 @@ MonoBehaviour:
   m_FillRect: {fileID: 276181546}
   m_HandleRect: {fileID: 1039952978}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 526983892}
+        m_TargetAssemblyTypeName: volumeSettings, Assembly-CSharp
+        m_MethodName: setSfxVolume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &526983892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526983889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc7e6a229af714f42b8c371d2393006f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: 715a9436622bfa847aba1afb1fd41573, type: 2}
+  musicVolumeSlider: {fileID: 1484513383}
+  sfxVolumeSlider: {fileID: 526983891}
 --- !u!1 &601835781
 GameObject:
   m_ObjectHideFlags: 0
@@ -1926,7 +1954,7 @@ AudioSource:
   m_GameObject: {fileID: 615208920}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -1757907694663978720, guid: 715a9436622bfa847aba1afb1fd41573, type: 2}
   m_audioClip: {fileID: 8300000, guid: b3048d32abc6b7c4aafedd87e24acdd8, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -2273,7 +2301,7 @@ AudioSource:
   m_GameObject: {fileID: 702481845}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -1757907694663978720, guid: 715a9436622bfa847aba1afb1fd41573, type: 2}
   m_audioClip: {fileID: 8300000, guid: 5007bb1b224f9a744ad77913d15ddabf, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -2477,7 +2505,7 @@ AudioSource:
   m_GameObject: {fileID: 952579122}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -1757907694663978720, guid: 715a9436622bfa847aba1afb1fd41573, type: 2}
   m_audioClip: {fileID: 8300000, guid: 7047e8a3b527cf24f8b4bcda6db6a5f2, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -3280,8 +3308,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1484513382}
   - component: {fileID: 1484513383}
+  - component: {fileID: 1484513384}
   m_Layer: 5
-  m_Name: Music Volume Slider
+  m_Name: musicVolumeSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3355,13 +3384,40 @@ MonoBehaviour:
   m_FillRect: {fileID: 904775318}
   m_HandleRect: {fileID: 1734434255}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1484513384}
+        m_TargetAssemblyTypeName: volumeSettings, Assembly-CSharp
+        m_MethodName: setMusicVolume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1484513384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1484513381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc7e6a229af714f42b8c371d2393006f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: 715a9436622bfa847aba1afb1fd41573, type: 2}
+  musicVolumeSlider: {fileID: 1484513383}
+  sfxVolumeSlider: {fileID: 526983891}
 --- !u!1 &1625779711
 GameObject:
   m_ObjectHideFlags: 0
