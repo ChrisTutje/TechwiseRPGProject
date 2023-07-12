@@ -9,8 +9,8 @@ public class volumeSettings : MonoBehaviour
     [SerializeField] private Slider musicVolumeSlider;
     [SerializeField] private Slider sfxVolumeSlider;
 
-    private void start() {
-        if(PlayerPrefs.HasKey("musicVol")) {
+    private void Start() {
+        if(PlayerPrefs.HasKey("musicVol") || PlayerPrefs.HasKey("sfxVol") ) {
             loadVolume();
         } else{
         setMusicVolume();
