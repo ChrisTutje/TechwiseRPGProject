@@ -1762,6 +1762,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 931262000}
   m_CullTransparentMesh: 1
+
 --- !u!1 &983920093
 GameObject:
   m_ObjectHideFlags: 0
@@ -1842,6 +1843,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 983920093}
   m_CullTransparentMesh: 1
+
 --- !u!1 &1006717342
 GameObject:
   m_ObjectHideFlags: 0
@@ -2241,6 +2243,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+
 --- !u!1 &1441465007
 GameObject:
   m_ObjectHideFlags: 0
@@ -2321,6 +2324,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1441465007}
   m_CullTransparentMesh: 1
+
 --- !u!1 &1453590945
 GameObject:
   m_ObjectHideFlags: 0
@@ -3263,9 +3267,11 @@ MonoBehaviour:
   enemyPrefab: {fileID: 450787236531585063, guid: a3638cc1ee8a83f4384beb4e1e7553df, type: 3}
   playerBattleStation: {fileID: 1603094194}
   enemyBattleStation: {fileID: 931262001}
+
   dialogueText: {fileID: 1940569261}
   playerHUD: {fileID: 1502352558}
   enemyHUD: {fileID: 2060209615}
+
   state: 0
 --- !u!1 &1741474783
 GameObject:
@@ -4688,6 +4694,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2060209611}
   m_CullTransparentMesh: 1
+
 --- !u!114 &2060209615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4703,6 +4710,7 @@ MonoBehaviour:
   nameText: {fileID: 1441465009}
   levelText: {fileID: 0}
   hpSlider: {fileID: 1941842035}
+
 --- !u!1 &2078868587
 GameObject:
   m_ObjectHideFlags: 0
@@ -4732,8 +4740,10 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
+
   m_Children:
   - {fileID: 1940569260}
+
   m_Father: {fileID: 1453590949}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

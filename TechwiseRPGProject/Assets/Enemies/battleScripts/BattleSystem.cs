@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 using UnityEngine.UI;
 
 public enum BattleState { START, PLAYERTURN, ENEMYTURN, VICTORY, DEFEAT } //list of phases
+
 
 public class BattleSystem : MonoBehaviour
 {
@@ -12,6 +14,7 @@ public class BattleSystem : MonoBehaviour
 
     public Transform playerBattleStation;
     public Transform enemyBattleStation;
+
 
     Unit playerUnit;
     Unit enemyUnit;
@@ -103,6 +106,7 @@ public class BattleSystem : MonoBehaviour
         return;
 
         StartCoroutine(PlayerAttack());
+
 
     }
 
