@@ -50,11 +50,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e978ae8cd0fe364a9944d43db2ea4cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitName: Sinister Paralellogram
+  unitName: Sinister Square
   unitLevel: 666
-  damage: 666
-  maxHp: 666
-  currentHp: 666
+  damage: 30
+  maxHp: 4
+  currentHp: 4
 --- !u!1 &3557481600862146149
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Unit : MonoBehaviour
+public class Unit : MonoBehaviour //variable fields for each unit
 {
     public string unitName;
     public int unitLevel;
@@ -11,5 +11,16 @@ public class Unit : MonoBehaviour
 
     public int maxHp;
     public int currentHp;
+
+    public bool TakeDamage(int dmg) {
+        currentHp -= dmg;
+
+        if(currentHp <= 0)
+            return true;
+        else
+            return false;
+
+
+    }
     
 }
