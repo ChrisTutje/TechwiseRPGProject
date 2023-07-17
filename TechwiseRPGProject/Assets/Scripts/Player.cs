@@ -24,17 +24,17 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W))
         {
             Vector2Int currentCell = Map.Grid.GetCell2D(this.gameObject);
-            transform.position = Map.Grid.GetCellCenter2D(currentCell + Direction.Up); //calling my personal method to get the 2d version of the grid, then going one left.
+            transform.position = Map.Grid.GetCellCenter2D(currentCell + Direction.Up);
         }
         if (Input.GetKeyDown(KeyCode.S))
         {
             Vector2Int currentCell = Map.Grid.GetCell2D(this.gameObject);
-            transform.position = Map.Grid.GetCellCenter2D(currentCell + Direction.Down); //calling my personal method to get the 2d version of the grid, then going one left.
+            transform.position = Map.Grid.GetCellCenter2D(currentCell + Direction.Down); 
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
             Vector2Int currentCell = Map.Grid.GetCell2D(this.gameObject);
-            transform.position = Map.Grid.GetCellCenter2D(currentCell + Direction.Right); //calling my personal method to get the 2d version of the grid, then going one left.
+            transform.position = Map.Grid.GetCellCenter2D(currentCell + Direction.Right); 
         }
     }
 }
