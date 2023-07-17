@@ -16,7 +16,7 @@ public class CharacterMover
 
     public void Move(Vector2Int direction)
     {
-        if (direction.IsBasic())
+    if (direction.IsBasic())
         {
             character.StartCoroutine(Co_Move(direction)); 
         }

@@ -5,32 +5,23 @@ using UnityEngine;
 public class Player : Character
 {
 
- 
-    // Start is called before the first frame update
+    public InputHandler InputHandler {get; private set;}
+
+    protected override void Awake() {
+        base.Awake();
+        InputHandler = new InputHandler(this);
+    }
+
     void Start()
     {
+        base.Start();
         Vector2Int currentCell = Map.Grid.GetCell2D(this.gameObject); //calling personal method made in GridExtensions
         transform.position = Map.Grid.GetCellCenter2D(currentCell);        
     }
 
-    // Update is called once per frame
-    void Update()
+    protected override void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            Move.Move(Direction.Left);
-        }
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            Move.Move(Direction.Up);
-        }
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            Move.Move(Direction.Down); 
-        }
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            Move.Move(Direction.Right);
-        }
+        base.Update();
+        InputHandler.CheckInput();
     }
 }
