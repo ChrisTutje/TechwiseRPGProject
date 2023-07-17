@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : Character
 {
 
  
@@ -18,23 +18,19 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
-            Vector2Int currentCell = Map.Grid.GetCell2D(this.gameObject);
-            transform.position = Map.Grid.GetCellCenter2D(currentCell + Direction.Left); //calling my personal method to get the 2d version of the grid, then going one left.
+            Move.Move(Direction.Left);
         }
         if (Input.GetKeyDown(KeyCode.W))
         {
-            Vector2Int currentCell = Map.Grid.GetCell2D(this.gameObject);
-            transform.position = Map.Grid.GetCellCenter2D(currentCell + Direction.Up);
+            Move.Move(Direction.Up);
         }
         if (Input.GetKeyDown(KeyCode.S))
         {
-            Vector2Int currentCell = Map.Grid.GetCell2D(this.gameObject);
-            transform.position = Map.Grid.GetCellCenter2D(currentCell + Direction.Down); 
+            Move.Move(Direction.Down); 
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
-            Vector2Int currentCell = Map.Grid.GetCell2D(this.gameObject);
-            transform.position = Map.Grid.GetCellCenter2D(currentCell + Direction.Right); 
+            Move.Move(Direction.Right);
         }
     }
 }
