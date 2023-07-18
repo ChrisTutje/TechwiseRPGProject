@@ -59,6 +59,10 @@ public class InputHandler
     }
     private void ProcessMovementInput(KeyCode keyPressed)
     {
+        if(player.isMoving==true)
+        {
+            return;
+        }
         Vector2Int direction = new Vector2Int(0,0);
         switch(keyPressed)
         {
