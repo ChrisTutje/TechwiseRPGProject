@@ -6,6 +6,8 @@ public abstract class Character : MonoBehaviour
 {
     public CharacterMover Move {get; private set;}
 
+    public bool isMoving => Move.isMoving;
+
     protected virtual void Awake() {
         {
             Move = new CharacterMover(this);
