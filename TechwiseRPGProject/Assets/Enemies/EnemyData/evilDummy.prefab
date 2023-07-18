@@ -52,9 +52,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unitName: Sinister Square
   unitLevel: 666
-  damage: 30
   maxHp: 4
   currentHp: 4
+  attack: 30
 --- !u!1 &3557481600862146149
 GameObject:
   m_ObjectHideFlags: 0

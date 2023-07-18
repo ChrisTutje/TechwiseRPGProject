@@ -49,10 +49,10 @@ public class BattleSystem : MonoBehaviour
     }
 
     IEnumerator PlayerAttack() { //Logic for the fight action
-       bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
+       bool isDead = enemyUnit.TakeDamage(playerUnit.attack);
 
        enemyHUD.SetHP(enemyUnit.currentHp);
-       dialogueText.text = "POW! " + enemyUnit.unitName + " takes " + playerUnit.damage + " damage!" ;
+       dialogueText.text = "POW! " + enemyUnit.unitName + " takes " + playerUnit.attack + " damage!" ;
 
         yield return new WaitForSeconds(2f);
 
@@ -66,12 +66,12 @@ public class BattleSystem : MonoBehaviour
     }
 
     IEnumerator EnemyTurn() {
-        dialogueText.text = enemyUnit.unitName + " attacks " + playerUnit.unitName + "! \n" + playerUnit.unitName + " takes " + enemyUnit.damage + " damage!";
+        dialogueText.text = enemyUnit.unitName + " attacks " + playerUnit.unitName + "! \n" + playerUnit.unitName + " takes " + enemyUnit.attack + " damage!";
         
 
         yield return new WaitForSeconds(1f);
 
-        bool isDead = playerUnit.TakeDamage(enemyUnit.damage);
+        bool isDead = playerUnit.TakeDamage(enemyUnit.attack);
 
         playerHUD.SetHP(playerUnit.currentHp);
 
