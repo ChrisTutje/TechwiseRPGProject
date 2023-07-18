@@ -54,6 +54,12 @@ MonoBehaviour:
   unitLevel: 666
   maxHp: 4
   currentHp: 4
+
+  maxMp: 666
+  currentMp: 666
+  maxStamina: 4
+  currentStamina: 4
+
   attack: 30
 --- !u!1 &3557481600862146149
 GameObject:
