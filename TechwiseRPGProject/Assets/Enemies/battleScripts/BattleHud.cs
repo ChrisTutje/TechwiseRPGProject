@@ -9,32 +9,16 @@ public class BattleHud : MonoBehaviour
 public Text nameText;
 public Text levelText;
 public Slider hpSlider;
-public Slider mpSlider;
-public Slider staminaSlider;
 
 public void setHUD(Unit unit) { //variables to put on the HUD
     nameText.text = unit.unitName;
-    levelText.text = "Level " + unit.unitLevel; //superfluous stat
+    //levelText.text = "lvl1 " + unit.unitLevel; //superfluous stat
     hpSlider.maxValue = unit.maxHp;
     hpSlider.value = unit.currentHp;
-    mpSlider.maxValue = unit.maxMp;
-    mpSlider.value = unit.currentMp;
-    staminaSlider.maxValue = unit.maxStamina;
-    staminaSlider.value = unit.currentStamina;
-    
 }
 
 public void SetHP(int hp) {
     hpSlider.value = hp;
-}
-
-public void SetMP(int mp) {
-    mpSlider.value = mp;
-}
-
-public void SetStamina(int stamina) {
-    staminaSlider.value = stamina;
-    staminaSlider.value -= 1;
 }
 
 }

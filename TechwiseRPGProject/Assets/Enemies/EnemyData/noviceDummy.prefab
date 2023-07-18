@@ -130,10 +130,4 @@ MonoBehaviour:
   unitLevel: 2
   maxHp: 12
   currentHp: 12
-
-  maxMp: 6
-  currentMp: 6
-  maxStamina: 4
-  currentStamina: 4
-
   attack: 2
