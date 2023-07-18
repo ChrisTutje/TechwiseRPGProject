@@ -128,6 +128,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unitName: Timmy Test-Cube
   unitLevel: 1
-  damage: 1
   maxHp: 100
   currentHp: 100
+  attack: 1
