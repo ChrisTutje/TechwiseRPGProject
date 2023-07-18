@@ -10,12 +10,10 @@ public class Unit : MonoBehaviour //variable fields for each unit
 
     public int maxHp;
     public int currentHp;
-
-    public int maxMp;
-    public int currentMp;
-    public int maxStamina;
-    public int currentStamina;
-
+    //public int maxMp;
+    //public int currentMP;
+    //public int maxStamina;
+    //public int currentStamina;
 
     public int attack;
     //public int defence;

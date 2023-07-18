@@ -22,8 +22,6 @@ public class BattleSystem : MonoBehaviour
     public BattleHud enemyHUD;
 
     public BattleState state;
-   
-    
 
    
     void Start()
@@ -65,8 +63,6 @@ public class BattleSystem : MonoBehaviour
             state = BattleState.ENEMYTURN;
             StartCoroutine(EnemyTurn());
         }
-
-        playerHUD.SetStamina(playerUnit.currentStamina); //used to decrement the player's stamina each attack
     }
 
     IEnumerator EnemyTurn() {
@@ -88,8 +84,6 @@ public class BattleSystem : MonoBehaviour
             state = BattleState.PLAYERTURN;
             PlayerTurn();
         }
-
-        enemyHUD.SetStamina(enemyUnit.currentStamina); //used to decrement the enemy's stamina per attack 
     }
 
     void EndBattle() {
@@ -100,11 +94,8 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
-    public int roundCounter = 1;
-
     void PlayerTurn() { //function for the PlayerTurn phase
-    dialogueText.text = "Round " + roundCounter +  ": \n How will " +  playerUnit.unitName + " respond?" ;
-    roundCounter += 1; //used to increment the round counter
+    dialogueText.text = "How will " +  playerUnit.unitName + " respond?" ;
     }
 
     public void OnAttackButton(){
