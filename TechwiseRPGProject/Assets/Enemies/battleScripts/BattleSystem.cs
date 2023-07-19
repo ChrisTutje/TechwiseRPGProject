@@ -54,7 +54,7 @@ public class BattleSystem : MonoBehaviour
        bool isDead = enemyUnit.TakeDamage(playerUnit.attack);
 
        enemyHUD.SetHP(enemyUnit.currentHp);
-       dialogueText.text = "POW! " + enemyUnit.unitName + " takes " + playerUnit.attack + " damage!" ;
+       dialogueText.text = "POW! \n" + enemyUnit.unitName + " takes " + playerUnit.attack + " damage!" ;
 
         yield return new WaitForSeconds(2f);
 
@@ -94,7 +94,7 @@ public class BattleSystem : MonoBehaviour
 
     void EndBattle() {
         if(state == BattleState.VICTORY) {
-            dialogueText.text = "Conglaturations! You are winner!!!";
+            dialogueText.text = "Conglaturations! \n You are winner!!!";
         } else if (state == BattleState.DEFEAT){
             dialogueText.text = "Get gud, skrub.";
         }
