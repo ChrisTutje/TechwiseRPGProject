@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72c193cb2c5f6bb409fd1171548f971d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitName: 'Timmy Test Cube '
+  unitName: Timmy Test Cube
   unitLevel: 1
   maxHp: 100
   currentHp: 100
