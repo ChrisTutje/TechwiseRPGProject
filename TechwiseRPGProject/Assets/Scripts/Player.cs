@@ -6,10 +6,12 @@ public class Player : Character
 {
 
     public InputHandler InputHandler {get; private set;}
+    public PauseMenu pm {get; private set;}
+
 
     protected override void Awake() {
         base.Awake();
-        InputHandler = new InputHandler(this);
+        InputHandler = new InputHandler(this, pm);
     }
 
     void Start()
