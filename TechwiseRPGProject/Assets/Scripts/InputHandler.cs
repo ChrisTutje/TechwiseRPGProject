@@ -7,9 +7,10 @@ public class InputHandler
 {
     PauseMenu pm;
     private Player player;
-    public InputHandler(Player player) {
+    public InputHandler(Player player, PauseMenu pauseMenu) {
         {
             this.player = player;
+            this.pm = pauseMenu;
         }
     }
 
