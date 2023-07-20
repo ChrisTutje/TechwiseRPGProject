@@ -5,7 +5,11 @@ using UnityEngine;
 public abstract class Character : MonoBehaviour
 {
     public CharacterMover Move {get; private set;}
+    public PauseMenu pauseMenu;
 
+
+
+    
     public bool isMoving => Move.isMoving;
 
     protected virtual void Awake() {

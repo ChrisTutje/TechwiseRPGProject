@@ -2,20 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class InputHandler 
 {
-
+    PauseMenu pm;
     private Player player;
-    public InputHandler(Player player) {
+    public InputHandler(Player player, PauseMenu pauseMenu) {
         {
             this.player = player;
+            this.pm = pauseMenu;
         }
     }
 
     // Update is called once per frame
     public void CheckInput()
     {
-        KeyCode keyPressed = KeyCode.Escape;
+        KeyCode keyPressed = KeyCode.P;
 
         if (Input.GetKeyDown(KeyCode.A))
         {
@@ -33,11 +35,16 @@ public class InputHandler
         {
             keyPressed = KeyCode.S;
         }
+        else if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            keyPressed = KeyCode.Escape;
+        }
 
-        if (keyPressed != KeyCode.Escape)
+        if (keyPressed != KeyCode.P)
         {
         HandleInput(keyPressed);
         }
+
         
         
 
@@ -47,13 +54,16 @@ public class InputHandler
     {
             switch(keyPressed)
             {
+                case(KeyCode.Escape):
+                    pm.PMRunner();
+                    break;
+
                 case(KeyCode.A):
                 case(KeyCode.W):
                 case(KeyCode.D):
                 case(KeyCode.S):
                     ProcessMovementInput(keyPressed);
-                    break;
-                
+                    break;  
                 
             }
     }
