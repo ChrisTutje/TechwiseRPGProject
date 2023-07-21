@@ -91,6 +91,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unitName: Sinister Square
   unitLevel: 666
+  currentExp: 0
   maxHp: 4
   currentHp: 4
   maxMp: 666
@@ -98,3 +99,10 @@ MonoBehaviour:
   maxStamina: 4
   currentStamina: 4
   attack: 30
+  strength: 15
+  perception: 1
+  endurance: 166
+  intellegence: 1
+  agility: 0
+  luck: 1
+  expDrop: 99

@@ -11,16 +11,19 @@ public Text levelText;
 public Slider hpSlider;
 public Slider mpSlider;
 public Slider staminaSlider;
+public Slider expSlider;
 
 public void setHUD(Unit unit) { //variables to put on the HUD
     nameText.text = unit.unitName;
-    levelText.text = "Level " + unit.unitLevel; //superfluous stat
+    levelText.text = "Level " + unit.unitLevel; 
     hpSlider.maxValue = unit.maxHp;
     hpSlider.value = unit.currentHp;
     mpSlider.maxValue = unit.maxMp;
     mpSlider.value = unit.currentMp;
     staminaSlider.maxValue = unit.maxStamina;
     staminaSlider.value = unit.currentStamina;
+    expSlider.maxValue = 100; //work in progress
+    expSlider.value = unit.currentExp;
     
 }
 
@@ -35,6 +38,10 @@ public void SetMP(int mp) {
 public void SetStamina(int stamina) {
     staminaSlider.value = stamina;
     staminaSlider.value -= 1;
+}
+
+public void SetEXP(int exp) {
+    expSlider.value = exp;
 }
 
 }

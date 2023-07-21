@@ -91,10 +91,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unitName: Proficient  Dummy
   unitLevel: 8
+  currentExp: 0
   maxHp: 32
   currentHp: 32
   maxMp: 24
   currentMp: 24
   maxStamina: 16
   currentStamina: 16
-  attack: 8
+  attack: 16
+  strength: 8
+  perception: 8
+  endurance: 8
+  intellegence: 8
+  agility: 8
+  luck: 8
+  expDrop: 8

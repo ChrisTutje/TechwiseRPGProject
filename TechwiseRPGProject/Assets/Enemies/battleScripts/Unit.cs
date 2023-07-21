@@ -6,35 +6,44 @@ public class Unit : MonoBehaviour //variable fields for each unit
 {
     public string unitName;
     public int unitLevel;
-    //public int exp; 
+    public int currentExp; 
 
+
+//resource stats
     public int maxHp;
     public int currentHp;
-
     public int maxMp;
     public int currentMp;
     public int maxStamina;
     public int currentStamina;
 
-
-    public int attack;
-    //public int defence;
-    //public int accuracy;
-    //public int evasion;
-    //public int speed;
-    //public int resistance;
-    //public int critical; 
+//totaled stats
+    public int attack /*= strength + weaponDamage + strMod*/;
+    //public int defence = armorClass + defMod;
+    //public int accuracy = perception - armorVision ;
+    //public int evasion = agility - armorWeight;
+    //public int speed = agility - armorWeight ;
+    //public int resistance = luck + lckMod ;
+    //public int critical = luck + critMod ; 
     
-    //public int strength;
-    //public int perception;
-    //public int endurance;
-    //public int charisma;
-    //public int intellegence;
-    //public int agility;
-    //public int luck; 
+//base stats
+    public int strength;
+    public int perception;
+    public int endurance;
+    public int intellegence;
+    public int agility;
+    public int luck; 
+
+//loot stats
+    public int expDrop;
+
+
 
 
     public bool TakeDamage(int dmg) {
+        if (dmg <= 0)
+            dmg = 1;
+
         currentHp -= dmg;
 
         if(currentHp <= 0)

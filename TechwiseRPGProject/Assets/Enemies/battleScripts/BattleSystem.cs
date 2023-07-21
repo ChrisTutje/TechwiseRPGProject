@@ -22,6 +22,9 @@ public class BattleSystem : MonoBehaviour
     public BattleHud enemyHUD;
 
     public BattleState state;
+
+    public AudioSource battleTheme;
+    public AudioSource victoryFanfare;
    
     
 
@@ -29,6 +32,7 @@ public class BattleSystem : MonoBehaviour
     void Start()
     {
         state = BattleState.START;
+        battleTheme.Play();
         StartCoroutine(SetupBattle());
     }
 
@@ -94,8 +98,13 @@ public class BattleSystem : MonoBehaviour
 
     void EndBattle() {
         if(state == BattleState.VICTORY) {
-            dialogueText.text = "Conglaturations! \n You are winner!!!";
+            playerUnit.currentExp += enemyUnit.expDrop; //gain EXP 
+            dialogueText.text = "Conglaturations! You are winner!!! \n You gained " + enemyUnit.expDrop + " experience points!";
+            battleTheme.Stop();
+            victoryFanfare.Play(); //switch to the victory fanfare
         } else if (state == BattleState.DEFEAT){
+            battleTheme.Stop(); //switch to the game over music
+            //gameoverTheme.stop(); //yet to be implemented 
             dialogueText.text = "Get gud, skrub.";
         }
     }

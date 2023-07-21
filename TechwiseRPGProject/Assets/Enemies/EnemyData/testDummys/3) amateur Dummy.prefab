@@ -91,10 +91,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unitName: Amateur Dummy
   unitLevel: 4
+  currentExp: 0
   maxHp: 16
   currentHp: 16
   maxMp: 12
   currentMp: 12
   maxStamina: 8
   currentStamina: 8
-  attack: 4
+  attack: 8
+  strength: 4
+  perception: 4
+  endurance: 4
+  intellegence: 4
+  agility: 4
+  luck: 4
+  expDrop: 4
