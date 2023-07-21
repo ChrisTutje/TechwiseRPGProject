@@ -91,10 +91,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unitName: Expert Dummy
   unitLevel: 32
+  currentExp: 0
   maxHp: 128
   currentHp: 128
   maxMp: 96
   currentMp: 96
   maxStamina: 64
   currentStamina: 64
-  attack: 32
+  attack: 64
+  strength: 32
+  perception: 32
+  endurance: 32
+  intellegence: 32
+  agility: 32
+  luck: 32
+  expDrop: 32

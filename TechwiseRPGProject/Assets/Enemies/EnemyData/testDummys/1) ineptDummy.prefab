@@ -91,10 +91,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unitName: inept Dummy
   unitLevel: 1
+  currentExp: 0
   maxHp: 4
   currentHp: 4
   maxMp: 3
   currentMp: 3
   maxStamina: 2
   currentStamina: 2
-  attack: 1
+  attack: 0
+  strength: 1
+  perception: 1
+  endurance: 1
+  intellegence: 1
+  agility: 1
+  luck: 1
+  expDrop: 1
