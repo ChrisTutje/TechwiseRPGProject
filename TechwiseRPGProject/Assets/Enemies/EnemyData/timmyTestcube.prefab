@@ -99,10 +99,5 @@ MonoBehaviour:
   maxStamina: 4
   currentStamina: 4
   attack: 1
-  strength: 1
-  perception: 1
-  endurance: 1
-  intellegence: 1
-  agility: 1
-  luck: 7
+  defence: 1
   expDrop: 1

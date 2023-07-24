@@ -4381,6 +4381,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1719669303}
+        m_TargetAssemblyTypeName: BattleSystem, Assembly-CSharp
+        m_MethodName: OnHealButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1569816175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5074,8 +5086,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ad637680d0ef6f43af672ec4d573659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 3929587845492748558, guid: 496b0bd7019855541b7beb43fed5f6fc, type: 3}
-  enemyPrefab: {fileID: 3929587845492748558, guid: b9994f0568cd21d4da2290e2ae37015b, type: 3}
+  playerPrefab: {fileID: 3929587845492748558, guid: 074c0e3504444c64a9f9d90d92c7057a, type: 3}
+  enemyPrefab: {fileID: 887607553077772412, guid: d824257c319b83645a5b5b963397c032, type: 3}
   playerBattleStation: {fileID: 1603094194}
   enemyBattleStation: {fileID: 931262001}
   dialogueText: {fileID: 1940569261}
@@ -5734,6 +5746,18 @@ MonoBehaviour:
       - m_Target: {fileID: 616477997}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1719669303}
+        m_TargetAssemblyTypeName: BattleSystem, Assembly-CSharp
+        m_MethodName: OnBlockButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
