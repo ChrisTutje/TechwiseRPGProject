@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : Character
 {
 
-    public InputHandler InputHandler {get; private set;}
+    private InputHandler InputHandler;
     public PauseMenu pm {get; private set;}
 
 
@@ -18,8 +18,7 @@ public class Player : Character
     void Start()
     {
         base.Start();
-        Vector2Int currentCell = Map.Grid.GetCell2D(this.gameObject); //calling personal method made in GridExtensions
-        transform.position = Map.Grid.GetCellCenter2D(currentCell);        
+        
     }
 
     protected override void Update()
