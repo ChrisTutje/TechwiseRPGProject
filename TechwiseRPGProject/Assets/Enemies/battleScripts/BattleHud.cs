@@ -55,8 +55,9 @@ public void SetMP(int mp) {
 
 public void SetStamina(int stamina) {
     staminaSlider.value = stamina;
-    staminaSlider.value -= 1;
+    staminaSlider.value -= 1; //used to decrement stamina
     staminaTracker.text = stamina.ToString();
+    //staminaTracker.text = staminaSlider.value -= 1; //bad code
 }
 
 public void SetEXP(int exp) {
