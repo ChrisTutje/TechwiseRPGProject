@@ -48,20 +48,21 @@ public class Unit : MonoBehaviour //variable fields for each unit
 //loot stats
     public int expDrop;
 
+    // ** ACTION MOVES ** //
 
-
-
-    public bool TakeDamage(int dmg) {
+    public int TakeDamage(int dmg)
+    {
         if (dmg <= 0)
             dmg = 1;
 
         currentHp -= dmg;
 
-        if(currentHp <= 0)
-            return true;
-        else
-            return false;
+        if (currentHp <= 0)
+            currentHp = 0;
+
+        return dmg;
     }
+
     
     public void Heal(int amount){
         currentHp += amount;
@@ -71,5 +72,26 @@ public class Unit : MonoBehaviour //variable fields for each unit
 
      public void Block(){
        // playerUnit.defence *= 2;
+    }
+
+    public void DrainStamina(int amount)
+    {
+        currentStamina -= amount;
+        if (currentStamina < 0)
+            currentStamina = 0;
+    }
+
+      public void RestoreStamina(int amount)
+    {
+        currentStamina += amount;
+        if (currentStamina >= maxStamina)
+            currentStamina = maxStamina;
+    }
+
+    //** STATUS EFFECTS ** // 
+
+        public bool IsKo()
+    {
+        return currentHp <= 0;
     }
 }
