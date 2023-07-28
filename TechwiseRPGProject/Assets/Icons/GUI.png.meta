@@ -510,7 +510,7 @@ TextureImporter:
         x: 81
         y: 177
         width: 30
-        height: 43
+        height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -592,9 +592,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 165
+        y: 176
         width: 48
-        height: 43
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -612,10 +612,10 @@ TextureImporter:
       name: GUI_24
       rect:
         serializedVersion: 2
-        x: 48
-        y: 165
-        width: 31
-        height: 42
+        x: 49
+        y: 178
+        width: 30
+        height: 29
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -98,7 +98,7 @@ MonoBehaviour:
   currentMp: 12
   maxStamina: 8
   currentStamina: 8
-  attack: 8
+  attack: 4
   strength: 4
   perception: 4
   endurance: 4

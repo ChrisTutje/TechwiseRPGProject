@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum BattleState { START, PLAYERTURN, ENEMYTURN, VICTORY, DEFEAT } //list of phases
+public enum BattleState { START, PLAYERTURN, ENEMYTURN, VICTORY, DEFEAT, /*FLEE*/ } //list of phases
 
 public class BattleSystem : MonoBehaviour
 {
@@ -55,14 +55,15 @@ public class BattleSystem : MonoBehaviour
     }
 
     IEnumerator PlayerAttack() { //Logic for the fight action
-       bool isDead = enemyUnit.TakeDamage(playerUnit.attack);
+       int damageToEnemy = playerUnit.attack - enemyUnit.defence;
+       bool isDead = enemyUnit.TakeDamage(damageToEnemy);
 
        enemyHUD.SetHP(enemyUnit.currentHp);
        dialogueText.text = "POW! \n" + enemyUnit.unitName + " takes " + playerUnit.attack + " damage!" ;
 
         yield return new WaitForSeconds(2f);
 
-        if(isDead) {
+        if(isDead) { 
             state = BattleState.VICTORY;
             EndBattle();
         } else{
@@ -78,8 +79,8 @@ public class BattleSystem : MonoBehaviour
         
 
         yield return new WaitForSeconds(1f);
-
-        bool isDead = playerUnit.TakeDamage(enemyUnit.attack);
+        int damageToPlayer =  enemyUnit.attack - playerUnit.defence;
+        bool isDead = playerUnit.TakeDamage(damageToPlayer);
 
         playerHUD.SetHP(playerUnit.currentHp);
 
@@ -116,12 +117,50 @@ public class BattleSystem : MonoBehaviour
     roundCounter += 1; //used to increment the round counter
     }
 
+    IEnumerator PlayerHeal() { //healing action
+        int hpRecovery = 8; //how much action heals by
+        playerUnit.Heal(hpRecovery);
+
+        playerHUD.SetHP(playerUnit.currentHp);
+        dialogueText.text = playerUnit.unitName + " regained " + hpRecovery  + " hit points.";
+
+        yield return new WaitForSeconds(2f);
+
+        state = BattleState.ENEMYTURN;
+        StartCoroutine(EnemyTurn());
+    }
+
+       IEnumerator PlayerBlock() { //blocking action
+        playerUnit.Block();
+
+        dialogueText.text = playerUnit.unitName + " defends!";
+
+        yield return new WaitForSeconds(2f);
+
+        state = BattleState.ENEMYTURN;
+        StartCoroutine(EnemyTurn());
+    }
+
     public void OnAttackButton(){
         if (state != BattleState.PLAYERTURN)
         return;
 
         StartCoroutine(PlayerAttack());
 
+    }
+
+     public void OnHealButton(){
+       if (state != BattleState.PLAYERTURN)
+        return;
+
+        StartCoroutine(PlayerHeal());
+    }
+
+    public void OnBlockButton(){
+       if (state != BattleState.PLAYERTURN)
+        return;
+
+        StartCoroutine(PlayerBlock());
     }
 
   

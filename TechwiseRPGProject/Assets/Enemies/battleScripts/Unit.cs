@@ -9,7 +9,7 @@ public class Unit : MonoBehaviour //variable fields for each unit
     public int currentExp; 
 
 
-//resource stats
+//HUD stats
     public int maxHp;
     public int currentHp;
     public int maxMp;
@@ -19,7 +19,7 @@ public class Unit : MonoBehaviour //variable fields for each unit
 
 //totaled stats
     public int attack /*= strength + weaponDamage + strMod*/;
-    //public int defence = armorClass + defMod;
+    public int defence /*= armorClass + defMod*/;
     //public int accuracy = perception - armorVision ;
     //public int evasion = agility - armorWeight;
     //public int speed = agility - armorWeight ;
@@ -27,12 +27,23 @@ public class Unit : MonoBehaviour //variable fields for each unit
     //public int critical = luck + critMod ; 
     
 //base stats
-    public int strength;
-    public int perception;
-    public int endurance;
-    public int intellegence;
-    public int agility;
-    public int luck; 
+    //[SerializeField]
+    //private int strength = 1;
+
+    //[SerializeField]
+    //private int perception = 1;
+
+    //[SerializeField]
+    //private int endurance = 1;
+
+    //[SerializeField]
+    //private int intelligence = 1;
+
+    //[SerializeField]
+    //private int agility = 1;
+
+    //[SerializeField]
+    //private int luck = 1;
 
 //loot stats
     public int expDrop;
@@ -50,8 +61,15 @@ public class Unit : MonoBehaviour //variable fields for each unit
             return true;
         else
             return false;
-
-
     }
     
+    public void Heal(int amount){
+        currentHp += amount;
+        if (currentHp > maxHp)
+            currentHp = maxHp;
+    }
+
+     public void Block(){
+       // playerUnit.defence *= 2;
+    }
 }
