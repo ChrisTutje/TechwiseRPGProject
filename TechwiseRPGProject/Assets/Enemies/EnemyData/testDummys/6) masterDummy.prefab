@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72c193cb2c5f6bb409fd1171548f971d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitName: Expert Dummy
+  unitName: Master  Dummy
   unitLevel: 32
   currentExp: 0
   maxHp: 128
@@ -98,11 +98,9 @@ MonoBehaviour:
   currentMp: 96
   maxStamina: 64
   currentStamina: 64
-  attack: 32
   strength: 32
-  perception: 32
   endurance: 32
-  intellegence: 32
-  agility: 32
-  luck: 32
+  intelligence: 32
   expDrop: 32
+  attack: 32
+  defence: 0

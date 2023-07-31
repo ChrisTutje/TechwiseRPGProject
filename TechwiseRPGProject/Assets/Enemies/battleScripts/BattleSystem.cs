@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum BattleState { START, PLAYERTURN, ENEMYTURN, VICTORY, DEFEAT, /*FLEE*/ } //list of phases
+public enum BattleState { START, PLAYERTURN, ENEMYTURN, VICTORY, DEFEAT, FLEE } //list of phases
 
 public class BattleSystem : MonoBehaviour
 {
@@ -25,9 +25,10 @@ public class BattleSystem : MonoBehaviour
 
     public AudioSource battleTheme;
     public AudioSource victoryFanfare;
-   
-    
+    public AudioSource gameoverTheme;
 
+    public AudioSource attackSfx;
+    public AudioSource healSfx;
    
     void Start()
     {
@@ -45,69 +46,103 @@ public class BattleSystem : MonoBehaviour
 
       dialogueText.text = "A hostile " + enemyUnit.unitName + " challenges you!";
 
-      playerHUD.setHUD(playerUnit);
-      enemyHUD.setHUD(enemyUnit);
-
       yield return new WaitForSeconds(2f); // the setUp phase waits for 2 seconds 
 
       state = BattleState.PLAYERTURN;
       PlayerTurn();
+
+      playerHUD.setHUD(playerUnit);
+      enemyHUD.setHUD(enemyUnit);
     }
 
     IEnumerator PlayerAttack() { //Logic for the fight action
        int damageToEnemy = playerUnit.attack - enemyUnit.defence;
-       bool isDead = enemyUnit.TakeDamage(damageToEnemy);
+       int actualDamage = enemyUnit.TakeDamage(damageToEnemy);
 
-       enemyHUD.SetHP(enemyUnit.currentHp);
-       dialogueText.text = "POW! \n" + enemyUnit.unitName + " takes " + playerUnit.attack + " damage!" ;
+          if (playerUnit.IsExhausted())
+        {
+            dialogueText.text = playerUnit.unitName + " is exhausted and cannot attack!";
+            yield return new WaitForSeconds(2f);
+            state = BattleState.ENEMYTURN;
+            StartCoroutine(EnemyTurn());
+            yield break;
+        } else {
+            attackSfx.Play();
 
-        yield return new WaitForSeconds(2f);
+            enemyHUD.SetHP(enemyUnit.currentHp);
+            dialogueText.text = "POW! \n" + enemyUnit.unitName + " takes " + actualDamage + " damage!" ;
 
-        if(isDead) { 
+            yield return new WaitForSeconds(2f);
+
+        if(enemyUnit.IsKo()) { 
             state = BattleState.VICTORY;
             EndBattle();
-        } else{
+        } else {
+            playerUnit.DrainStamina(1); // Reduce player's stamina by 1
+            playerHUD.SetStamina(playerUnit.currentStamina);
+
             state = BattleState.ENEMYTURN;
             StartCoroutine(EnemyTurn());
         }
 
-        playerHUD.SetStamina(playerUnit.currentStamina); //used to decrement the player's stamina each attack
+        }
+
+       
+
     }
 
     IEnumerator EnemyTurn() {
-        dialogueText.text = enemyUnit.unitName + " attacks " + playerUnit.unitName + "! \n" + playerUnit.unitName + " takes " + enemyUnit.attack + " damage!";
-        
-
-        yield return new WaitForSeconds(1f);
         int damageToPlayer =  enemyUnit.attack - playerUnit.defence;
-        bool isDead = playerUnit.TakeDamage(damageToPlayer);
+        int actualDamage = playerUnit.TakeDamage(damageToPlayer);
+
+        if (enemyUnit.IsExhausted())
+        {
+            dialogueText.text =enemyUnit.unitName + " is exhausted and cannot attack!";
+            yield return new WaitForSeconds(2f);
+            state = BattleState.PLAYERTURN;
+            PlayerTurn();
+            yield break;
+        } else {
+        attackSfx.Play();
+        dialogueText.text = enemyUnit.unitName + " attacks " + playerUnit.unitName + "! \n" + playerUnit.unitName + " takes " + actualDamage + " damage!";
+        
+        yield return new WaitForSeconds(1f);
 
         playerHUD.SetHP(playerUnit.currentHp);
 
         yield return new WaitForSeconds(1f);
 
-        if(isDead) {
+        if(playerUnit.IsKo()) {
+            playerHUD.SetStatusEffects(playerUnit);
             state = BattleState.DEFEAT;
             EndBattle();
         } else {
+            enemyUnit.DrainStamina(1); // Reduce enemy's stamina by 1
+            enemyHUD.SetStamina(enemyUnit.currentStamina);
+
+
             state = BattleState.PLAYERTURN;
             PlayerTurn();
         }
 
-        enemyHUD.SetStamina(enemyUnit.currentStamina); //used to decrement the enemy's stamina per attack 
+        }
+
+        
+
     }
 
     void EndBattle() {
         if(state == BattleState.VICTORY) {
             playerUnit.currentExp += enemyUnit.expDrop; //gain EXP 
+            playerHUD.SetEXP(playerUnit.currentExp);
             dialogueText.text = "Conglaturations! You are winner!!! \n You gained " + enemyUnit.expDrop + " experience points!";
             battleTheme.Stop();
             victoryFanfare.Play(); //switch to the victory fanfare
         } else if (state == BattleState.DEFEAT){
             battleTheme.Stop(); //switch to the game over music
-            //gameoverTheme.stop(); //yet to be implemented 
+            gameoverTheme.Play(); 
             dialogueText.text = "Get gud, skrub.";
-        }
+        } 
     }
 
     public int roundCounter = 1;
@@ -118,6 +153,7 @@ public class BattleSystem : MonoBehaviour
     }
 
     IEnumerator PlayerHeal() { //healing action
+        healSfx.Play();
         int hpRecovery = 8; //how much action heals by
         playerUnit.Heal(hpRecovery);
 
@@ -131,15 +167,62 @@ public class BattleSystem : MonoBehaviour
     }
 
        IEnumerator PlayerBlock() { //blocking action
+       int originalDefence = playerUnit.defence; 
+
         playerUnit.Block();
+        playerUnit.defence *= 2; //double unit's defence while blocking
+        playerUnit.RestoreStamina(1); //restore unit's stamina 
+        playerHUD.SetStamina(playerUnit.currentStamina);
 
         dialogueText.text = playerUnit.unitName + " defends!";
+
+        yield return new WaitForSeconds(2f);
+
+
+        state = BattleState.ENEMYTURN;
+        StartCoroutine(EnemyTurn());
+
+        playerUnit.defence = originalDefence; //revert the players defence back after blocking
+    }
+
+    IEnumerator PlayerRest() {
+        int staminaRecovery = 4;
+        playerUnit.RestoreStamina(staminaRecovery);
+        playerHUD.SetStamina(playerUnit.currentStamina);
+
+        dialogueText.text = playerUnit.unitName + " recovers " + staminaRecovery + " stamina.";
 
         yield return new WaitForSeconds(2f);
 
         state = BattleState.ENEMYTURN;
         StartCoroutine(EnemyTurn());
     }
+
+   IEnumerator PlayerFlee()
+{
+    dialogueText.text = playerUnit.unitName + " attempts to flee...";
+
+    yield return new WaitForSeconds(1f);
+
+    
+   float escapeSuccess = d20() /* + ((playerUnit.speed / 2) + (playerUnit.luck / 2)) */;
+   float escapeFail = enemyUnit.unitLevel;
+    if (escapeSuccess >= escapeFail) // Escape rate
+    {
+        dialogueText.text = "Escape successful! " + playerUnit.name + " ran away!";
+        state = BattleState.FLEE;
+        EndBattle(); battleTheme.Stop();
+    }
+    else
+    {
+        dialogueText.text = "Escape failed! You must stand and fight!";
+        state = BattleState.ENEMYTURN; 
+        StartCoroutine(EnemyTurn());
+    }
+}
+
+
+    //**vvv Logic for Action Moves go here vvv **// 
 
     public void OnAttackButton(){
         if (state != BattleState.PLAYERTURN)
@@ -161,6 +244,30 @@ public class BattleSystem : MonoBehaviour
         return;
 
         StartCoroutine(PlayerBlock());
+    }
+
+    public void OnRestButton(){
+       if (state != BattleState.PLAYERTURN)
+        return;
+
+        StartCoroutine(PlayerRest());
+    }
+
+    public void OnFleeButton()
+{
+    if (state != BattleState.PLAYERTURN)
+        return;
+
+    StartCoroutine(PlayerFlee());
+}
+
+    //** vvv Logic for Status Effects go here vvv **//
+
+    //** vvv Logic for Random EVents vvv ***//
+
+    public int d20() //rolling a D20
+    {
+        return Random.Range(1, 21); 
     }
 
   
