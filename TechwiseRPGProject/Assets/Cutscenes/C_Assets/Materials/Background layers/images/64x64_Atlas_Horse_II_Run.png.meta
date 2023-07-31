@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1e89e24d2d8f9bc4d988697229d61a68
+guid: 2a0b9501982aa4a1898b9764dd90301a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,64 +105,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 04_Box_Frames_9Patch_0
+      name: 64x64_Atlas_Horse_II_Run_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 9
-        width: 30
-        height: 30
+        x: 0
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07639c53b7786994895a1d926109aa52
-      internalID: -525210115
+      spriteID: 0fe4cd6edd8fb4be78729882e3150949
+      internalID: -1606767992
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 04_Box_Frames_9Patch_1
+      name: 64x64_Atlas_Horse_II_Run_1
       rect:
         serializedVersion: 2
-        x: 57
-        y: 9
-        width: 30
-        height: 30
+        x: 64
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a15f828b0eb84224b858e02fdcd77370
-      internalID: 1788377792
+      spriteID: 684f8c19e87de4eefa6f2af54f627e77
+      internalID: 1062066519
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 04_Box_Frames_9Patch_2
+      name: 64x64_Atlas_Horse_II_Run_2
       rect:
         serializedVersion: 2
-        x: 99
-        y: 9
-        width: 36
-        height: 30
+        x: 128
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0256bf2222d9ab04e9e3da6f9c8a8f2c
-      internalID: -1672906499
+      spriteID: 114652d4c37744832a6e038897c27838
+      internalID: -2098579846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 64x64_Atlas_Horse_II_Run_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f0736634a69b44358d1fde8d56f40e0
+      internalID: -650399497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 64x64_Atlas_Horse_II_Run_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbdf5c00172fe4da1ab021e919254935
+      internalID: 747987721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 64x64_Atlas_Horse_II_Run_5
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 484749424388f46b8bc211c41421345f
+      internalID: 1151890073
       vertices: []
       indices: 
       edges: []
@@ -178,9 +241,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      04_Box_Frames_9Patch_0: -525210115
-      04_Box_Frames_9Patch_1: 1788377792
-      04_Box_Frames_9Patch_2: -1672906499
+      64x64_Atlas_Horse_II_Run_0: -1606767992
+      64x64_Atlas_Horse_II_Run_1: 1062066519
+      64x64_Atlas_Horse_II_Run_2: -2098579846
+      64x64_Atlas_Horse_II_Run_3: -650399497
+      64x64_Atlas_Horse_II_Run_4: 747987721
+      64x64_Atlas_Horse_II_Run_5: 1151890073
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
