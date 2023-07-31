@@ -5,7 +5,7 @@ using UnityEngine;
 public class scrollingbehavior : MonoBehaviour
 {
     public float horizontal_speed = 0.2f;
-    public float vertical_speed = 0.0f;
+    public float vertical_speed = 0.2f;
 
     private Renderer ren;
     void Start()

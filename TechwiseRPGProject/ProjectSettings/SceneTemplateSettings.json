@@ -1,10 +1,5 @@
 {
-    "templatePinStates": [
-        {
-            "templateId": "Basic 3D (Built-in)",
-            "isEnabled": true
-        }
-    ],
+    "templatePinStates": [],
     "dependencyTypeInfos": [
         {
             "userAdded": false,
