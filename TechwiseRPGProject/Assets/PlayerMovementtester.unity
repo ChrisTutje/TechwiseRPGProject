@@ -1197,7 +1197,7 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1729781897
+  m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
@@ -5419,6 +5419,32 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &2022185379 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8423817317366893217, guid: 9d04bc710ee52c240a87a0b71ec51dfb, type: 3}
+  m_PrefabInstance: {fileID: 8423817318901934099}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2022185383
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2022185379}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f6ab0caa107654a458a1204c1f2da693, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2048084674
 GameObject:
   m_ObjectHideFlags: 0
@@ -5832,17 +5858,5 @@ PrefabInstance:
       propertyPath: pauseMenu
       value: 
       objectReference: {fileID: 182788918}
-    - target: {fileID: 8423817317366893223, guid: 9d04bc710ee52c240a87a0b71ec51dfb, type: 3}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8423817317366893223, guid: 9d04bc710ee52c240a87a0b71ec51dfb, type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8423817317366893223, guid: 9d04bc710ee52c240a87a0b71ec51dfb, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 1030761543
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d04bc710ee52c240a87a0b71ec51dfb, type: 3}
