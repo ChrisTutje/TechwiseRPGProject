@@ -30,9 +30,6 @@ public class BattleSystem : MonoBehaviour
     public AudioSource attackSfx;
     public AudioSource healSfx;
    
-    
-
-   
     void Start()
     {
         state = BattleState.START;
@@ -49,25 +46,33 @@ public class BattleSystem : MonoBehaviour
 
       dialogueText.text = "A hostile " + enemyUnit.unitName + " challenges you!";
 
-      playerHUD.setHUD(playerUnit);
-      enemyHUD.setHUD(enemyUnit);
-
       yield return new WaitForSeconds(2f); // the setUp phase waits for 2 seconds 
 
       state = BattleState.PLAYERTURN;
       PlayerTurn();
+
+      playerHUD.setHUD(playerUnit);
+      enemyHUD.setHUD(enemyUnit);
     }
 
     IEnumerator PlayerAttack() { //Logic for the fight action
        int damageToEnemy = playerUnit.attack - enemyUnit.defence;
        int actualDamage = enemyUnit.TakeDamage(damageToEnemy);
 
-       attackSfx.Play();
+          if (playerUnit.IsExhausted())
+        {
+            dialogueText.text = playerUnit.unitName + " is exhausted and cannot attack!";
+            yield return new WaitForSeconds(2f);
+            state = BattleState.ENEMYTURN;
+            StartCoroutine(EnemyTurn());
+            yield break;
+        } else {
+            attackSfx.Play();
 
-       enemyHUD.SetHP(enemyUnit.currentHp);
-       dialogueText.text = "POW! \n" + enemyUnit.unitName + " takes " + actualDamage + " damage!" ;
+            enemyHUD.SetHP(enemyUnit.currentHp);
+            dialogueText.text = "POW! \n" + enemyUnit.unitName + " takes " + actualDamage + " damage!" ;
 
-        yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(2f);
 
         if(enemyUnit.IsKo()) { 
             state = BattleState.VICTORY;
@@ -80,12 +85,24 @@ public class BattleSystem : MonoBehaviour
             StartCoroutine(EnemyTurn());
         }
 
+        }
+
+       
+
     }
 
     IEnumerator EnemyTurn() {
         int damageToPlayer =  enemyUnit.attack - playerUnit.defence;
         int actualDamage = playerUnit.TakeDamage(damageToPlayer);
 
+        if (enemyUnit.IsExhausted())
+        {
+            dialogueText.text =enemyUnit.unitName + " is exhausted and cannot attack!";
+            yield return new WaitForSeconds(2f);
+            state = BattleState.PLAYERTURN;
+            PlayerTurn();
+            yield break;
+        } else {
         attackSfx.Play();
         dialogueText.text = enemyUnit.unitName + " attacks " + playerUnit.unitName + "! \n" + playerUnit.unitName + " takes " + actualDamage + " damage!";
         
@@ -96,6 +113,7 @@ public class BattleSystem : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         if(playerUnit.IsKo()) {
+            playerHUD.SetStatusEffects(playerUnit);
             state = BattleState.DEFEAT;
             EndBattle();
         } else {
@@ -107,11 +125,16 @@ public class BattleSystem : MonoBehaviour
             PlayerTurn();
         }
 
+        }
+
+        
+
     }
 
     void EndBattle() {
         if(state == BattleState.VICTORY) {
             playerUnit.currentExp += enemyUnit.expDrop; //gain EXP 
+            playerHUD.SetEXP(playerUnit.currentExp);
             dialogueText.text = "Conglaturations! You are winner!!! \n You gained " + enemyUnit.expDrop + " experience points!";
             battleTheme.Stop();
             victoryFanfare.Play(); //switch to the victory fanfare
@@ -144,12 +167,30 @@ public class BattleSystem : MonoBehaviour
     }
 
        IEnumerator PlayerBlock() { //blocking action
+       int originalDefence = playerUnit.defence; 
+
         playerUnit.Block();
         playerUnit.defence *= 2; //double unit's defence while blocking
         playerUnit.RestoreStamina(1); //restore unit's stamina 
         playerHUD.SetStamina(playerUnit.currentStamina);
 
         dialogueText.text = playerUnit.unitName + " defends!";
+
+        yield return new WaitForSeconds(2f);
+
+
+        state = BattleState.ENEMYTURN;
+        StartCoroutine(EnemyTurn());
+
+        playerUnit.defence = originalDefence; //revert the players defence back after blocking
+    }
+
+    IEnumerator PlayerRest() {
+        int staminaRecovery = 4;
+        playerUnit.RestoreStamina(staminaRecovery);
+        playerHUD.SetStamina(playerUnit.currentStamina);
+
+        dialogueText.text = playerUnit.unitName + " recovers " + staminaRecovery + " stamina.";
 
         yield return new WaitForSeconds(2f);
 
@@ -203,6 +244,13 @@ public class BattleSystem : MonoBehaviour
         return;
 
         StartCoroutine(PlayerBlock());
+    }
+
+    public void OnRestButton(){
+       if (state != BattleState.PLAYERTURN)
+        return;
+
+        StartCoroutine(PlayerRest());
     }
 
     public void OnFleeButton()
