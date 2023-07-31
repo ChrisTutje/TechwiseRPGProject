@@ -8,9 +8,9 @@ public class CharacterAnimator
    private Animator animator;
 
    
-
-   private string horizontalParameter = "xDir";
-   private string verticalParamater = "yDir";
+    private string walkingParameter = "isWalking";
+    private string horizontalParameter = "xDir";
+    private string verticalParamater = "yDir";
 
    public CharacterAnimator(Character character)
    {
@@ -21,6 +21,16 @@ public class CharacterAnimator
 
    public void ChooseLayer()
    {
+        bool isWalking = character.isMoving;
+        animator.SetBool(walkingParameter, isWalking);
+
+   }
+
+   public void UpdateParamaters()
+   {
+    animator.SetFloat(horizontalParameter, character.Facing.x);
+    animator.SetFloat(verticalParamater, character.Facing.y);
+
 
    }
 }
