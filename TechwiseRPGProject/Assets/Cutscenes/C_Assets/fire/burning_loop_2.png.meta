@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1e89e24d2d8f9bc4d988697229d61a68
+guid: ddcf64f23bac04eebaa9dd164edab551
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,64 +105,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 04_Box_Frames_9Patch_0
+      name: burning_loop_2_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 9
-        width: 30
-        height: 30
+        x: 0
+        y: 0
+        width: 20
+        height: 24
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07639c53b7786994895a1d926109aa52
-      internalID: -525210115
+      spriteID: f57ad568796604b58b4c0c1840e3d252
+      internalID: -1122061608
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 04_Box_Frames_9Patch_1
+      name: burning_loop_2_1
       rect:
         serializedVersion: 2
-        x: 57
-        y: 9
-        width: 30
-        height: 30
+        x: 20
+        y: 0
+        width: 20
+        height: 24
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a15f828b0eb84224b858e02fdcd77370
-      internalID: 1788377792
+      spriteID: 20592aa249ada4a4492166f7b38ea1ff
+      internalID: 176411393
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 04_Box_Frames_9Patch_2
+      name: burning_loop_2_2
       rect:
         serializedVersion: 2
-        x: 99
-        y: 9
-        width: 36
-        height: 30
+        x: 40
+        y: 0
+        width: 20
+        height: 24
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0256bf2222d9ab04e9e3da6f9c8a8f2c
-      internalID: -1672906499
+      spriteID: a46a969d40e1842279e0c0d1fe56e495
+      internalID: -841744982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: burning_loop_2_3
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 0
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54a2c843ff5164fa9a33289709cb1ad1
+      internalID: -553191405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: burning_loop_2_4
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccb8486baef344ef68e07028f172f4d0
+      internalID: -1404179897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: burning_loop_2_5
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b007abea570534fa7958c69fcbc6c78a
+      internalID: -345866659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: burning_loop_2_6
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 0
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ea389c3481384dbb823f49db78d3cfc
+      internalID: -1371626386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: burning_loop_2_7
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 0
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25d97b56262ea4e01b3649a8643e0572
+      internalID: -1570536573
       vertices: []
       indices: 
       edges: []
@@ -178,9 +283,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      04_Box_Frames_9Patch_0: -525210115
-      04_Box_Frames_9Patch_1: 1788377792
-      04_Box_Frames_9Patch_2: -1672906499
+      burning_loop_2_0: -1122061608
+      burning_loop_2_1: 176411393
+      burning_loop_2_2: -841744982
+      burning_loop_2_3: -553191405
+      burning_loop_2_4: -1404179897
+      burning_loop_2_5: -345866659
+      burning_loop_2_6: -1371626386
+      burning_loop_2_7: -1570536573
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
