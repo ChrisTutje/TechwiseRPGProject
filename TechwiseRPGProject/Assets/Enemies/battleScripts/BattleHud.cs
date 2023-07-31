@@ -21,17 +21,7 @@ public Text staminaTracker;
 public Slider expSlider;
 public Text expTracker;
 
-public Text statusEffects; 
-
-private Unit playerUnit;
-//private Unit enemyUnit;
-
-
 public void setHUD(Unit unit) { //variables to put on the HUD
-    playerUnit = unit;
-    //enemyUnit = unit;
-
-
     nameText.text = unit.unitName;
     levelText.text = "Level " + unit.unitLevel; 
 
@@ -50,11 +40,8 @@ public void setHUD(Unit unit) { //variables to put on the HUD
     expSlider.maxValue = 100; //work in progress
     expSlider.value = unit.currentExp;
     expTracker.text = unit.currentExp.ToString();
-
-    statusEffects.text = SetStatusEffects(playerUnit);
     
-} 
-
+}
 
 public void SetHP(int hp) {
     hpSlider.value = hp;
@@ -77,21 +64,5 @@ public void SetEXP(int exp) {
     expSlider.value = exp;
     expTracker.text = exp.ToString();
 }
-
- public string SetStatusEffects(Unit unit) {
-    string statusEffects = "";
-
-        if (unit.IsExhausted())
-        {
-            statusEffects += "Exhausted\n";
-        }
-
-        if (unit.IsKo())
-        {
-            statusEffects += "KO\n";
-        }
-
-        return statusEffects;
-} 
 
 }

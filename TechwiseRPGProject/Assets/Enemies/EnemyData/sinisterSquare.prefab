@@ -98,8 +98,6 @@ MonoBehaviour:
   currentMp: 666
   maxStamina: 4
   currentStamina: 4
-  strength: 34
-  endurance: 1
-  expDrop: 99
   attack: 34
   defence: 666
+  expDrop: 99

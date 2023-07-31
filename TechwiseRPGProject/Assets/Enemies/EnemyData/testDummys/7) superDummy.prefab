@@ -98,9 +98,6 @@ MonoBehaviour:
   currentMp: 192
   maxStamina: 128
   currentStamina: 128
-  strength: 64
-  endurance: 64
-  intelligence: 64
-  expDrop: 64
   attack: 64
-  defence: 1
+  defence: 0
+  expDrop: 64
