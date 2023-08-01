@@ -792,7 +792,7 @@ RectTransform:
   m_Children:
   - {fileID: 1169038088}
   m_Father: {fileID: 847046672}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.47900003, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2597,8 +2597,6 @@ RectTransform:
   - {fileID: 1984284781}
   - {fileID: 1569816173}
   - {fileID: 1741474784}
-  - {fileID: 2144945141}
-  - {fileID: 1356993671}
   - {fileID: 206421626}
   m_Father: {fileID: 1453590949}
   m_RootOrder: 3
@@ -4079,7 +4077,7 @@ GameObject:
   - component: {fileID: 1180286141}
   - component: {fileID: 1180286140}
   m_Layer: 5
-  m_Name: 'fightButton '
+  m_Name: 'attackButton '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4759,16 +4757,16 @@ RectTransform:
   m_GameObject: {fileID: 1356993670}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.0368323, y: 1.1059545, z: 1.1059545}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1210345445}
-  m_Father: {fileID: 847046672}
-  m_RootOrder: 5
+  m_Father: {fileID: 1498222410}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 81.3, y: 15.700005}
+  m_AnchoredPosition: {x: -61.4, y: -42.3}
   m_SizeDelta: {x: 73.907, y: 13.6872}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1356993672
@@ -4860,6 +4858,30 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: BattleSystem, Assembly-CSharp
         m_MethodName: OnRestButton
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1453590945}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1498222409}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5005,7 +5027,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1396284538}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 292.60715, y: 167.39119, z: -4.3955526}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5453,6 +5475,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1751665278}
+  - {fileID: 2144945141}
+  - {fileID: 1356993671}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5633,7 +5657,7 @@ MonoBehaviour:
   staminaTracker: {fileID: 1412775194}
   expSlider: {fileID: 747824002}
   expTracker: {fileID: 951623481}
-  statusEffects: {fileID: 1801114306}
+  statusEffectsText: {fileID: 1801114306}
 --- !u!1 &1517959424
 GameObject:
   m_ObjectHideFlags: 0
@@ -6810,8 +6834,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ad637680d0ef6f43af672ec4d573659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 3929587845492748558, guid: 074c0e3504444c64a9f9d90d92c7057a, type: 3}
-  enemyPrefab: {fileID: 887607553077772412, guid: d824257c319b83645a5b5b963397c032, type: 3}
+  playerPrefab: {fileID: 3929587845492748558, guid: 496b0bd7019855541b7beb43fed5f6fc, type: 3}
+  enemyPrefab: {fileID: 3929587845492748558, guid: 496b0bd7019855541b7beb43fed5f6fc, type: 3}
   playerBattleStation: {fileID: 1603094194}
   enemyBattleStation: {fileID: 931262001}
   dialogueText: {fileID: 1940569261}
@@ -8564,7 +8588,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2050923343}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 335.1903, y: 257.27405, z: -8.655913}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -8682,7 +8706,7 @@ MonoBehaviour:
   staminaTracker: {fileID: 1920874356}
   expSlider: {fileID: 868951081}
   expTracker: {fileID: 1921661185}
-  statusEffects: {fileID: 1791521323}
+  statusEffectsText: {fileID: 1791521323}
 --- !u!1 &2073654215
 GameObject:
   m_ObjectHideFlags: 0
@@ -8902,16 +8926,16 @@ RectTransform:
   m_GameObject: {fileID: 2144945140}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.0368323, y: 1.1059545, z: 1.1059545}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1162117841}
-  m_Father: {fileID: 847046672}
-  m_RootOrder: 4
+  m_Father: {fileID: 1498222410}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 81.3, y: 32.8}
+  m_AnchoredPosition: {x: -61.4, y: -17.6}
   m_SizeDelta: {x: 73.907, y: 13.6872}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2144945142
@@ -9003,6 +9027,30 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: BattleSystem, Assembly-CSharp
         m_MethodName: OnBlockButton
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1453590945}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1498222409}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

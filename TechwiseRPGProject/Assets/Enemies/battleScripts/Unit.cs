@@ -124,8 +124,9 @@ public class Unit : MonoBehaviour //variable fields for each unit
     }
 
     //** STATUS EFFECTS ** // 
+    
 
-        public bool IsKo()
+       public bool IsKo()
     {
         return currentHp <= 0;
     }
@@ -138,5 +139,5 @@ public class Unit : MonoBehaviour //variable fields for each unit
      public bool IsExhausted()
     {
         return currentStamina <= 0;
-    }
+    } 
 }

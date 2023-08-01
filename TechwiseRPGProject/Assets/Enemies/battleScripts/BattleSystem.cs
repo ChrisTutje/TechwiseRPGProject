@@ -23,7 +23,7 @@ public class BattleSystem : MonoBehaviour
 
     public BattleState state;
 
-    public AudioSource battleTheme;
+     public AudioSource battleTheme;
     public AudioSource victoryFanfare;
     public AudioSource gameoverTheme;
 
@@ -55,7 +55,12 @@ public class BattleSystem : MonoBehaviour
       enemyHUD.setHUD(enemyUnit);
     }
 
-    IEnumerator PlayerAttack() { //Logic for the fight action
+    void PlayerTurn() { //function for the PlayerTurn phase
+    dialogueText.text = "Round " + roundCounter +  ": \n How will " +  playerUnit.unitName + " respond?" ;
+    roundCounter += 1; //used to increment the round counter
+    }
+
+        IEnumerator PlayerAttack() { //Logic for the fight action
        int damageToEnemy = playerUnit.attack - enemyUnit.defence;
        int actualDamage = enemyUnit.TakeDamage(damageToEnemy);
 
@@ -87,83 +92,6 @@ public class BattleSystem : MonoBehaviour
 
         }
 
-       
-
-    }
-
-    IEnumerator EnemyTurn() {
-        int damageToPlayer =  enemyUnit.attack - playerUnit.defence;
-        int actualDamage = playerUnit.TakeDamage(damageToPlayer);
-
-        if (enemyUnit.IsExhausted())
-        {
-            dialogueText.text =enemyUnit.unitName + " is exhausted and cannot attack!";
-            yield return new WaitForSeconds(2f);
-            state = BattleState.PLAYERTURN;
-            PlayerTurn();
-            yield break;
-        } else {
-        attackSfx.Play();
-        dialogueText.text = enemyUnit.unitName + " attacks " + playerUnit.unitName + "! \n" + playerUnit.unitName + " takes " + actualDamage + " damage!";
-        
-        yield return new WaitForSeconds(1f);
-
-        playerHUD.SetHP(playerUnit.currentHp);
-
-        yield return new WaitForSeconds(1f);
-
-        if(playerUnit.IsKo()) {
-            playerHUD.SetStatusEffects(playerUnit);
-            state = BattleState.DEFEAT;
-            EndBattle();
-        } else {
-            enemyUnit.DrainStamina(1); // Reduce enemy's stamina by 1
-            enemyHUD.SetStamina(enemyUnit.currentStamina);
-
-
-            state = BattleState.PLAYERTURN;
-            PlayerTurn();
-        }
-
-        }
-
-        
-
-    }
-
-    void EndBattle() {
-        if(state == BattleState.VICTORY) {
-            playerUnit.currentExp += enemyUnit.expDrop; //gain EXP 
-            playerHUD.SetEXP(playerUnit.currentExp);
-            dialogueText.text = "Conglaturations! You are winner!!! \n You gained " + enemyUnit.expDrop + " experience points!";
-            battleTheme.Stop();
-            victoryFanfare.Play(); //switch to the victory fanfare
-        } else if (state == BattleState.DEFEAT){
-            battleTheme.Stop(); //switch to the game over music
-            gameoverTheme.Play(); 
-            dialogueText.text = "Get gud, skrub.";
-        } 
-    }
-
-    public int roundCounter = 1;
-
-    void PlayerTurn() { //function for the PlayerTurn phase
-    dialogueText.text = "Round " + roundCounter +  ": \n How will " +  playerUnit.unitName + " respond?" ;
-    roundCounter += 1; //used to increment the round counter
-    }
-
-    IEnumerator PlayerHeal() { //healing action
-        healSfx.Play();
-        int hpRecovery = 8; //how much action heals by
-        playerUnit.Heal(hpRecovery);
-
-        playerHUD.SetHP(playerUnit.currentHp);
-        dialogueText.text = playerUnit.unitName + " regained " + hpRecovery  + " hit points.";
-
-        yield return new WaitForSeconds(2f);
-
-        state = BattleState.ENEMYTURN;
-        StartCoroutine(EnemyTurn());
     }
 
        IEnumerator PlayerBlock() { //blocking action
@@ -185,12 +113,26 @@ public class BattleSystem : MonoBehaviour
         playerUnit.defence = originalDefence; //revert the players defence back after blocking
     }
 
-    IEnumerator PlayerRest() {
+        IEnumerator PlayerRest() {
         int staminaRecovery = 4;
         playerUnit.RestoreStamina(staminaRecovery);
         playerHUD.SetStamina(playerUnit.currentStamina);
 
         dialogueText.text = playerUnit.unitName + " recovers " + staminaRecovery + " stamina.";
+
+        yield return new WaitForSeconds(2f);
+
+        state = BattleState.ENEMYTURN;
+        StartCoroutine(EnemyTurn());
+    }
+
+        IEnumerator PlayerHeal() { //healing action
+        healSfx.Play();
+        int hpRecovery = 8; //how much action heals by
+        playerUnit.Heal(hpRecovery);
+
+        playerHUD.SetHP(playerUnit.currentHp);
+        dialogueText.text = playerUnit.unitName + " regained " + hpRecovery  + " hit points.";
 
         yield return new WaitForSeconds(2f);
 
@@ -204,8 +146,7 @@ public class BattleSystem : MonoBehaviour
 
     yield return new WaitForSeconds(1f);
 
-    
-   float escapeSuccess = d20() /* + ((playerUnit.speed / 2) + (playerUnit.luck / 2)) */;
+   float escapeSuccess = randomEvents.d20() /* + ((playerUnit.speed / 2) + (playerUnit.luck / 2)) */;
    float escapeFail = enemyUnit.unitLevel;
     if (escapeSuccess >= escapeFail) // Escape rate
     {
@@ -220,6 +161,75 @@ public class BattleSystem : MonoBehaviour
         StartCoroutine(EnemyTurn());
     }
 }
+
+IEnumerator EnemyTurn() {
+        int damageToPlayer =  enemyUnit.attack - playerUnit.defence;
+        int actualDamage = playerUnit.TakeDamage(damageToPlayer);
+
+        if (enemyUnit.IsExhausted())
+        {
+            dialogueText.text =enemyUnit.unitName + " is exhausted and takes a rest!";
+            yield return new WaitForSeconds(2f);
+            state = BattleState.PLAYERTURN;
+            StartCoroutine(EnemyRest());
+            yield break;
+        } else {
+        attackSfx.Play();
+        dialogueText.text = enemyUnit.unitName + " attacks " + playerUnit.unitName + "! \n" + playerUnit.unitName + " takes " + actualDamage + " damage!";
+        
+        yield return new WaitForSeconds(1f);
+
+        playerHUD.SetHP(playerUnit.currentHp);
+
+        yield return new WaitForSeconds(1f);
+
+        if(playerUnit.IsKo()) {
+            //playerHUD.SetStatusEffects(playerUnit);
+            state = BattleState.DEFEAT;
+            EndBattle();
+        } else {
+            enemyUnit.DrainStamina(1); // Reduce enemy's stamina by 1
+            enemyHUD.SetStamina(enemyUnit.currentStamina);
+
+
+            state = BattleState.PLAYERTURN;
+            PlayerTurn();
+        }
+
+        }
+
+        
+
+    }
+
+    IEnumerator EnemyRest() {
+        int staminaRecovery = 4;
+        enemyUnit.RestoreStamina(staminaRecovery);
+        enemyHUD.SetStamina(enemyUnit.currentStamina);
+
+        dialogueText.text = enemyUnit.unitName + " recovered " + staminaRecovery + " stamina!";
+
+        yield return new WaitForSeconds(2f);
+
+        state = BattleState.PLAYERTURN;
+        PlayerTurn();
+    }
+
+    void EndBattle() {
+        if(state == BattleState.VICTORY) {
+            playerUnit.currentExp += enemyUnit.expDrop; //gain EXP 
+            playerHUD.SetEXP(playerUnit.currentExp);
+            dialogueText.text = "Conglaturations! You are winner!!! \n You gained " + enemyUnit.expDrop + " experience points!";
+            battleTheme.Stop();
+            victoryFanfare.Play(); //switch to the victory fanfare
+        } else if (state == BattleState.DEFEAT){
+            battleTheme.Stop(); //switch to the game over music
+            gameoverTheme.Play(); 
+            dialogueText.text = "Get gud, skrub.";
+        } 
+    }
+
+    public int roundCounter = 1;
 
 
     //**vvv Logic for Action Moves go here vvv **// 
@@ -263,12 +273,7 @@ public class BattleSystem : MonoBehaviour
 
     //** vvv Logic for Status Effects go here vvv **//
 
-    //** vvv Logic for Random EVents vvv ***//
 
-    public int d20() //rolling a D20
-    {
-        return Random.Range(1, 21); 
-    }
 
   
 }
