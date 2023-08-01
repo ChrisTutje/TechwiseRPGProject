@@ -5027,7 +5027,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1396284538}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 292.60715, y: 167.39119, z: -4.3955526}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6834,8 +6834,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ad637680d0ef6f43af672ec4d573659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 3929587845492748558, guid: 074c0e3504444c64a9f9d90d92c7057a, type: 3}
-  enemyPrefab: {fileID: 887607553077772412, guid: d824257c319b83645a5b5b963397c032, type: 3}
+  playerPrefab: {fileID: 3929587845492748558, guid: 496b0bd7019855541b7beb43fed5f6fc, type: 3}
+  enemyPrefab: {fileID: 3929587845492748558, guid: 496b0bd7019855541b7beb43fed5f6fc, type: 3}
   playerBattleStation: {fileID: 1603094194}
   enemyBattleStation: {fileID: 931262001}
   dialogueText: {fileID: 1940569261}
@@ -8588,7 +8588,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2050923343}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 335.1903, y: 257.27405, z: -8.655913}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
