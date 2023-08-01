@@ -21,15 +21,15 @@ public Text staminaTracker;
 public Slider expSlider;
 public Text expTracker;
 
-public Text statusEffects; 
+public Text statusEffectsText; 
 
 private Unit playerUnit;
-//private Unit enemyUnit;
+private Unit enemyUnit;
 
 
 public void setHUD(Unit unit) { //variables to put on the HUD
     playerUnit = unit;
-    //enemyUnit = unit;
+    enemyUnit = unit;
 
 
     nameText.text = unit.unitName;
@@ -51,7 +51,8 @@ public void setHUD(Unit unit) { //variables to put on the HUD
     expSlider.value = unit.currentExp;
     expTracker.text = unit.currentExp.ToString();
 
-    statusEffects.text = SetStatusEffects(playerUnit);
+    statusEffectsText.text = SetStatusEffects(playerUnit);
+    statusEffectsText.text = SetStatusEffects(enemyUnit);
     
 } 
 
@@ -59,6 +60,19 @@ public void setHUD(Unit unit) { //variables to put on the HUD
 public void SetHP(int hp) {
     hpSlider.value = hp;
     hpTracker.text = hp.ToString();
+
+    statusEffectsText.text = SetStatusEffects(playerUnit);
+    statusEffectsText.text = SetStatusEffects(enemyUnit);
+
+    if (!playerUnit.IsExhausted())
+        {
+            statusEffectsText.text = statusEffectsText.text.Replace("Exhausted\n", "");
+        }
+
+        if (!enemyUnit.IsExhausted())
+        {
+            statusEffectsText.text = statusEffectsText.text.Replace("Exhausted\n", "");
+        }
 }
 
 public void SetMP(int mp) {
@@ -70,7 +84,9 @@ public void SetStamina(int stamina) {
     staminaSlider.value = stamina;
     staminaSlider.value -= 1; //used to decrement stamina
     staminaTracker.text = stamina.ToString();
-    //staminaTracker.text = staminaSlider.value -= 1; //bad code
+    statusEffectsText.text = SetStatusEffects(playerUnit);
+    statusEffectsText.text = SetStatusEffects(enemyUnit);
+    
 }
 
 public void SetEXP(int exp) {
@@ -79,19 +95,21 @@ public void SetEXP(int exp) {
 }
 
  public string SetStatusEffects(Unit unit) {
-    string statusEffects = "";
+    string statusEffectsText = "";
 
         if (unit.IsExhausted())
         {
-            statusEffects += "Exhausted\n";
-        }
+            statusEffectsText += "Exhausted\n";
+        } 
+
+        
 
         if (unit.IsKo())
         {
-            statusEffects += "KO\n";
+           statusEffectsText += "KO\n";
         }
 
-        return statusEffects;
+        return statusEffectsText;
 } 
 
 }
