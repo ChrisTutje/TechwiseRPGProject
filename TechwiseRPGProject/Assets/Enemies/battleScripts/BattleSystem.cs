@@ -23,7 +23,7 @@ public class BattleSystem : MonoBehaviour
 
     public BattleState state;
 
-     public AudioSource battleTheme;
+    public AudioSource battleTheme;
     public AudioSource victoryFanfare;
     public AudioSource gameoverTheme;
 
@@ -138,6 +138,32 @@ public class BattleSystem : MonoBehaviour
 
         state = BattleState.ENEMYTURN;
         StartCoroutine(EnemyTurn());
+    }
+
+        IEnumerator mysticProjectile() { 
+        healSfx.Play();
+        int damageToEnemy = 8;
+        int actualDamage = enemyUnit.TakeDamage(damageToEnemy);
+
+        playerUnit.currentMp -= 8;
+        playerHUD.SetMP(playerUnit.currentMp);
+
+        dialogueText.text = "Zap! " + playerUnit.unitName + " casts Mystic Projectile(TM)! \n" + enemyUnit.unitName + " takes " + actualDamage + " damage!";
+
+    yield return new WaitForSeconds(2f);
+
+    enemyHUD.SetHP(enemyUnit.currentHp);
+
+    if (enemyUnit.IsKo())
+    {
+        state = BattleState.VICTORY;
+        EndBattle();
+    }
+    else
+    {
+        state = BattleState.ENEMYTURN;
+        StartCoroutine(EnemyTurn());
+    }
     }
 
    IEnumerator PlayerFlee()
@@ -271,9 +297,12 @@ IEnumerator EnemyTurn() {
     StartCoroutine(PlayerFlee());
 }
 
-    //** vvv Logic for Status Effects go here vvv **//
+public void OnmysticProjectileButton()
+{
+    if (state != BattleState.PLAYERTURN || playerUnit.currentMp < 8)
+        return;
 
+    StartCoroutine(mysticProjectile());
+}
 
-
-  
 }
