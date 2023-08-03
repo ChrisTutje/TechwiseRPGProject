@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0739f408832f0124994b1b6eb8d8c6d4
+guid: 8cea34d544408f5449f4fcd4d57545ca
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -101,29 +101,17 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: _side idle_0
+      name: _side walk_0
       rect:
         serializedVersion: 2
-        x: 25
+        x: 24
         y: 78
         width: 16
-        height: 32
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9b5cb29001531e42ad11c60afcd4b7b
-      internalID: 601609362
+      spriteID: 6c2bc24b7a8540b43adeb560f48d93c2
+      internalID: 110953585
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _side idle_1
+      name: _side walk_1
       rect:
         serializedVersion: 2
         x: 89
         y: 78
-        width: 16
-        height: 32
+        width: 15
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,19 +140,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0698585d5c633fc4bb2cb528f652d93a
-      internalID: 709922173
+      spriteID: 45c148e84bb42c9459a8179deb3d48ca
+      internalID: 359465311
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _side idle_2
+      name: _side walk_2
       rect:
         serializedVersion: 2
         x: 153
         y: 78
-        width: 16
+        width: 15
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -173,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6e080226ad0a5b49a53cead740a6bee
-      internalID: 2123355006
+      spriteID: 8ab10cef1957eb6498263cb2d090d85a
+      internalID: -819336495
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _side idle_3
+      name: _side walk_3
       rect:
         serializedVersion: 2
         x: 217
         y: 78
-        width: 16
-        height: 32
+        width: 15
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,19 +182,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aae1f081392a8aa4cb2f96267e585f8b
-      internalID: 858395946
+      spriteID: cddb08f95f7b8de46a75069476ca8474
+      internalID: 477920288
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _side idle_4
+      name: _side walk_4
       rect:
         serializedVersion: 2
         x: 25
         y: 14
-        width: 16
+        width: 15
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -215,8 +203,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce1793c37ab92954ca7179e409aa0d68
-      internalID: 2025071623
+      spriteID: 5594d6e2b9b4aa745b6bcb58c30522da
+      internalID: 1914665911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _side walk_5
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 14
+        width: 15
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e3c9077415386d438409eca09ed7c7a
+      internalID: -1378423810
       vertices: []
       indices: 
       edges: []
@@ -232,11 +241,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      _side idle_0: 601609362
-      _side idle_1: 709922173
-      _side idle_2: 2123355006
-      _side idle_3: 858395946
-      _side idle_4: 2025071623
+      _side walk_0: 110953585
+      _side walk_1: 359465311
+      _side walk_2: -819336495
+      _side walk_3: 477920288
+      _side walk_4: 1914665911
+      _side walk_5: -1378423810
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

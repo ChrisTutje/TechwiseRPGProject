@@ -5,6 +5,8 @@ using UnityEngine;
 public abstract class Character : MonoBehaviour
 {
     public CharacterMover Move {get; private set;}
+    public CharacterTurner Turn {get; private set;}
+    public CharacterAnimator Animator{get; private set;}
     public PauseMenu pauseMenu;
 
 
@@ -12,9 +14,15 @@ public abstract class Character : MonoBehaviour
     
     public bool isMoving => Move.isMoving;
 
+
+    public Vector2Int Facing => Turn.Facing;
+
     protected virtual void Awake() {
         {
             Move = new CharacterMover(this);
+            Turn = new CharacterTurner();
+            Animator = new CharacterAnimator(this);
+
         }
     }
     protected virtual void Start()
@@ -25,6 +33,9 @@ public abstract class Character : MonoBehaviour
     }
     protected virtual void Update()
     {
+        
+        Animator.ChooseLayer();
+        Animator.UpdateParamaters();
         
     }
 }
