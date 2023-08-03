@@ -28,6 +28,9 @@ public class CharacterMover
     public IEnumerator Co_Move(Vector2Int direction)
     {
         isMoving=true;
+
+
+        character.Turn.Turn(direction);
         Vector2Int startingCell = Map.Grid.GetCell2D(character.gameObject);
         Vector2Int endingCell = startingCell+direction;
 

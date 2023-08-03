@@ -33,6 +33,7 @@ public abstract class Character : MonoBehaviour
     }
     protected virtual void Update()
     {
+        
         Animator.ChooseLayer();
         Animator.UpdateParamaters();
         
