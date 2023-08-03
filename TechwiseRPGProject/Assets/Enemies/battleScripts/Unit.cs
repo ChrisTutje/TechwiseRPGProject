@@ -123,6 +123,13 @@ public class Unit : MonoBehaviour //variable fields for each unit
             currentStamina = maxStamina;
     }
 
+    public void DeductMP(int amount)
+{
+    currentMp -= amount;
+    if (currentMp < 0)
+        currentMp = 0;
+}
+
     //** STATUS EFFECTS ** // 
     
 
