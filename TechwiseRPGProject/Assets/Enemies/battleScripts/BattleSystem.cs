@@ -23,12 +23,13 @@ public class BattleSystem : MonoBehaviour
 
     public BattleState state;
 
-     public AudioSource battleTheme;
+    public AudioSource battleTheme;
     public AudioSource victoryFanfare;
     public AudioSource gameoverTheme;
 
     public AudioSource attackSfx;
     public AudioSource healSfx;
+    public AudioSource menuNegative;
    
     void Start()
     {
@@ -66,11 +67,10 @@ public class BattleSystem : MonoBehaviour
 
           if (playerUnit.IsExhausted())
         {
+            menuNegative.Play();
             dialogueText.text = playerUnit.unitName + " is exhausted and cannot attack!";
             yield return new WaitForSeconds(2f);
-            state = BattleState.ENEMYTURN;
-            StartCoroutine(EnemyTurn());
-            yield break;
+           
         } else {
             attackSfx.Play();
 
@@ -126,7 +126,86 @@ public class BattleSystem : MonoBehaviour
         StartCoroutine(EnemyTurn());
     }
 
-        IEnumerator PlayerHeal() { //healing action
+    IEnumerator PlayerCharge() { 
+       int originalAttack = playerUnit.attack;
+       int originalDefence = playerUnit.defence;
+
+          if (playerUnit.IsExhausted() || playerUnit.currentStamina < 4)
+        {
+            menuNegative.Play();
+            dialogueText.text = playerUnit.unitName + " is exhausted and cannot attack!";
+            yield return new WaitForSeconds(2f);
+        
+        } else {
+            attackSfx.Play();
+            playerUnit.attack *= 2;
+            playerUnit.defence /= 2;
+            int damageToEnemy = playerUnit.attack - enemyUnit.defence;
+            int actualDamage = enemyUnit.TakeDamage(damageToEnemy);
+
+            enemyHUD.SetHP(enemyUnit.currentHp);
+            dialogueText.text = "KAPOW!!! \n" + enemyUnit.unitName + " takes " + actualDamage + " damage!" ;
+
+            yield return new WaitForSeconds(2f);
+
+        if(enemyUnit.IsKo()) { 
+            state = BattleState.VICTORY;
+            EndBattle();
+        } else {
+            playerUnit.DrainStamina(4); // Reduce player's stamina by 2
+            playerHUD.SetStamina(playerUnit.currentStamina);
+
+            state = BattleState.ENEMYTURN;
+            StartCoroutine(EnemyTurn());
+
+            playerUnit.attack = originalAttack;
+            playerUnit.defence = originalDefence;
+        }
+
+        }
+    }
+
+       IEnumerator PlayerHeavyAttack() { 
+       int originalAttack = playerUnit.attack;
+       int originalDefence = playerUnit.defence;
+
+          if (playerUnit.IsExhausted())
+        {
+            menuNegative.Play();
+            dialogueText.text = playerUnit.unitName + " is exhausted and cannot attack!";
+            yield return new WaitForSeconds(2f);
+        } else {
+            attackSfx.Play();
+            if (playerUnit.attack % 2 == 0) {
+                playerUnit.attack = playerUnit.attack + playerUnit.attack / 2; 
+           } else {
+                playerUnit.attack = (playerUnit.attack + 1) / 2;
+            }
+            int damageToEnemy = playerUnit.attack - enemyUnit.defence;
+            int actualDamage = enemyUnit.TakeDamage(damageToEnemy);
+
+            enemyHUD.SetHP(enemyUnit.currentHp);
+            dialogueText.text = "OOF! \n" + enemyUnit.unitName + " takes " + actualDamage + " damage!" ;
+
+            yield return new WaitForSeconds(2f);
+
+        if(enemyUnit.IsKo()) { 
+            state = BattleState.VICTORY;
+            EndBattle();
+        } else {
+            playerUnit.DrainStamina(2); // Reduce player's stamina by 2
+            playerHUD.SetStamina(playerUnit.currentStamina);
+
+            state = BattleState.ENEMYTURN;
+            StartCoroutine(EnemyTurn());
+
+            playerUnit.attack = originalAttack;
+        }
+
+        }
+    }
+
+       /* IEnumerator PlayerHeal() { //healing action
         healSfx.Play();
         int hpRecovery = 8; //how much action heals by
         playerUnit.Heal(hpRecovery);
@@ -138,7 +217,65 @@ public class BattleSystem : MonoBehaviour
 
         state = BattleState.ENEMYTURN;
         StartCoroutine(EnemyTurn());
+    } */
+
+    IEnumerator PlayerCure() { //healing action
+      if (playerUnit.currentMp >= 8){
+        healSfx.Play();
+        int hpRecovery = 8; //how much action heals by
+        playerUnit.Heal(hpRecovery);
+        playerUnit.DeductMP(8);
+        playerHUD.SetMP(playerUnit.currentMp);
+
+        playerHUD.SetHP(playerUnit.currentHp);
+        dialogueText.text = playerUnit.unitName + " regained " + hpRecovery  + " hit points.";
+
+        yield return new WaitForSeconds(2f);
+
+        state = BattleState.ENEMYTURN;
+        StartCoroutine(EnemyTurn());
+      } else {
+        menuNegative.Play();
+        dialogueText.text = "Not enough MP for Cure!";
+      }
+        
     }
+
+        IEnumerator mysticProjectile() { 
+
+        if (playerUnit.currentMp >= 24) {
+        healSfx.Play();
+        int damageToEnemy = 21;
+        int actualDamage = enemyUnit.TakeDamage(damageToEnemy);
+
+        playerUnit.currentMp -= 8;
+        playerHUD.SetMP(playerUnit.currentMp);
+
+        dialogueText.text = "Zap! " + playerUnit.unitName + " casts Mystic Projectile(TM)! \n" + enemyUnit.unitName + " takes " + actualDamage + " damage!";
+
+    yield return new WaitForSeconds(2f);
+
+    enemyHUD.SetHP(enemyUnit.currentHp);
+
+    if (enemyUnit.IsKo())
+    {
+        state = BattleState.VICTORY;
+        EndBattle();
+    }
+    else
+    {
+        state = BattleState.ENEMYTURN;
+        StartCoroutine(EnemyTurn());
+    }
+        } else {
+        menuNegative.Play();
+        dialogueText.text = "Not enough MP for Mystic Projectile!";
+      }
+        
+        
+    } 
+
+   
 
    IEnumerator PlayerFlee()
 {
@@ -242,12 +379,20 @@ IEnumerator EnemyTurn() {
 
     }
 
-     public void OnHealButton(){
+     /* public void OnHealButton(){
        if (state != BattleState.PLAYERTURN)
         return;
 
         StartCoroutine(PlayerHeal());
-    }
+    } */
+
+    public void OnCureButton()
+{
+    if (state != BattleState.PLAYERTURN)
+        return;
+
+    StartCoroutine(PlayerCure());
+}
 
     public void OnBlockButton(){
        if (state != BattleState.PLAYERTURN)
@@ -271,9 +416,29 @@ IEnumerator EnemyTurn() {
     StartCoroutine(PlayerFlee());
 }
 
-    //** vvv Logic for Status Effects go here vvv **//
+public void OnmysticProjectileButton()
+{
+    if (state != BattleState.PLAYERTURN)
+        return;
 
+    StartCoroutine(mysticProjectile());
+}
 
+public void OnChargeButton(){
+        if (state != BattleState.PLAYERTURN)
+        return;
 
-  
+        StartCoroutine(PlayerCharge());
+
+    }
+
+public void OnPlayerHeavyAttack(){
+        if (state != BattleState.PLAYERTURN)
+        return;
+
+        StartCoroutine(PlayerHeavyAttack());
+
+    }
+    
+
 }
