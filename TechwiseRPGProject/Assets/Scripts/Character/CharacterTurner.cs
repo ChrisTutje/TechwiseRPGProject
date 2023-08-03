@@ -2,17 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterTurner : MonoBehaviour
+public class CharacterTurner
 {
-    // Start is called before the first frame update
-    void Start()
+  
+  public Vector2Int Facing {get; private set;} = Direction.Down;
+
+  
+
+
+    public void Turn(Vector2Int direction)
     {
-        //17:29
+        if(direction.IsBasic())
+        {
+            Facing = direction;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public void TurnAround() => Facing = new Vector2Int(-Facing.x, -Facing.y);
+
+    //37.44
+
 }
+
+

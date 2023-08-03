@@ -44,3 +44,12 @@ TagManager:
   - name: Character 1
     uniqueID: 1030761543
     locked: 0
+  - name: Character 2
+    uniqueID: 551352485
+    locked: 0
+  - name: 'Character 3 '
+    uniqueID: 1392131343
+    locked: 0
+  - name: Character 4
+    uniqueID: 3837965243
+    locked: 0
