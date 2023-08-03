@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.3490566, g: 0.3210662, b: 0.3210662, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -98,11 +98,9 @@ MonoBehaviour:
   currentMp: 3
   maxStamina: 2
   currentStamina: 2
-  attack: 1
   strength: 1
-  perception: 1
   endurance: 1
-  intellegence: 1
-  agility: 1
-  luck: 1
+  intelligence: 1
   expDrop: 1
+  attack: 1
+  defence: 0
