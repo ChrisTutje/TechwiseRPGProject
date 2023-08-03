@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitName: Timmy Test Cube
-  unitLevel: 1
+  unitLevel: 2
   currentExp: 0
   maxHp: 100
   currentHp: 100
@@ -99,8 +99,8 @@ MonoBehaviour:
   maxStamina: 4
   currentStamina: 4
   strength: 1
-  endurance: 25
+  endurance: 2
   intelligence: 1
-  expDrop: 1
+  expDrop: 2
   attack: 1
   defence: 1
