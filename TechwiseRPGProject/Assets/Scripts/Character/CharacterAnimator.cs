@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class CharacterAnimator 
 {
-   private Character character;
+   public Character character;
    private Animator animator;
-
    
     private string walkingParameter = "isWalking";
     private string horizontalParameter = "xDir";
@@ -21,8 +20,8 @@ public class CharacterAnimator
 
    public void ChooseLayer()
    {
-        bool isWalking = character.isMoving;
-        animator.SetBool(walkingParameter, isWalking);
+      bool isWalking = character.isMoving;
+      animator.SetBool(walkingParameter,isWalking);
 
    }
 

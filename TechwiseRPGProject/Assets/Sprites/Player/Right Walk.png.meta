@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9d3a40b9497bb8c449ded2c36955fa33
+guid: 3a4683184ae9e6548a0f2c3abf89eedf
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,12 +105,33 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: _side idle_0
+      name: Right Walk_0
       rect:
         serializedVersion: 2
-        x: 25
+        x: 24
         y: 78
-        width: 16
+        width: 15
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9be59c1eb83ba7843a0808f47a0b0986
+      internalID: 466637718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Right Walk_1
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 78
+        width: 15
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -119,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 21e8898d99cfc7243ac1e0ccd74642b2
-      internalID: -1906454247
+      spriteID: edc1f4fedd53083409189859194aa3c5
+      internalID: -537929326
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _side idle_1
+      name: Right Walk_2
       rect:
         serializedVersion: 2
-        x: 89
+        x: 152
         y: 78
-        width: 16
-        height: 32
+        width: 15
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc347dadc4e29484eace19a4234018ff
-      internalID: 506338811
+      spriteID: cc0682d34f0de004596feb748ab48e59
+      internalID: -1105755823
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _side idle_2
+      name: Right Walk_3
       rect:
         serializedVersion: 2
-        x: 153
+        x: 216
         y: 78
         width: 16
-        height: 32
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,40 +182,40 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60f53d51ab5b48947b61e2df944639f6
-      internalID: 1943316606
+      spriteID: 47e1ee99ad574bb4b826fb8774296d42
+      internalID: -2139602930
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _side idle_3
+      name: Right Walk_4
       rect:
         serializedVersion: 2
-        x: 217
-        y: 78
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5a20ac91465373d4681f13c7468c9fa5
-      internalID: 1407499263
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: _side idle_4
-      rect:
-        serializedVersion: 2
-        x: 25
+        x: 152
         y: 14
-        width: 16
+        width: 15
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85bcc9ac3eae02345bbb28f13f5ab8fd
+      internalID: -2101882607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Right Walk_5
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 14
+        width: 15
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -203,8 +224,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f62c2c174b460ed48acd7f889e50fd05
-      internalID: 871900878
+      spriteID: a9d269ae0aeb6f84fb7a023aaa7272be
+      internalID: -2015565605
       vertices: []
       indices: 
       edges: []
@@ -220,11 +241,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      _side idle_0: -1906454247
-      _side idle_1: 506338811
-      _side idle_2: 1943316606
-      _side idle_3: 1407499263
-      _side idle_4: 871900878
+      Right Walk_0: 466637718
+      Right Walk_1: -537929326
+      Right Walk_2: -1105755823
+      Right Walk_3: -2139602930
+      Right Walk_4: -2101882607
+      Right Walk_5: -2015565605
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
