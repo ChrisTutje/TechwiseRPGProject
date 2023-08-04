@@ -220,7 +220,8 @@ public class BattleSystem : MonoBehaviour
     } */
 
     IEnumerator PlayerCure() { //healing action
-      if (playerUnit.currentMp >= 8){
+    int mpCost = 8;
+      if (playerUnit.currentMp >= mpCost){
         healSfx.Play();
         int hpRecovery = 8; //how much action heals by
         playerUnit.Heal(hpRecovery);
@@ -241,14 +242,113 @@ public class BattleSystem : MonoBehaviour
         
     }
 
-        IEnumerator mysticProjectile() { 
+    IEnumerator PlayerRevitalize()
+{
+    int mpCost = 16;
+    int staminaRestore = 4;
+    int hpRecovery = 16;
 
-        if (playerUnit.currentMp >= 24) {
+    if (playerUnit.currentMp < mpCost)
+    {
+        menuNegative.Play();
+        dialogueText.text = "Not enough MP for Revitalize!";
+    }
+    else
+    {
+        playerUnit.RestoreStamina(staminaRestore);
+        playerUnit.DeductMP(mpCost);
+        playerUnit.Heal(hpRecovery);
+
+        playerHUD.SetStamina(playerUnit.currentStamina);
+        playerHUD.SetMP(playerUnit.currentMp);
+        playerHUD.SetHP(playerUnit.currentHp);
+
+        dialogueText.text = playerUnit.unitName + " uses Revitalize!\nRestores " + hpRecovery + "HP and " + staminaRestore + " stamina!";
+
+        yield return new WaitForSeconds(2f);
+
+        state = BattleState.ENEMYTURN;
+        StartCoroutine(EnemyTurn());
+    }
+}
+
+/* IEnumerator PlayerProtection()
+{
+    int mpCost = 8;
+    int protectionRounds = 5;
+    int protectionDefenseIncrease = 4;
+
+    if (playerUnit.currentMp < mpCost)
+    {
+        menuNegative.Play();
+        dialogueText.text = "Not enough MP for Protection!";
+    }
+    else
+    {
+        playerUnit.protectedRounds = protectionRounds;
+        playerUnit.protectedDefenseIncrease = protectionDefenseIncrease;
+        playerUnit.DeductMP(mpCost);
+
+        playerHUD.SetMP(playerUnit.currentMp);
+        playerHUD.SetStatusEffects(playerUnit);
+
+        dialogueText.text = playerUnit.unitName + " uses Protection!\n" + playerUnit.unitName + " boosts their defence!";
+
+        yield return new WaitForSeconds(2f);
+
+        state = BattleState.ENEMYTURN;
+        StartCoroutine(EnemyTurn());
+    }
+} */
+
+    IEnumerator PlayerIcyWind()
+{
+    int mpCost = 12;
+
+    if (playerUnit.currentMp < mpCost)
+    {
+        menuNegative.Play();
+        dialogueText.text = "Not enough MP for Icy Wind!";
+    }
+    else
+    {
+        int damageToEnemy = 9;
+        int actualDamage = enemyUnit.TakeDamage(damageToEnemy);
+
+        playerUnit.DeductMP(mpCost);
+        playerHUD.SetMP(playerUnit.currentMp);
+
+        enemyUnit.DrainStamina(1);
+        enemyHUD.SetStamina(enemyUnit.currentStamina);
+
+        dialogueText.text = "Brrr! " + playerUnit.unitName + " casts Icy Wind!\n" + enemyUnit.unitName + " takes " + actualDamage + " damage and loses 1 stamina!";
+
+        yield return new WaitForSeconds(2f);
+
+        enemyHUD.SetHP(enemyUnit.currentHp);
+
+        if (enemyUnit.IsKo())
+        {
+            state = BattleState.VICTORY;
+            EndBattle();
+        }
+        else
+        {
+            state = BattleState.ENEMYTURN;
+            StartCoroutine(EnemyTurn());
+        }
+    }
+}
+
+        IEnumerator mysticProjectile() { 
+        int mpCost = 24;
+
+        if (playerUnit.currentMp >= mpCost) {
         healSfx.Play();
         int damageToEnemy = 21;
         int actualDamage = enemyUnit.TakeDamage(damageToEnemy);
 
-        playerUnit.currentMp -= 8;
+        playerUnit.currentMp -= mpCost;
         playerHUD.SetMP(playerUnit.currentMp);
 
         dialogueText.text = "Zap! " + playerUnit.unitName + " casts Mystic Projectile(TM)! \n" + enemyUnit.unitName + " takes " + actualDamage + " damage!";
@@ -432,13 +532,36 @@ public void OnChargeButton(){
 
     }
 
-public void OnPlayerHeavyAttack(){
+public void OnHeavyAttack(){
         if (state != BattleState.PLAYERTURN)
         return;
 
         StartCoroutine(PlayerHeavyAttack());
 
     }
+
+    public void OnIcyWind(){
+        if (state != BattleState.PLAYERTURN)
+        return;
+
+        StartCoroutine(PlayerIcyWind());
+
+    }
+
+    public void OnRevitalize(){
+        if (state != BattleState.PLAYERTURN)
+        return;
+
+        StartCoroutine(PlayerRevitalize());
+
+    }
+
+      /* public void OnProtection(){
+        if (state != BattleState.PLAYERTURN)
+        return;
+
+        StartCoroutine(PlayerProtection());
+    } */
     
 
 }
