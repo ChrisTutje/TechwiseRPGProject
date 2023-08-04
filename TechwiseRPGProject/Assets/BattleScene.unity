@@ -6347,7 +6347,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1719669303}
         m_TargetAssemblyTypeName: BattleSystem, Assembly-CSharp
-        m_MethodName: OnPlayerHeavyAttack
+        m_MethodName: OnHeavyAttack
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
