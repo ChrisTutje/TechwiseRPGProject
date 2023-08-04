@@ -58,8 +58,10 @@ public class Unit : MonoBehaviour //variable fields for each unit
     //public int resistance = luck + lckMod ;
     //public int critical = luck + critMod ; 
 
+    //public int protectedRounds;
+    //public int protectedDefenseIncrease;
 
-    //Middle-man code, very janky
+    //Middle-man code
     private void Start()
     {
         CalculateStats();
@@ -147,4 +149,6 @@ public class Unit : MonoBehaviour //variable fields for each unit
     {
         return currentStamina <= 0;
     } 
+
+    
 }

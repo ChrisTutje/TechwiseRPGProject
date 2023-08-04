@@ -102,12 +102,15 @@ public void SetEXP(int exp) {
             statusEffectsText += "Exhausted\n";
         } 
 
-        
-
         if (unit.IsKo())
         {
            statusEffectsText += "KO\n";
         }
+
+        //if (unit.protectedRounds > 0)
+    //{
+        //statusEffectsText += "Protected (" + unit.protectedRounds + " rounds)\n";
+    //}
 
         return statusEffectsText;
 } 
