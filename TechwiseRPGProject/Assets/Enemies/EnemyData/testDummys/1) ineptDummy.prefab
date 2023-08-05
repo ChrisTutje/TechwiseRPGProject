@@ -104,3 +104,10 @@ MonoBehaviour:
   expDrop: 1
   attack: 1
   defence: 0
+  equippedWeapon:
+    weaponName: 
+    weaponAttack: 1
+  equippedArmor:
+    armorName: 
+    armorClass: 1
+    armorWeight: 2

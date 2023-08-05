@@ -61,6 +61,10 @@ public class Unit : MonoBehaviour //variable fields for each unit
     //public int protectedRounds;
     //public int protectedDefenseIncrease;
 
+    //equipment stats
+    public Weapon equippedWeapon;
+    public Armor equippedArmor;
+
     //Middle-man code
     private void Start()
     {
@@ -79,8 +83,8 @@ public class Unit : MonoBehaviour //variable fields for each unit
         maxStamina = endurance * 2; 
         currentStamina = maxStamina;
 
-        attack = strength; 
-        defence = 1; 
+        attack = strength  + equippedWeapon.weaponAttack ; 
+        defence = 1  + equippedArmor.armorClass ; 
 
     }
 
@@ -149,6 +153,10 @@ public class Unit : MonoBehaviour //variable fields for each unit
     {
         return currentStamina <= 0;
     } 
+
+    // ** vv EQUIPMENT vv ** //
+
+
 
     
 }
