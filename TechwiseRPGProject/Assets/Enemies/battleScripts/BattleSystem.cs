@@ -64,6 +64,11 @@ public class BattleSystem : MonoBehaviour
         IEnumerator PlayerAttack() { //Logic for the fight action
        int damageToEnemy = playerUnit.attack - enemyUnit.defence;
        int actualDamage = enemyUnit.TakeDamage(damageToEnemy);
+       int staminaCost = 1;
+            if (playerUnit.equippedArmor != null)
+            {
+                staminaCost *= playerUnit.equippedArmor.armorWeight;
+            }
 
           if (playerUnit.IsExhausted())
         {
@@ -83,7 +88,9 @@ public class BattleSystem : MonoBehaviour
             state = BattleState.VICTORY;
             EndBattle();
         } else {
-            playerUnit.DrainStamina(1); // Reduce player's stamina by 1
+
+            playerUnit.DrainStamina(staminaCost);
+
             playerHUD.SetStamina(playerUnit.currentStamina);
 
             state = BattleState.ENEMYTURN;
@@ -129,8 +136,13 @@ public class BattleSystem : MonoBehaviour
     IEnumerator PlayerCharge() { 
        int originalAttack = playerUnit.attack;
        int originalDefence = playerUnit.defence;
+       int staminaCost = 4;
+            if (playerUnit.equippedArmor != null)
+            {
+                staminaCost *= playerUnit.equippedArmor.armorWeight;
+            }
 
-          if (playerUnit.IsExhausted() || playerUnit.currentStamina < 4)
+          if (playerUnit.IsExhausted() || playerUnit.currentStamina < staminaCost)
         {
             menuNegative.Play();
             dialogueText.text = playerUnit.unitName + " is exhausted and cannot attack!";
@@ -152,7 +164,8 @@ public class BattleSystem : MonoBehaviour
             state = BattleState.VICTORY;
             EndBattle();
         } else {
-            playerUnit.DrainStamina(4); // Reduce player's stamina by 2
+ 
+            playerUnit.DrainStamina(staminaCost);
             playerHUD.SetStamina(playerUnit.currentStamina);
 
             state = BattleState.ENEMYTURN;
@@ -168,8 +181,13 @@ public class BattleSystem : MonoBehaviour
        IEnumerator PlayerHeavyAttack() { 
        int originalAttack = playerUnit.attack;
        int originalDefence = playerUnit.defence;
+       int staminaCost = 2;
+            if (playerUnit.equippedArmor != null)
+            {
+                staminaCost *= playerUnit.equippedArmor.armorWeight;
+            }
 
-          if (playerUnit.IsExhausted())
+          if (playerUnit.IsExhausted() || playerUnit.currentStamina < staminaCost)
         {
             menuNegative.Play();
             dialogueText.text = playerUnit.unitName + " is exhausted and cannot attack!";
@@ -193,7 +211,8 @@ public class BattleSystem : MonoBehaviour
             state = BattleState.VICTORY;
             EndBattle();
         } else {
-            playerUnit.DrainStamina(2); // Reduce player's stamina by 2
+           
+            playerUnit.DrainStamina(staminaCost);
             playerHUD.SetStamina(playerUnit.currentStamina);
 
             state = BattleState.ENEMYTURN;
@@ -318,7 +337,7 @@ public class BattleSystem : MonoBehaviour
         playerUnit.DeductMP(mpCost);
         playerHUD.SetMP(playerUnit.currentMp);
 
-        enemyUnit.DrainStamina(1);
+        enemyUnit.DrainStamina(4);
         enemyHUD.SetStamina(enemyUnit.currentStamina);
 
         dialogueText.text = "Brrr! " + playerUnit.unitName + " casts Icy Wind!\n" + enemyUnit.unitName + " takes " + actualDamage + " damage and loses 1 stamina!";
@@ -402,6 +421,11 @@ public class BattleSystem : MonoBehaviour
 IEnumerator EnemyTurn() {
         int damageToPlayer =  enemyUnit.attack - playerUnit.defence;
         int actualDamage = playerUnit.TakeDamage(damageToPlayer);
+        int staminaCost = 1;
+            if (enemyUnit.equippedArmor != null)
+            {
+                staminaCost *= enemyUnit.equippedArmor.armorWeight;
+            }
 
         if (enemyUnit.IsExhausted())
         {
@@ -425,7 +449,9 @@ IEnumerator EnemyTurn() {
             state = BattleState.DEFEAT;
             EndBattle();
         } else {
-            enemyUnit.DrainStamina(1); // Reduce enemy's stamina by 1
+            
+            enemyUnit.DrainStamina(staminaCost);
+            
             enemyHUD.SetStamina(enemyUnit.currentStamina);
 
 
