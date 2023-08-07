@@ -20,7 +20,6 @@ public class CharacterTurner
 
     public void TurnAround() => Facing = new Vector2Int(-Facing.x, -Facing.y);
 
-    //37.44
 
 }
 
