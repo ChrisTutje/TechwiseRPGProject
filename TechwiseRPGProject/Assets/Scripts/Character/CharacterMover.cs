@@ -47,6 +47,7 @@ public class CharacterMover
         }
 
         transform.position = endingPosition;
+        character.game.SwitchToSpecificScene();
         isMoving=false;
     }
 
