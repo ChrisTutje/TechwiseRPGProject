@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public enum BattleState { START, PLAYERTURN, ENEMYTURN, VICTORY, DEFEAT, FLEE } //list of phases
 
@@ -485,11 +486,23 @@ IEnumerator EnemyTurn() {
             dialogueText.text = "Conglaturations! You are winner!!! \n You gained " + enemyUnit.expDrop + " experience points!";
             battleTheme.Stop();
             victoryFanfare.Play(); //switch to the victory fanfare
+            StartCoroutine(SwitchGame());
+
         } else if (state == BattleState.DEFEAT){
             battleTheme.Stop(); //switch to the game over music
             gameoverTheme.Play(); 
             dialogueText.text = "Get gud, skrub.";
+            StartCoroutine(SwitchGame());
+
         } 
+   
+
+    }
+
+    IEnumerator SwitchGame()
+    {
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene("PlayerMovementtester");
     }
 
     public int roundCounter = 1;
