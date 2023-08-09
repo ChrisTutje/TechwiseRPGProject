@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class StationaryNPC : Character
 {
-    
+    //10:31
 
 
-    
+
 }
