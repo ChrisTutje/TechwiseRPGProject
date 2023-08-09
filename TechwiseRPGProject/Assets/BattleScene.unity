@@ -1248,7 +1248,7 @@ RectTransform:
   m_Children:
   - {fileID: 105422725}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4580,7 +4580,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -213.36383, y: 44.9}
+  m_AnchoredPosition: {x: -324.2, y: 40.1}
   m_SizeDelta: {x: 141.6426, y: 112.3369}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &847046673
@@ -8845,7 +8845,7 @@ RectTransform:
   - {fileID: 931262001}
   - {fileID: 288233290}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -9630,7 +9630,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -231.5, y: 185.5}
+  m_AnchoredPosition: {x: -342, y: 184}
   m_SizeDelta: {x: 228.91, y: 153.9688}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1502352556
@@ -10764,7 +10764,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1719669303
 MonoBehaviour:
@@ -13274,7 +13274,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 231, y: 181}
+  m_AnchoredPosition: {x: 337, y: 179}
   m_SizeDelta: {x: 452.8625, y: 232.4541}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2060209613
@@ -13450,7 +13450,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.4644599, y: 0.469}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 26, y: -180}
+  m_AnchoredPosition: {x: 13, y: -180}
   m_SizeDelta: {x: 273.25, y: 84.071}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2078868589
