@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(SpriteRenderer))]
+[RequireComponent(typeof(Animator))]
+
+
 public abstract class Character : MonoBehaviour
 {
     public CharacterMover Move {get; private set;}
