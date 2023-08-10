@@ -3,29 +3,46 @@ using UnityEngine.UI;
 
 public class SoundTestController : MonoBehaviour
 {
-    public Text trackSelectionText;
+    public Text trackSelectionText; 
     public AudioClip[] musicTracks;
+    public AudioSource audioSource0; //I tried making this section an array, however it created index errors in between objects
+    public AudioSource audioSource1;
+    public AudioSource audioSource2;
+    public AudioSource audioSource3;
+    public AudioSource audioSource4;
+    public AudioSource audioSource5;
+    public AudioSource audioSource6;
+
+    public AudioSource audioSource7;
+    public AudioSource audioSource8;
+    public AudioSource audioSource9;
+    public AudioSource audioSource10;
+    public AudioSource audioSource11;
+    public AudioSource audioSource12;
+    public AudioSource audioSource13;
+    public AudioSource audioSource14;
+    
+
     private int currentTrackIndex = 0;
-    private AudioSource[] audioSources; 
-    private AudioSource currentAudioSource; 
+    private AudioSource currentAudioSource;
 
     private void Start()
     {
-        audioSources = GetComponentsInChildren<AudioSource>(); 
         UpdateTrackSelectionText();
+        InitializePitch();
     }
 
     public void Play()
     {
         StopAllAudio();
-        
-        if (currentTrackIndex >= 0 && currentTrackIndex < musicTracks.Length)
+
+        currentAudioSource = GetCurrentAudioSource();
+        if (currentAudioSource != null)
         {
-            currentAudioSource = audioSources[currentTrackIndex];
             currentAudioSource.clip = musicTracks[currentTrackIndex];
             currentAudioSource.Play();
         }
-    } 
+    }
 
     public void Stop()
     {
@@ -37,27 +54,87 @@ public class SoundTestController : MonoBehaviour
 
     public void NextTrack()
     {
-        //currentTrackIndex = (currentTrackIndex + 1);
-        currentTrackIndex += 1;
+        StopAllAudio();
+        currentTrackIndex = (currentTrackIndex + 1) % musicTracks.Length;
         UpdateTrackSelectionText();
     }
 
     public void PreviousTrack()
     {
-        currentTrackIndex = (currentTrackIndex - 1 + musicTracks.Length) % musicTracks.Length ;
+        StopAllAudio();
+        currentTrackIndex = (currentTrackIndex - 1 + musicTracks.Length) % musicTracks.Length;
         UpdateTrackSelectionText();
     }
 
     private void StopAllAudio()
     {
-        foreach (var audioSource in audioSources)
+        if (currentAudioSource != null)
         {
-            audioSource.Stop();
+            currentAudioSource.Stop();
+        }
+    }
+
+    private AudioSource GetCurrentAudioSource()
+    {
+        switch (currentTrackIndex)
+        {
+            case 0: return audioSource0;
+            case 1: return audioSource1;
+            case 2: return audioSource2;
+            case 3: return audioSource3;
+            case 4: return audioSource4;
+            case 5: return audioSource5;
+
+            case 6: return audioSource6;
+            case 7: return audioSource7;
+            case 8: return audioSource8;
+            case 9: return audioSource9;
+            case 10: return audioSource10;
+            case 11: return audioSource11;
+            case 12: return audioSource12;
+            case 13: return audioSource13;
+            case 14: return audioSource14;
+            default: return null;
         }
     }
 
     private void UpdateTrackSelectionText()
     {
-        trackSelectionText.text = musicTracks[currentTrackIndex].name;
+        if (currentTrackIndex >= 0 && currentTrackIndex < musicTracks.Length)
+        {
+            trackSelectionText.text = musicTracks[currentTrackIndex].name;
+        }
+    }
+
+    private void InitializePitch()
+{
+    audioSource0.pitch = 1.0f;
+    audioSource1.pitch = 1.0f;
+    audioSource2.pitch = 1.0f;
+    audioSource3.pitch = 1.0f;
+    audioSource4.pitch = 1.0f;
+    audioSource5.pitch = 1.0f;
+
+    audioSource6.pitch = 1.0f;
+    audioSource7.pitch = 1.0f;
+    audioSource8.pitch = 1.0f;
+    audioSource9.pitch = 1.0f;
+    audioSource10.pitch = 1.0f;
+    audioSource11.pitch = 1.0f;
+    audioSource12.pitch = 1.0f;
+    audioSource13.pitch = 1.0f;
+    audioSource14.pitch = 1.0f;
+}
+
+    public void SetPitch(float newPitch)
+    {
+        if (currentAudioSource != null)
+        {
+            currentAudioSource.pitch = newPitch;
+        }
     }
 }
+
+
+
+
