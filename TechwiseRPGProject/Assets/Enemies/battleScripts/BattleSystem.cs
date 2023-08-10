@@ -31,6 +31,7 @@ public class BattleSystem : MonoBehaviour
     public AudioSource attackSfx;
     public AudioSource healSfx;
     public AudioSource menuNegative;
+    public AudioSource blockSFX;
    
     void Start()
     {
@@ -104,6 +105,8 @@ public class BattleSystem : MonoBehaviour
 
        IEnumerator PlayerBlock() { //blocking action
        int originalDefence = playerUnit.defence; 
+
+       blockSFX.Play();
 
         playerUnit.Block();
         playerUnit.defence *= 2; //double unit's defence while blocking
