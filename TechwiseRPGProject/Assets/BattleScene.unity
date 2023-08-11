@@ -1926,7 +1926,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.6173034}
   m_AnchorMax: {x: 0.5, y: 0.6173034}
-  m_AnchoredPosition: {x: -2, y: 56}
+  m_AnchoredPosition: {x: -2, y: 61}
   m_SizeDelta: {x: 166.0587, y: 45.1467}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &374802654
@@ -8871,6 +8871,7 @@ MonoBehaviour:
   attackSfx: {fileID: 266901996}
   healSfx: {fileID: 779775322}
   menuNegative: {fileID: 276986306}
+  blockSFX: {fileID: 0}
   roundCounter: 1
 --- !u!1 &1741474783
 GameObject:
