@@ -31,6 +31,7 @@ public class BattleSystem : MonoBehaviour
     public AudioSource attackSfx;
     public AudioSource healSfx;
     public AudioSource menuNegative;
+    public AudioSource blockSFX;
    
     void Start()
     {
@@ -104,6 +105,8 @@ public class BattleSystem : MonoBehaviour
 
        IEnumerator PlayerBlock() { //blocking action
        int originalDefence = playerUnit.defence; 
+
+       blockSFX.Play();
 
         playerUnit.Block();
         playerUnit.defence *= 2; //double unit's defence while blocking
@@ -225,20 +228,6 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
-       /* IEnumerator PlayerHeal() { //healing action
-        healSfx.Play();
-        int hpRecovery = 8; //how much action heals by
-        playerUnit.Heal(hpRecovery);
-
-        playerHUD.SetHP(playerUnit.currentHp);
-        dialogueText.text = playerUnit.unitName + " regained " + hpRecovery  + " hit points.";
-
-        yield return new WaitForSeconds(2f);
-
-        state = BattleState.ENEMYTURN;
-        StartCoroutine(EnemyTurn());
-    } */
-
     IEnumerator PlayerCure() { //healing action
     int mpCost = 8;
       if (playerUnit.currentMp >= mpCost){
@@ -291,35 +280,6 @@ public class BattleSystem : MonoBehaviour
         StartCoroutine(EnemyTurn());
     }
 }
-
-/* IEnumerator PlayerProtection()
-{
-    int mpCost = 8;
-    int protectionRounds = 5;
-    int protectionDefenseIncrease = 4;
-
-    if (playerUnit.currentMp < mpCost)
-    {
-        menuNegative.Play();
-        dialogueText.text = "Not enough MP for Protection!";
-    }
-    else
-    {
-        playerUnit.protectedRounds = protectionRounds;
-        playerUnit.protectedDefenseIncrease = protectionDefenseIncrease;
-        playerUnit.DeductMP(mpCost);
-
-        playerHUD.SetMP(playerUnit.currentMp);
-        playerHUD.SetStatusEffects(playerUnit);
-
-        dialogueText.text = playerUnit.unitName + " uses Protection!\n" + playerUnit.unitName + " boosts their defence!";
-
-        yield return new WaitForSeconds(2f);
-
-        state = BattleState.ENEMYTURN;
-        StartCoroutine(EnemyTurn());
-    }
-} */
 
     IEnumerator PlayerIcyWind()
 {
@@ -410,7 +370,8 @@ public class BattleSystem : MonoBehaviour
         dialogueText.text = "Escape successful! " + playerUnit.name + " ran away!";
         state = BattleState.FLEE;
         EndBattle(); battleTheme.Stop();
-        StartCoroutine(SwitchGame());
+        //StartCoroutine(SwitchGame());
+        SceneManager.LoadScene("PlayerMovementtester");
     }
     else
     {
@@ -489,13 +450,16 @@ IEnumerator EnemyTurn() {
             playerHUD.SetEXP(playerUnit.currentExp);
             dialogueText.text = "Conglaturations! You are winner!!! \n You gained " + enemyUnit.expDrop + " experience points!";
 
-            StartCoroutine(SwitchGame());
+            //StartCoroutine(SwitchGame());
+            SceneManager.LoadScene("PlayerMovementtester");
 
         } else if (state == BattleState.DEFEAT){
             battleTheme.Stop(); //switch to the game over music
-            gameoverTheme.Play(); 
+            //gameoverTheme.Play(); 
             dialogueText.text = "Get gud, skrub.";
-            StartCoroutine(SwitchGame());
+            //StartCoroutine(SwitchGame());
+           // yield return new WaitForSeconds(2f);
+            SceneManager.LoadScene("Game_Over");
 
         } 
    
@@ -520,13 +484,6 @@ IEnumerator EnemyTurn() {
         StartCoroutine(PlayerAttack());
 
     }
-
-     /* public void OnHealButton(){
-       if (state != BattleState.PLAYERTURN)
-        return;
-
-        StartCoroutine(PlayerHeal());
-    } */
 
     public void OnCureButton()
 {
@@ -597,13 +554,5 @@ public void OnHeavyAttack(){
         StartCoroutine(PlayerRevitalize());
 
     }
-
-      /* public void OnProtection(){
-        if (state != BattleState.PLAYERTURN)
-        return;
-
-        StartCoroutine(PlayerProtection());
-    } */
     
-
 }
