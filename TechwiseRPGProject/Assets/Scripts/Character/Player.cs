@@ -11,6 +11,10 @@ public class Player : Character
 
     protected override void Awake() {
         base.Awake();
+
+        
+        
+
         pm = FindObjectOfType<Character>().pauseMenu;
         InputHandler = new InputHandler(this, pm);
     }
