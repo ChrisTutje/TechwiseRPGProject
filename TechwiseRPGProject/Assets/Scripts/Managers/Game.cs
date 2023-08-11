@@ -3,25 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public enum GameState
-{
-    Overworld,
-    Cutscene,
-    Battle,
-    Menu,
-}
+
 
 public class Game  
 {
     public Character character;
     public Vector2 playerPosition;
     
-   public static GameState State {get; private set;}
-   public static Map Map {get; private set; }
-   public static Player Player {get; private set; }
+    public Game(Character character)
+    {
+        this.character = character;
+    }
 
 
-    
+
    public void SwitchToSpecificScene()
     {
         float probability = .05f; // 10% chance
@@ -35,7 +30,6 @@ public class Game
         else if (SceneManager.GetSceneByName("BattleScene").isLoaded)
         {
             SceneManager.LoadScene("PlayerMovementtester");
-
         }
     }
 
@@ -47,6 +41,5 @@ public class Game
 
 
 }
-
 
 

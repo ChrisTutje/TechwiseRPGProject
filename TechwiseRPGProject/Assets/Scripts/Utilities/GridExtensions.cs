@@ -19,4 +19,3 @@ public static class GridExtensions
                 return (Vector2)grid.GetCellCenterWorld(threeDimensionCell); //more casting
             }
     }
-
