@@ -13,7 +13,6 @@ public abstract class Character : MonoBehaviour
     public CharacterAnimator Animator{get; private set;}
     public Game game{get; private set;}
 
-    public Vector2Int currentCell => Map.Grid.GetCell2D(this.gameObject);
 
     public PauseMenu pauseMenu;
 
@@ -30,15 +29,14 @@ public abstract class Character : MonoBehaviour
             Move = new CharacterMover(this);
             Turn = new CharacterTurner();
             Animator = new CharacterAnimator(this);
+            game = new Game(this);
+
         }
     }
     protected virtual void Start()
     {
-      
-
         Vector2Int currentCell = Map.Grid.GetCell2D(this.gameObject); //calling personal method made in GridExtensions
         transform.position = Map.Grid.GetCellCenter2D(currentCell);        //moved this to character for other sprites that we add to snap into a grid spot as well
-        
         Map.OccupiedCells.Add(currentCell);
     }
     protected virtual void Update()
