@@ -21,7 +21,6 @@ public class SoundTestController : MonoBehaviour
     public AudioSource audioSource12;
     public AudioSource audioSource13;
     public AudioSource audioSource14;
-    public AudioSource audioSource15;
     
 
     private int currentTrackIndex = 0;
@@ -95,7 +94,6 @@ public class SoundTestController : MonoBehaviour
             case 12: return audioSource12;
             case 13: return audioSource13;
             case 14: return audioSource14;
-            case 15: return audioSource15;
             default: return null;
         }
     }
@@ -126,7 +124,6 @@ public class SoundTestController : MonoBehaviour
     audioSource12.pitch = 1.0f;
     audioSource13.pitch = 1.0f;
     audioSource14.pitch = 1.0f;
-    audioSource15.pitch = 1.0f;
 }
 
     public void SetPitch(float newPitch)
