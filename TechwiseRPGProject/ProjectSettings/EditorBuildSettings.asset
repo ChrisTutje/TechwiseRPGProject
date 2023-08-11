@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Update.unity
     guid: 85ec2b0d1950058498b99ca4e405e911
   - enabled: 1
-    path: Assets/PlayerMovementtester.unity
+    path: Assets/DebugRoom.unity
     guid: 82dc7f44478f0f14294ec0c90c7c17c9
   - enabled: 1
     path: Assets/Cutscenes/Forest Scene.unity
