@@ -12,8 +12,8 @@ public class SoundTestController : MonoBehaviour
     public AudioSource audioSource4;
     public AudioSource audioSource5;
     public AudioSource audioSource6;
-
     public AudioSource audioSource7;
+
     public AudioSource audioSource8;
     public AudioSource audioSource9;
     public AudioSource audioSource10;
@@ -22,6 +22,7 @@ public class SoundTestController : MonoBehaviour
     public AudioSource audioSource13;
     public AudioSource audioSource14;
     public AudioSource audioSource15;
+    public AudioSource audioSource16;
     
 
     private int currentTrackIndex = 0;
@@ -85,9 +86,9 @@ public class SoundTestController : MonoBehaviour
             case 3: return audioSource3;
             case 4: return audioSource4;
             case 5: return audioSource5;
-
             case 6: return audioSource6;
             case 7: return audioSource7;
+
             case 8: return audioSource8;
             case 9: return audioSource9;
             case 10: return audioSource10;
@@ -96,6 +97,7 @@ public class SoundTestController : MonoBehaviour
             case 13: return audioSource13;
             case 14: return audioSource14;
             case 15: return audioSource15;
+            case 16: return audioSource16;
             default: return null;
         }
     }
@@ -116,8 +118,8 @@ public class SoundTestController : MonoBehaviour
     audioSource3.pitch = 1.0f;
     audioSource4.pitch = 1.0f;
     audioSource5.pitch = 1.0f;
-
     audioSource6.pitch = 1.0f;
+
     audioSource7.pitch = 1.0f;
     audioSource8.pitch = 1.0f;
     audioSource9.pitch = 1.0f;
@@ -127,6 +129,7 @@ public class SoundTestController : MonoBehaviour
     audioSource13.pitch = 1.0f;
     audioSource14.pitch = 1.0f;
     audioSource15.pitch = 1.0f;
+    audioSource16.pitch = 1.0f;
 }
 
     public void SetPitch(float newPitch)

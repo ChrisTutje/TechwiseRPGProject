@@ -450,15 +450,12 @@ IEnumerator EnemyTurn() {
             playerHUD.SetEXP(playerUnit.currentExp);
             dialogueText.text = "Conglaturations! You are winner!!! \n You gained " + enemyUnit.expDrop + " experience points!";
 
-            StartCoroutine(SwitchGame());
+            StartCoroutine(SwitchGameVictory());
             //SceneManager.LoadScene("PlayerMovementtester");
 
         } else if (state == BattleState.DEFEAT){
             battleTheme.Stop(); //switch to the game over music
-            //gameoverTheme.Play(); 
             dialogueText.text = "Get gud, skrub.";
-            //StartCoroutine(SwitchGame());
-           // yield return new WaitForSeconds(2f);
             SceneManager.LoadScene("Game_Over");
 
         } 
@@ -469,7 +466,13 @@ IEnumerator EnemyTurn() {
     IEnumerator SwitchGame()
     {
         yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene("PlayerMovementtester");
+        SceneManager.LoadScene("MainGame");
+    }
+
+    IEnumerator SwitchGameVictory()
+    {
+        yield return new WaitForSeconds(40f);
+        SceneManager.LoadScene("MainGame");
     }
 
     public int roundCounter = 1;
