@@ -778,7 +778,7 @@ Transform:
   - {fileID: 624427369}
   - {fileID: 1051762375}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &512344942
 MonoBehaviour:
@@ -5320,6 +5320,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 0}
+  interaction: {fileID: 11400000, guid: bbcd4ba3de603ea4da05a62ff38b0692, type: 2}
 --- !u!95 &1852523847
 Animator:
   serializedVersion: 5
@@ -5735,32 +5736,6 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &2022185379 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8423817317366893217, guid: 9d04bc710ee52c240a87a0b71ec51dfb, type: 3}
-  m_PrefabInstance: {fileID: 8423817318901934099}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &2022185383
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2022185379}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f6ab0caa107654a458a1204c1f2da693, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2048084674
 GameObject:
   m_ObjectHideFlags: 0
@@ -6113,7 +6088,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &8423817318901934099
 PrefabInstance:
@@ -6122,6 +6097,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3460332578092445330, guid: 9d04bc710ee52c240a87a0b71ec51dfb, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3460332578092445330, guid: 9d04bc710ee52c240a87a0b71ec51dfb, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1030761543
+      objectReference: {fileID: 0}
     - target: {fileID: 8423817317366893216, guid: 9d04bc710ee52c240a87a0b71ec51dfb, type: 3}
       propertyPath: m_RootOrder
       value: 2

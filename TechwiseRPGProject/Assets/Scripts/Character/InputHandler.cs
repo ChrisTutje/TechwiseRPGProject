@@ -35,9 +35,14 @@ public class InputHandler
         {
             keyPressed = KeyCode.S;
         }
-        else if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             keyPressed = KeyCode.Escape;
+        }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            keyPressed = KeyCode.E; 
+            
         }
 
         if (keyPressed != KeyCode.P)
@@ -54,6 +59,9 @@ public class InputHandler
     {
             switch(keyPressed)
             {
+                case(KeyCode.E):
+                    ProcessInteract();
+                    break;
                 case(KeyCode.Escape):
                     pm.PMRunner();
                     break;
@@ -64,6 +72,7 @@ public class InputHandler
                 case(KeyCode.S):
                     ProcessMovementInput(keyPressed);
                     break;  
+                
                 
             }
     }
@@ -90,6 +99,21 @@ public class InputHandler
                 break;
 
         }
-        player.Move.Move(direction);
+        player.Move.TryMove(direction);
+    }
+
+    private void ProcessInteract()
+    {
+        Vector2Int cellToCheck = player.Facing + Map.Grid.GetCell2D(player.gameObject);
+        
+        if (!Map.OccupiedCells.ContainsKey(cellToCheck))
+        {
+            return;
+
+        }
+        if ((Map.OccupiedCells[cellToCheck]) is IInteractable interactable)
+        {
+            interactable.Interact();
+        }
     }
 }
