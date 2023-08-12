@@ -9,7 +9,7 @@ public class CharacterMover
     private Vector2Int currentCell => Map.Grid.GetCell2D(character.gameObject); //reference where character currently is
     private const float TIME_TO_MOVE_ONE_SQUARE = .375f;
 
-    public bool isMoving {get; private set;}
+    public bool isMoving {get; private set;} = false; 
     public CharacterMover(Character character)
     {
 
@@ -17,28 +17,43 @@ public class CharacterMover
         this.transform = character.transform;
     }
 
-    public void Move(Vector2Int direction)
+    public void TryMove(Vector2Int direction)
     {
-    if (direction.IsBasic() && isMoving==false && !Map.OccupiedCells.Contains(currentCell + direction))
+        if(isMoving)
         {
+            return;
+        }
+
+
+        Vector2Int targetCell = currentCell + direction;
+
+
+    if (direction.IsBasic() && IsCellEmpty(targetCell))
+        {
+            
+        Map.OccupiedCells.Add((currentCell + direction), character); //adding cell we move to occupied cells. 
+        Map.OccupiedCells.Remove(currentCell); //removing old cell
             character.StartCoroutine(Co_Move(direction)); 
         }
 
     }
 
+    private bool IsCellEmpty(Vector2Int cell)
+    {
+        return !(Map.OccupiedCells.ContainsKey(cell));
+    }
+
     public IEnumerator Co_Move(Vector2Int direction)
     {
         isMoving=true;
-        character.Turn.Turn(direction);        
+        character.Turn.Turn(direction);  
+
         Vector2Int startingCell = currentCell;
         Vector2Int endingCell = startingCell+direction;
 
         Vector2 startingPosition = Map.Grid.GetCellCenter2D(startingCell);
         Vector2 endingPosition = Map.Grid.GetCellCenter2D(endingCell);
 
-        Map.OccupiedCells.Add(currentCell + direction); //adding cell we move to occupied cells. 
-        Map.OccupiedCells.Remove(currentCell); //removing old cell
-        
 
         float elapsedTime = 0f;
         while((Vector2)transform.position != endingPosition)
@@ -50,6 +65,7 @@ public class CharacterMover
 
         transform.position = endingPosition;
         character.game.SwitchToSpecificScene();
+
         isMoving=false;
     }
 
