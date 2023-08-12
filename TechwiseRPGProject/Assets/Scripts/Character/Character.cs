@@ -37,7 +37,7 @@ public abstract class Character : MonoBehaviour
     {
         Vector2Int currentCell = Map.Grid.GetCell2D(this.gameObject); //calling personal method made in GridExtensions
         transform.position = Map.Grid.GetCellCenter2D(currentCell);        //moved this to character for other sprites that we add to snap into a grid spot as well
-        Map.OccupiedCells.Add(currentCell);
+        Map.OccupiedCells.Add(currentCell, this);
     }
     protected virtual void Update()
     {
