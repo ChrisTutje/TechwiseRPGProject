@@ -370,8 +370,8 @@ public class BattleSystem : MonoBehaviour
         dialogueText.text = "Escape successful! " + playerUnit.name + " ran away!";
         state = BattleState.FLEE;
         EndBattle(); battleTheme.Stop();
-        //StartCoroutine(SwitchGame());
-        SceneManager.LoadScene("PlayerMovementtester");
+        StartCoroutine(SwitchGame());
+        //SceneManager.LoadScene("PlayerMovementtester");
     }
     else
     {
@@ -450,8 +450,8 @@ IEnumerator EnemyTurn() {
             playerHUD.SetEXP(playerUnit.currentExp);
             dialogueText.text = "Conglaturations! You are winner!!! \n You gained " + enemyUnit.expDrop + " experience points!";
 
-            //StartCoroutine(SwitchGame());
-            SceneManager.LoadScene("PlayerMovementtester");
+            StartCoroutine(SwitchGame());
+            //SceneManager.LoadScene("PlayerMovementtester");
 
         } else if (state == BattleState.DEFEAT){
             battleTheme.Stop(); //switch to the game over music

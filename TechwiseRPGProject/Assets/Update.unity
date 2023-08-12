@@ -9268,7 +9268,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4084aca2782e28946a2b1eb5e97ac3c0, type: 3}
   - {fileID: 8300000, guid: 6be469224961b5a4396ac023943e5d16, type: 3}
   - {fileID: 8300000, guid: 7fdc15ce684b1f045a604d73c326b981, type: 3}
-  - {fileID: 8300000, guid: 35985ed26e51e6047b4c8e57d598b529, type: 3}
+  - {fileID: 8300000, guid: 0253c863354f51f4180d5a7471dfc283, type: 3}
   - {fileID: 8300000, guid: ba1a9d7e9904e974b8c3ffb28bce324d, type: 3}
   audioSource0: {fileID: 790995503}
   audioSource1: {fileID: 1634158499}
@@ -9285,6 +9285,7 @@ MonoBehaviour:
   audioSource12: {fileID: 697850016}
   audioSource13: {fileID: 1723410979}
   audioSource14: {fileID: 1087371089}
+  audioSource15: {fileID: 422018031}
 --- !u!82 &1088715541
 AudioSource:
   m_ObjectHideFlags: 0
