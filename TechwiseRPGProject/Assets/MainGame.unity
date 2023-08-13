@@ -32974,7 +32974,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1274870840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34444,6 +34444,9 @@ GameObject:
   - component: {fileID: 1581421291}
   - component: {fileID: 1581421290}
   - component: {fileID: 1581421289}
+  - component: {fileID: 1581421297}
+  - component: {fileID: 1581421296}
+  - component: {fileID: 1581421295}
   m_Layer: 5
   m_Name: Pause Menu stuff
   m_TagString: Untagged
@@ -34582,6 +34585,47 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1581421295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581421287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eee3386765c7dc641a30af499bbe104b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainSceneName: MainScene
+  quitToTitleButton: {fileID: 2006747884}
+--- !u!114 &1581421296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581421287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eee3386765c7dc641a30af499bbe104b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainSceneName: MainScene
+  quitToTitleButton: {fileID: 0}
+--- !u!114 &1581421297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581421287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 911506d97f6c766418d10eae01e18fd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resolutionDropdown: {fileID: 0}
 --- !u!1 &1598686940
 GameObject:
   m_ObjectHideFlags: 0
@@ -35643,6 +35687,7 @@ GameObject:
   - component: {fileID: 2006747886}
   - component: {fileID: 2006747885}
   - component: {fileID: 2006747884}
+  - component: {fileID: 2006747887}
   m_Layer: 5
   m_Name: Quit bttn
   m_TagString: Untagged
@@ -35715,13 +35760,25 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2069635316}
         m_TargetAssemblyTypeName: BatttlePauseMenu, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2069635311}
+        m_TargetAssemblyTypeName: BatttlePauseMenu, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -35765,6 +35822,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2006747882}
   m_CullTransparentMesh: 1
+--- !u!114 &2006747887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2006747882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 911506d97f6c766418d10eae01e18fd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resolutionDropdown: {fileID: 0}
 --- !u!1 &2022355502
 GameObject:
   m_ObjectHideFlags: 0
