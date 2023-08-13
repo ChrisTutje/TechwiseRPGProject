@@ -8,11 +8,11 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Collisions
   - Water
   - UI
-  - 
-  - 
+  - Ground
+  - Characters
   - 
   - 
   - 

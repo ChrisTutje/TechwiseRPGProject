@@ -19,28 +19,38 @@ public class CharacterMover
 
     public void TryMove(Vector2Int direction)
     {
-        if(isMoving)
-        {
-            return;
-        }
-
-
         Vector2Int targetCell = currentCell + direction;
-
-
-    if (direction.IsBasic() && IsCellEmpty(targetCell))
+        if(isMoving || !direction.IsBasic()){return;}
+        if(CanMoveIntoCell(targetCell, direction))
         {
-            
-        Map.OccupiedCells.Add((currentCell + direction), character); //adding cell we move to occupied cells. 
-        Map.OccupiedCells.Remove(currentCell); //removing old cell
+            Map.OccupiedCells.Add((currentCell + direction), character); //adding cell we move to occupied cells. 
+            Map.OccupiedCells.Remove(currentCell); //removing old cell
             character.StartCoroutine(Co_Move(direction)); 
         }
+    }
+    private bool CanMoveIntoCell(Vector2Int targetCell, Vector2Int direction)
+    {
+    if (IsCellOccupied(targetCell))
+        {
+            return false;
+        }
+        Ray2D ray = new Ray2D(Map.Grid.GetCellCenter2D(currentCell), direction);
+        RaycastHit2D[] hits = Physics2D.RaycastAll(ray.origin, ray.direction);
+        Debug.DrawRay(ray.origin, ray.direction, Color.red, 2.0f);
 
+        foreach(RaycastHit2D hit in hits)
+        {
+            if(hit.distance < Map.Grid.cellSize.x)
+            {
+                return false;
+            }
+        }
+        return true;
     }
 
-    private bool IsCellEmpty(Vector2Int cell)
+    private bool IsCellOccupied(Vector2Int cell)
     {
-        return !(Map.OccupiedCells.ContainsKey(cell));
+        return (Map.OccupiedCells.ContainsKey(cell));
     }
 
     public IEnumerator Co_Move(Vector2Int direction)
