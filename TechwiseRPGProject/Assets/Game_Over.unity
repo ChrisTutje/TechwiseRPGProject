@@ -502,6 +502,7 @@ GameObject:
   - component: {fileID: 1151119210}
   - component: {fileID: 1151119209}
   - component: {fileID: 1151119211}
+  - component: {fileID: 1151119212}
   m_Layer: 5
   m_Name: Retry Button
   m_TagString: Untagged
@@ -612,6 +613,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1151119212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151119207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ffcd6b0480314673a2ea0e5e94d9bb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  retry: {fileID: 1151119211}
 --- !u!1 &1181020016
 GameObject:
   m_ObjectHideFlags: 0
@@ -752,6 +766,7 @@ GameObject:
   - component: {fileID: 1414899434}
   - component: {fileID: 1414899433}
   - component: {fileID: 1414899435}
+  - component: {fileID: 1414899436}
   m_Layer: 5
   m_Name: Quit Button
   m_TagString: Untagged
@@ -862,6 +877,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1414899436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414899431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82b656ab3f8d74fd599eada8a21c7ea8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quit: {fileID: 0}
 --- !u!1 &1466873856
 GameObject:
   m_ObjectHideFlags: 0

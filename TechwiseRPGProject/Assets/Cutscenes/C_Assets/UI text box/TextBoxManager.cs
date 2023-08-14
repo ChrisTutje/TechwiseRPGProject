@@ -43,7 +43,7 @@ public class TextBoxManager : MonoBehaviour
 
         if(currentLine > endAtLine){
             //textBox.SetActive(false);
-            SceneManager.LoadScene("PlayerMovementtester");
+            SceneManager.LoadScene("MainGame");
         }
 
     }
