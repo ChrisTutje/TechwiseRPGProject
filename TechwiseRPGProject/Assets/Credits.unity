@@ -589,7 +589,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -157.00797, y: -2}
+  m_AnchoredPosition: {x: -157.00797, y: 46}
   m_SizeDelta: {x: 311.3772, y: 433.2383}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1010621592
@@ -621,7 +621,7 @@ MonoBehaviour:
     Animation
 
 
-    Storyboard
+    Story & Cinematics
 
 
     Programmers
@@ -767,9 +767,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'RETURN OF THE FALLEN
-
-    Team 14'
+  m_text: RETURN OF THE FALLEN
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -778,8 +776,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4280841088
+  m_fontColor: {r: 0.5, g: 0.44947386, b: 0.15801886, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1033,7 +1031,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 138, y: -1}
+  m_AnchoredPosition: {x: 138, y: 47}
   m_SizeDelta: {x: 277.3613, y: 433.2383}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1307349863
@@ -1056,7 +1054,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Chris Tutje\n\nEric Holman\n\nAdam Ahmetasevic \n\nAmber Miller\n\nChris
+  m_text: "Chris Tutje\n\nEric Holman\n\nAdam Ahmetasevic \n\nAmber Miller\n\n\nChris
     Tutje\nEric Holman\nAdam Ahmetasevic \nAmber Miller\nJaya Sicard\n\nTechWise\nGoogle"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
