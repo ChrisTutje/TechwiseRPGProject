@@ -469,13 +469,33 @@ IEnumerator EnemyTurn() {
         SceneManager.LoadScene("MainGame");
     }
 
+    /* IEnumerator SwitchGameVictory()
+    {
+        yield return new WaitForSeconds(40f);
+        SceneManager.LoadScene("Credits");
+    } */
+
     IEnumerator SwitchGameVictory()
+{
+    
+
+    string currentSceneName = SceneManager.GetActiveScene().name;
+
+    if (currentSceneName == "FelipeBossBattle")
     {
         yield return new WaitForSeconds(40f);
         SceneManager.LoadScene("Credits");
     }
+    else if (currentSceneName == "BattleScene")
+    {
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene("MainGame");
+    }
+}
 
-    public int roundCounter = 1;
+    public int roundCounter = 1; 
+
+    
 
 
     //**vvv Logic for Action Moves go here vvv **// 
