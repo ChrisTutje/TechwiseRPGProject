@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7614909473026312747}
   - component: {fileID: 3311816089669334108}
   - component: {fileID: 6323021816030238425}
+  - component: {fileID: -170371542360738239}
   m_Layer: 5
   m_Name: PlayerCharacter
   m_TagString: Untagged
@@ -67,9 +68,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c58c37040aa1c9f42a268d70df019f9b, type: 3}
+  m_Sprite: {fileID: 269345296, guid: 83b44bd00119a714d805519dbfec9f84, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -111,3 +112,24 @@ MonoBehaviour:
     armorName: Plot Armor
     armorClass: 1
     armorWeight: 2
+--- !u!95 &-170371542360738239
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3929587845492748558}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cf3b9c9da3bda0041b06e0cee39d8f82, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

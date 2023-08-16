@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7614909473026312747}
   - component: {fileID: 3311816089669334108}
   - component: {fileID: 6323021816030238425}
+  - component: {fileID: 7281407778673716511}
   m_Layer: 5
   m_Name: Slime
   m_TagString: Untagged
@@ -67,9 +68,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 872dbcff89fb53b48a6468e248418add, type: 3}
+  m_Sprite: {fileID: 408966343, guid: e7169fee8ae3aa140ab45a724632e033, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -111,3 +112,24 @@ MonoBehaviour:
     armorName: 
     armorClass: 0
     armorWeight: 0
+--- !u!95 &7281407778673716511
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3929587845492748558}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0a2008d2781edc1458198b7375f3aaeb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
