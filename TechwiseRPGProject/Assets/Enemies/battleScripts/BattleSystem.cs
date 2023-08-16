@@ -281,14 +281,14 @@ public class BattleSystem : MonoBehaviour
     }
 }
 
-    IEnumerator PlayerIcyWind()
+    IEnumerator PlayerFireBomb()
 {
     int mpCost = 12;
 
     if (playerUnit.currentMp < mpCost)
     {
         menuNegative.Play();
-        dialogueText.text = "Not enough MP for Icy Wind!";
+        dialogueText.text = "Not enough MP for Fire Bomb!";
     }
     else
     {
@@ -301,7 +301,7 @@ public class BattleSystem : MonoBehaviour
         enemyUnit.DrainStamina(4);
         enemyHUD.SetStamina(enemyUnit.currentStamina);
 
-        dialogueText.text = "Brrr! " + playerUnit.unitName + " casts Icy Wind!\n" + enemyUnit.unitName + " takes " + actualDamage + " damage and loses 1 stamina!";
+        dialogueText.text = "FWOOSH! " + playerUnit.unitName + " casts Fire Bomb!\n" + enemyUnit.unitName + " takes " + actualDamage + " damage and loses 1 stamina!";
 
         yield return new WaitForSeconds(2f);
 
@@ -318,9 +318,9 @@ public class BattleSystem : MonoBehaviour
             StartCoroutine(EnemyTurn());
         }
     }
-}
+} 
 
-        IEnumerator mysticProjectile() { 
+        IEnumerator PlayerGodlyStrike() { 
         int mpCost = 24;
 
         if (playerUnit.currentMp >= mpCost) {
@@ -331,7 +331,7 @@ public class BattleSystem : MonoBehaviour
         playerUnit.currentMp -= mpCost;
         playerHUD.SetMP(playerUnit.currentMp);
 
-        dialogueText.text = "Zap! " + playerUnit.unitName + " casts Mystic Projectile(TM)! \n" + enemyUnit.unitName + " takes " + actualDamage + " damage!";
+        dialogueText.text = "ZZAP! " + playerUnit.unitName + " casts Godly Strike! \n" + enemyUnit.unitName + " takes " + actualDamage + " damage!";
 
     yield return new WaitForSeconds(2f);
 
@@ -349,7 +349,7 @@ public class BattleSystem : MonoBehaviour
     }
         } else {
         menuNegative.Play();
-        dialogueText.text = "Not enough MP for Mystic Projectile!";
+        dialogueText.text = "Not enough MP for Godly Strike!";
       }
         
         
@@ -371,7 +371,7 @@ public class BattleSystem : MonoBehaviour
         state = BattleState.FLEE;
         EndBattle(); battleTheme.Stop();
         StartCoroutine(SwitchGame());
-        //SceneManager.LoadScene("PlayerMovementtester");
+        
     }
     else
     {
@@ -451,7 +451,7 @@ IEnumerator EnemyTurn() {
             dialogueText.text = "Conglaturations! You are winner!!! \n You gained " + enemyUnit.expDrop + " experience points!";
 
             StartCoroutine(SwitchGameVictory());
-            //SceneManager.LoadScene("PlayerMovementtester");
+            
 
         } else if (state == BattleState.DEFEAT){
             battleTheme.Stop(); //switch to the game over music
@@ -472,7 +472,7 @@ IEnumerator EnemyTurn() {
     IEnumerator SwitchGameVictory()
     {
         yield return new WaitForSeconds(40f);
-        SceneManager.LoadScene("MainGame");
+        SceneManager.LoadScene("Credits");
     }
 
     public int roundCounter = 1;
@@ -518,12 +518,12 @@ IEnumerator EnemyTurn() {
     StartCoroutine(PlayerFlee());
 }
 
-public void OnmysticProjectileButton()
+public void OnGodlyStrike()
 {
     if (state != BattleState.PLAYERTURN)
         return;
 
-    StartCoroutine(mysticProjectile());
+    StartCoroutine(PlayerGodlyStrike());
 }
 
 public void OnChargeButton(){
@@ -542,11 +542,11 @@ public void OnHeavyAttack(){
 
     }
 
-    public void OnIcyWind(){
+    public void OnFireBomb(){
         if (state != BattleState.PLAYERTURN)
         return;
 
-        StartCoroutine(PlayerIcyWind());
+        StartCoroutine(PlayerFireBomb());
 
     }
 

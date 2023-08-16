@@ -12980,7 +12980,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 3929587845492748558, guid: 047aa8e6986bbe846a2df3a62345c722, type: 3}
-  enemyPrefab: {fileID: 3929587845492748558, guid: da7909dba90f36840a7ac179baa6bec7, type: 3}
+  enemyPrefab: {fileID: 3929587845492748558, guid: c100d3859e2ee9f48a8ccdb426cb48fd, type: 3}
   playerBattleStation: {fileID: 1603094194}
   enemyBattleStation: {fileID: 931262001}
   dialogueText: {fileID: 1940569261}
