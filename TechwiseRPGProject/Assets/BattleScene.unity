@@ -5573,7 +5573,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -12284,7 +12284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -12979,8 +12979,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ad637680d0ef6f43af672ec4d573659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 3929587845492748558, guid: b04de6880c0f9344fb560ab54504a28e, type: 3}
-  enemyPrefab: {fileID: 3929587845492748558, guid: b04de6880c0f9344fb560ab54504a28e, type: 3}
+  playerPrefab: {fileID: 3929587845492748558, guid: 047aa8e6986bbe846a2df3a62345c722, type: 3}
+  enemyPrefab: {fileID: 3929587845492748558, guid: da7909dba90f36840a7ac179baa6bec7, type: 3}
   playerBattleStation: {fileID: 1603094194}
   enemyBattleStation: {fileID: 931262001}
   dialogueText: {fileID: 1940569261}
