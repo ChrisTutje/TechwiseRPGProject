@@ -98,7 +98,7 @@ MonoBehaviour:
   currentMp: 100
   maxStamina: 4
   currentStamina: 4
-  strength: 5
+  strength: 4
   endurance: 8
   intelligence: 90
   expDrop: 99
@@ -106,8 +106,8 @@ MonoBehaviour:
   defence: 1
   equippedWeapon:
     weaponName: The Nullifier
-    weaponAttack: 0
+    weaponAttack: 1
   equippedArmor:
     armorName: Norton Anti-Virus
-    armorClass: 0
+    armorClass: 1
     armorWeight: 4

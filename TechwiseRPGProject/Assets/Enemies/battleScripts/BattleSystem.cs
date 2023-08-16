@@ -110,7 +110,7 @@ public class BattleSystem : MonoBehaviour
 
         playerUnit.Block();
         playerUnit.defence *= 2; //double unit's defence while blocking
-        playerUnit.RestoreStamina(1); //restore unit's stamina 
+        playerUnit.RestoreStamina(2); //restore unit's stamina 
         playerHUD.SetStamina(playerUnit.currentStamina);
 
         dialogueText.text = playerUnit.unitName + " defends!";
@@ -469,11 +469,23 @@ IEnumerator EnemyTurn() {
         SceneManager.LoadScene("MainGame");
     }
 
-    IEnumerator SwitchGameVictory()
+   IEnumerator SwitchGameVictory()
+{
+    
+
+    string currentSceneName = SceneManager.GetActiveScene().name;
+
+    if (currentSceneName == "FelipeBossBattle")
     {
         yield return new WaitForSeconds(40f);
         SceneManager.LoadScene("Credits");
     }
+    else if (currentSceneName == "BattleScene")
+    {
+        yield return new WaitForSeconds(4f);
+        SceneManager.LoadScene("MainGame");
+    }
+}
 
     public int roundCounter = 1;
 
