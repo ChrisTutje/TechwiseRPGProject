@@ -104,14 +104,14 @@ public class InputHandler
 
     private void ProcessInteract()
     {
-        Vector2Int cellToCheck = player.Facing + Map.Grid.GetCell2D(player.gameObject);
+        Vector2Int cellToCheck = player.Facing + Game.Map.Grid.GetCell2D(player.gameObject);
         
-        if (!Map.OccupiedCells.ContainsKey(cellToCheck))
+        if (!Game.Map.OccupiedCells.ContainsKey(cellToCheck))
         {
             return;
 
         }
-        if ((Map.OccupiedCells[cellToCheck]) is IInteractable interactable)
+        if ((Game.Map.OccupiedCells[cellToCheck]) is IInteractable interactable)
         {
             interactable.Interact();
         }

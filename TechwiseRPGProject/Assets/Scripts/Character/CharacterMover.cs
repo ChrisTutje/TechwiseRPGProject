@@ -6,7 +6,7 @@ public class CharacterMover
 {
     private Character character;
     private Transform transform;
-    private Vector2Int currentCell => Map.Grid.GetCell2D(character.gameObject); //reference where character currently is
+    private Vector2Int currentCell => Game.Map.Grid.GetCell2D(character.gameObject); //reference where character currently is
     private const float TIME_TO_MOVE_ONE_SQUARE = .375f;
 
     public bool isMoving {get; private set;} = false; 
@@ -23,8 +23,8 @@ public class CharacterMover
         if(isMoving || !direction.IsBasic()){return;}
         if(CanMoveIntoCell(targetCell, direction))
         {
-            Map.OccupiedCells.Add((currentCell + direction), character); //adding cell we move to occupied cells. 
-            Map.OccupiedCells.Remove(currentCell); //removing old cell
+            Game.Map.OccupiedCells.Add((currentCell + direction), character); //adding cell we move to occupied cells. 
+            Game.Map.OccupiedCells.Remove(currentCell); //removing old cell
             character.StartCoroutine(Co_Move(direction)); 
         }
     }
@@ -34,13 +34,13 @@ public class CharacterMover
         {
             return false;
         }
-        Ray2D ray = new Ray2D(Map.Grid.GetCellCenter2D(currentCell), direction);
+        Ray2D ray = new Ray2D(Game.Map.Grid.GetCellCenter2D(currentCell), direction);
         RaycastHit2D[] hits = Physics2D.RaycastAll(ray.origin, ray.direction);
         Debug.DrawRay(ray.origin, ray.direction, Color.red, 2.0f);
 
         foreach(RaycastHit2D hit in hits)
         {
-            if(hit.distance < Map.Grid.cellSize.x)
+            if(hit.distance < Game.Map.Grid.cellSize.x)
             {
                 return false;
             }
@@ -50,7 +50,7 @@ public class CharacterMover
 
     private bool IsCellOccupied(Vector2Int cell)
     {
-        return (Map.OccupiedCells.ContainsKey(cell));
+        return (Game.Map.OccupiedCells.ContainsKey(cell));
     }
 
     public IEnumerator Co_Move(Vector2Int direction)
@@ -61,8 +61,8 @@ public class CharacterMover
         Vector2Int startingCell = currentCell;
         Vector2Int endingCell = startingCell+direction;
 
-        Vector2 startingPosition = Map.Grid.GetCellCenter2D(startingCell);
-        Vector2 endingPosition = Map.Grid.GetCellCenter2D(endingCell);
+        Vector2 startingPosition = Game.Map.Grid.GetCellCenter2D(startingCell);
+        Vector2 endingPosition = Game.Map.Grid.GetCellCenter2D(endingCell);
 
 
         float elapsedTime = 0f;
@@ -74,7 +74,6 @@ public class CharacterMover
         }
 
         transform.position = endingPosition;
-        character.game.SwitchToSpecificScene();
 
         isMoving=false;
     }

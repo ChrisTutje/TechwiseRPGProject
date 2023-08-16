@@ -29,15 +29,14 @@ public abstract class Character : MonoBehaviour
             Move = new CharacterMover(this);
             Turn = new CharacterTurner();
             Animator = new CharacterAnimator(this);
-            game = new Game(this);
 
         }
     }
     protected virtual void Start()
     {
-        Vector2Int currentCell = Map.Grid.GetCell2D(this.gameObject); //calling personal method made in GridExtensions
-        transform.position = Map.Grid.GetCellCenter2D(currentCell);        //moved this to character for other sprites that we add to snap into a grid spot as well
-        Map.OccupiedCells.Add(currentCell, this);
+        Vector2Int currentCell = Game.Map.Grid.GetCell2D(this.gameObject); //calling personal method made in GridExtensions
+        transform.position = Game.Map.Grid.GetCellCenter2D(currentCell);        //moved this to character for other sprites that we add to snap into a grid spot as well
+        Game.Map.OccupiedCells.Add(currentCell, this);
     }
     protected virtual void Update()
     {

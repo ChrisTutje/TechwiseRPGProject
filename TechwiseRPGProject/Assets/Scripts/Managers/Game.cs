@@ -3,43 +3,55 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
-
-public class Game  
+public enum GameState
 {
-    public Character character;
-    public Vector2 playerPosition;
-    
-    public Game(Character character)
-    {
-        this.character = character;
-    }
+    World,
+    Cutscene,
+    Battle,
+    Menu,
+}
+
+public class Game : MonoBehaviour
+{
+   public static GameState State {get; private set;}
+    public static Map Map {get; private set;}
+    public static Player Player {get; private set; }
+    public  Grid Grid {get;private set;} //making a script just to pull the grid- so i dont have to do this same 4 lines of code in every script.
+
+    [SerializeField] private Map startingMap;
+    [SerializeField] private GameObject playerPrefab;
+    [SerializeField] private  Vector2Int startingCell;
 
 
-
-   public void SwitchToSpecificScene()
-    {
-        float probability = .05f; // 10% chance
-        if (SceneManager.GetSceneByName("PlayerMovementtester").isLoaded)
+        private void Awake()
         {
-        if (Random.value < probability)
+        if (Map== null)
+            {
+                Map = Instantiate(startingMap);
+            }
+        if (Player==null)
         {
-            SceneManager.LoadScene("BattleScene");
+            GameObject gameObject = Instantiate(playerPrefab, Map.Grid.GetCellCenter2D(startingCell), Quaternion.identity);
+            Player= gameObject.GetComponent<Player>();
         }
-        }
-        else if (SceneManager.GetSceneByName("BattleScene").isLoaded)
+
+
+        }   
+        
+        private void Update()
         {
-            SceneManager.LoadScene("PlayerMovementtester");
+            if(Input.GetKeyDown(KeyCode.B))
+            {
+                //StartBattle();
+            }
+
+            if(Input.GetKeyDown(KeyCode.E))
+            {
+                //EndBattle()
+            }
         }
-    }
-
-    public void SavePlayerPosition()
-    {
-
-    }
-
-
 
 }
+
 
 
