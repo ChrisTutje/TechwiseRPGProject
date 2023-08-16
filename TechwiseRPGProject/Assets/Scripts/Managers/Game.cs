@@ -21,7 +21,7 @@ public class Game : MonoBehaviour
     [SerializeField] private Map startingMap;
     [SerializeField] private GameObject playerPrefab;
     [SerializeField] private  Vector2Int startingCell;
-    [SerializeField] private GameObject MainCamera;
+    [SerializeField] private GameObject cameraPrefab;
 
 
         private void Awake()
@@ -35,14 +35,22 @@ public class Game : MonoBehaviour
             GameObject gameObject = Instantiate(playerPrefab, Map.Grid.GetCellCenter2D(startingCell), Quaternion.identity);
             Player= gameObject.GetComponent<Player>();
 
-            Camera.main.transform.SetParent(Player.transform);
 
         }
-
+         if (Camera.main == null && cameraPrefab != null)
+        {
+            GameObject cameraObject = Instantiate(cameraPrefab);
+        CameraFollow cameraFollow = cameraObject.GetComponent<CameraFollow>();
+        if (cameraFollow != null)
+        {
+            cameraFollow.target = Player.transform;
+        }
+        }
             DontDestroyOnLoad(this);
             DontDestroyOnLoad(Player);
+        }
 
-        }   
+          
         
         private void Update()
         {
