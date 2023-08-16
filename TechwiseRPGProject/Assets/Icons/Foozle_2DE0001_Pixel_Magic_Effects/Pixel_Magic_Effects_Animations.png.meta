@@ -1,0 +1,3398 @@
+fileFormatVersion: 2
+guid: d9e7aa0d69ec2674f839d204483d2dca
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_0
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 780
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b6b925cf9ed10f4cb4bfb219d835d85
+      internalID: -836155004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_1
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 819
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efce63c0bee89a547bd741be11e0dd43
+      internalID: 393393431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_2
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 768
+        width: 72
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1817441447ed71a40aab7c77d49c2295
+      internalID: -1959416180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 783
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f4b54e62a2b6c94abda5d47036dd070
+      internalID: -343827462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_5
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 785
+        width: 41
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 956327e147ab765428e5e9a7a0ea3d9d
+      internalID: -95580871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_7
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 790
+        width: 30
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75ad99d6f6cea1e4ebfd8cc02bc10af8
+      internalID: -870502864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_8
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 792
+        width: 38
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4415c5e2c823e546939e88c1ec5cfc9
+      internalID: -1768502223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_9
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 787
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77c3e2950f41191419a6f565f8669e12
+      internalID: 1117486553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_10
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 768
+        width: 42
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fb1e3333ca2d92488c056652a0a719c
+      internalID: -1242487819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 721
+        width: 64
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a52c90c4b0b67d0418111b0357d061c7
+      internalID: 105198721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_13
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 721
+        width: 44
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 310cfb55c450f574dbaee7da1ef9b388
+      internalID: -483160517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_15
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 725
+        width: 33
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3f49c358b9f7874e90b8534703aeb59
+      internalID: 368777104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_16
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 728
+        width: 41
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26a7af34348f5f1479851eecb400b7f1
+      internalID: 1110808449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_17
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 716
+        width: 41
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d6d4ef1080282346917b0d03ac98cdf
+      internalID: 1359159808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_18
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 722
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 030e7160db7adfc41b3127f9b4a8deeb
+      internalID: -2008124621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_19
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 737
+        width: 17
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af4e76414b4e4d240951f179fff9a6f9
+      internalID: -466299207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_20
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 704
+        width: 41
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76ada5e029b242d439b95383fc30dad8
+      internalID: 1292175489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_23
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 704
+        width: 52
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5bc1dd2550221a4ba781055dcbd3638
+      internalID: -913036052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_24
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 704
+        width: 26
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4a063ba72107ca40af9ccf585c4d63b
+      internalID: -594803706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 658
+        width: 64
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eade96342083a8a45a16bc31700a324d
+      internalID: -378984086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_28
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 655
+        width: 43
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d46b8ca0656a514ba841cefa3bd319b
+      internalID: -908278684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_30
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 662
+        width: 39
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f40d485fd030b724faa3213dfc1a89d5
+      internalID: 199097738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_32
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 665
+        width: 44
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f366233427dc0a04f9986dce59c70562
+      internalID: 1393073471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_33
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 652
+        width: 41
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57495c4ed9f5f824dbd56002363bf774
+      internalID: -455097938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_34
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 649
+        width: 51
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01ebee4fba4a5624e905e86e4592b87f
+      internalID: 923294329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_35
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 660
+        width: 17
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e226ef7642519c4693aacfb519fcb50
+      internalID: -363259111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_36
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 640
+        width: 43
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1dbe3d0204090640addfa44ddae8959
+      internalID: 2141680739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_38
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 640
+        width: 55
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 072b41c5f52a852418434dbbb16f4596
+      internalID: -1110996575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_39
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 640
+        width: 30
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df057531bdbb1e1479631e5c9bacf16c
+      internalID: -1749301104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_40
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 631
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f42963d1b22b6442832345ea2fae2b4
+      internalID: -102537177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_41
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 374
+        width: 19
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3719793d5ad72540ae7af080b5eef82
+      internalID: -578330636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 593
+        width: 64
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b3ffdd3e69842c42b4fcb5e19fb72dc
+      internalID: 912577023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_43
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 588
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3627fce23959acb45b433813571fcc29
+      internalID: 1881921032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_44
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 618
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cb91f87d12481d40abd8ffb2afd6491
+      internalID: 1387319679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_45
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 596
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2e055b4080a2b44b8e03ba97113fe20
+      internalID: 795863914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_46
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 618
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bf787640a7e09443b6f48ea91970404
+      internalID: -147412798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_47
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 576
+        width: 41
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 614db1feac2e93c40b5559d3fee9616f
+      internalID: -529607157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_51
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 595
+        width: 42
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26c97cc455bfb1c45b519619d03e6c8d
+      internalID: 964179667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_53
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 598
+        width: 28
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56d62af8bcc8dd94faf726d4db78c28f
+      internalID: 210586708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_55
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 600
+        width: 49
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca179f06ead11ad49a0c6b978f746e91
+      internalID: 2127050527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_56
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 601
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a39c275cd499f2e4380185b7ac8ff70d
+      internalID: 1377505082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_57
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 576
+        width: 58
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee7e6b02c96a15142a1838d03549feff
+      internalID: 1387522419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_58
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 595
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 699ef8462cdff73439029de8d12bdc3e
+      internalID: 580797870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_59
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 571
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 688229668e573bb46bd2ceb0a5d92341
+      internalID: -1166405598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_60
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 576
+        width: 31
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2758cd001289fd14b9492d6a67bdf280
+      internalID: 244912146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_61
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 528
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e87518a4de416e146b47d49eece24945
+      internalID: -2008478885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_62
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 525
+        width: 39
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81c7ca7d788260c44a718d969916274f
+      internalID: 1586085298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_63
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 559
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cec07a35d83863f438239dab64afccaa
+      internalID: 629848032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_64
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 531
+        width: 39
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71ce499545177c64296356f1380fda21
+      internalID: -1009715346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_65
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 512
+        width: 41
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83722ece41a97bb40a938e7473b1da94
+      internalID: -363164677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_67
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 532
+        width: 45
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2058ba9238d75e4383a61d0567b0b4c
+      internalID: 423974615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_69
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 534
+        width: 29
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a4c18065f46bea488b41ebdfe7e2cea
+      internalID: -1990884877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_71
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 536
+        width: 48
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09fefb35b02f72943ab520046b97a26c
+      internalID: 1588471866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_72
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 512
+        width: 59
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a96e16fc007163a4ba0bbb03a0deca6e
+      internalID: -827656057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_73
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 384
+        width: 30
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01c652ec2bd7cbe49ac42533073e0882
+      internalID: 1800094663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_74
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 531
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc4dd18e17edbf44da1cf8c8b0e615c8
+      internalID: 980890399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_75
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 520
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83c985ab4c44fde489c7d4a294d23f6d
+      internalID: 1357321773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_76
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 463
+        width: 39
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4fafa613bd389f47894f3a4eb7ef1ba
+      internalID: 130916812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_77
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 467
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38f6db5bc180fc241810c3964058de8c
+      internalID: 1682011362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_78
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 488
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0da9bd2ae1b89f40a514b0dd5958198
+      internalID: 405966828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_79
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 490
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bdee11bd02ee614a94c5ef74f8be74a
+      internalID: -1548621641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_80
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 486
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e720eac2a9701d49b73f202ab8eb579
+      internalID: -1304176958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_81
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 448
+        width: 35
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8404550783457724791590cb8944344a
+      internalID: -1630735613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_82
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 468
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7be586b46e28fdd4eb5fe749f876d92a
+      internalID: 1269856772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_83
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 471
+        width: 22
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3061e0d147589f4408d30feeedb033cc
+      internalID: -1474296555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_84
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 483
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20120ba6aa57cb6499c5cf0dd2826de6
+      internalID: 2127111160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_85
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 478
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8289491009281ac459c338f10dfbe202
+      internalID: 597730073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_86
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 478
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 895fffffc0f855f44b5573f0ee3be04b
+      internalID: -135557698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_87
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 477
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e488f112d14719042a1ae3441749d2c1
+      internalID: -981741928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_88
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 477
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04e1be8923435e244883b1e534196414
+      internalID: 1042580661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_89
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 448
+        width: 58
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ec3c188a9c9c2c49953229139428a00
+      internalID: 1127573820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_90
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 466
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 919415dd36eb78e47b87bf8a0e9d5c9b
+      internalID: 1719876453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_91
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 467
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bf1145a16d8f274dbb5e6890cff89c3
+      internalID: -545305803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_92
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 463
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2796490834c4a7499bd22712680dd74
+      internalID: 46148139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_93
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 400
+        width: 17
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03efb9e343ddfd04b9057f03a6fd4a43
+      internalID: 933917641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_94
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 399
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ed34326e37e1a74e9edf7719605e87f
+      internalID: 1411568982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_95
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 396
+        width: 35
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82ac69fcccc4c9747bcda3d44c8073db
+      internalID: -755869149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_96
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 423
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5d3f5bef5d875249b5b770beb712298
+      internalID: 747967125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_97
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 429
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 317dd540d627a0b4ebf25615807469a2
+      internalID: 2025396724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_98
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 427
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac2f27e5094274a43a4134cae4c9e66b
+      internalID: 1077857723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_99
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 427
+        width: 8
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17dc6b0a6cd46c74a94b52f7c30a31fb
+      internalID: 1766021597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_100
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 384
+        width: 21
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebed5a5fe75dac7489fe2d1d8c5f506c
+      internalID: 334116136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_101
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 401
+        width: 29
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b0363f72ed75ba40aefd5166ce27838
+      internalID: -475925029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_102
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 405
+        width: 13
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e00ece14e37bd2945ae49a01514abe98
+      internalID: -1204333188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_103
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 418
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec76f38a9b25a834a921461d5fdf0ae9
+      internalID: -1547013712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_104
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 411
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9266465c3551d874f8fd6a0e792d472c
+      internalID: 1719312026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_105
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 413
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0ea29320bc3c3442a32968ed8f89039
+      internalID: -760349872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_106
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 401
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9f0e94df7b9ef24facf9e8d818eb278
+      internalID: 2043452826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_107
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 402
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6025a3e6156b8c418a5ca9d62acd2fc
+      internalID: -1190017913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_108
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 399
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 411b562612bf5ef41830de627ad7f29e
+      internalID: -796976185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_109
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 384
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddccd6beaa1f681499b77b024bd8d6cb
+      internalID: 758442402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_110
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 387
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bd33860cb4457e42a1e22e301c896f4
+      internalID: -2028627538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_111
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 384
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0df500a54159c51438e256ab8de148c1
+      internalID: -12332653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_112
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 384
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2343495931250d54fb6e22be2ab82ac8
+      internalID: 39134736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_113
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 334
+        width: 19
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 182d37d9a7e2fb84f819c141d698e3e3
+      internalID: -2139980199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_114
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 328
+        width: 9
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35141a09110506841badaa8ad7f03be4
+      internalID: -992414034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_115
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 364
+        width: 8
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04b64701662cd5e4f8c5529dcb9c9834
+      internalID: -1578713647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_116
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 338
+        width: 5
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ee16dd6a437afe408bb47c79dfdb326
+      internalID: -983231261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_117
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 339
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 430def1e7a504e2469cd848775bb9f7a
+      internalID: -864760918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_118
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 320
+        width: 17
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66a7f5653e802344da1fef1cc2f3fb87
+      internalID: 1412129368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_119
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 320
+        width: 30
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 772ef619a0b399243bc7de2b7210971a
+      internalID: -1454017919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_120
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 320
+        width: 9
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffa1ed1a842fe4741815e63ce37371b4
+      internalID: 1358076888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_121
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 336
+        width: 30
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07580aaa61f892d4ea5e5642c6edf15f
+      internalID: -824416596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_122
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 339
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3958e7c8e40358f48b0f86ad939127b7
+      internalID: -366206208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_123
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 334
+        width: 8
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b68a8cfc082f72c40b484c83b67e6b3f
+      internalID: 386450844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_124
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 320
+        width: 28
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3103662181c8fe24b8a464dd64ae1314
+      internalID: 580104654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_125
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 299
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb18492ae5b72f24a88462d2ae1b6702
+      internalID: 975603661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_126
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 300
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36b8244dd967f7f468d2b5b09577e573
+      internalID: 1300420765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_127
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 307
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1b440113319a4a46941e5b5e3b7eace
+      internalID: 1826550010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_128
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 268
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19609bad263d58849878ee7905be39fc
+      internalID: -430406366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_129
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 284
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe81555fcb883004bb8567842730179e
+      internalID: 962203130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_130
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 267
+        width: 4
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ab4bd058091d1f428aba0938804796e
+      internalID: 1766276234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_131
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 300
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 188bf95bd28cd4f4897f97ff4d559ffd
+      internalID: -1591650036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_132
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 256
+        width: 17
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b43a0116c56d3844e80e300daa2de51b
+      internalID: -473775473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_133
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 256
+        width: 7
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 112082861c4a8c2408cac892abd73dfa
+      internalID: 300699078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_134
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 291
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c445b7f70dfc74746903d9d06370e7da
+      internalID: -996693836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_135
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 285
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4658aa867355164481933b0771859af
+      internalID: 349100631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_136
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 292
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05c916f92685d9b4cbbc930638c13912
+      internalID: -11912835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_137
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 270
+        width: 10
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0d11e75fdb93184ba93288333d2692c
+      internalID: -1844778923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_138
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 256
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b639abcb9ad5c244b8d610dc9394656
+      internalID: 358889986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_139
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 283
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51852f53bf7ad7c408dd66e4dad8ab9a
+      internalID: 790949335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_140
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 286
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bab5239d1e49d084bbed6f95afb7bc20
+      internalID: -272386797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_141
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 283
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbc6e0ccc7acc644a87ec2b8d74780da
+      internalID: 387964212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_142
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 285
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88e7728cc9704444ebfdb0e58086983a
+      internalID: -272099174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_143
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 274
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6434ecb48fdc62141b5000b7e1ae5200
+      internalID: 1324201373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_144
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 271
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9abd8bd111417b4aaa00e9646dba906
+      internalID: 815881705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_145
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 271
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d7fe55e245b65840a9577f2fdafd6da
+      internalID: -1212570686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_146
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 262
+        width: 10
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 429e752e6c9e8914d8c4da0bb68f317e
+      internalID: -1688848432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_147
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 268
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 658653be2f1f2384c9760d3faa4fbcf6
+      internalID: -1651598838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_148
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 229
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7804469bc2e3a77439a1209d5a998e56
+      internalID: -673338467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_149
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 211
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0545e8f9a85ded74ca839bd1b25665fb
+      internalID: -1011172531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_150
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 223
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e814926af120a145a1ce3f11f2d6579
+      internalID: 1253900306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_151
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 207
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d6c71cc55b84c542b202195194ee87f
+      internalID: -1086851797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_152
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 207
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f647ff6b6973e0c45b3d80bfa63cef92
+      internalID: -84408994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_153
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 230
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4625022e6a6a9274e8687d079c47143d
+      internalID: -1481526915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_154
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 194
+        width: 27
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17951994aefcb144297be93c3d247346
+      internalID: -1883585546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_155
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 242
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a500b561476a2b42a564ff581ae4e88
+      internalID: 1661113054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_156
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 204
+        width: 9
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3e72d830bc52614a85f68c59554342c
+      internalID: -1615130068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_157
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 204
+        width: 60
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4668626aff7645747a24d9abc84f98bb
+      internalID: 908321444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_158
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 192
+        width: 17
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7abc8efd6ba2d94e8677452a7347ea0
+      internalID: 1013379517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_159
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 256
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84e5a3eda734cdd4e96b4e40cd0390d8
+      internalID: -448171656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_160
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 192
+        width: 30
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8426510378e31a42b88a64e17d90192
+      internalID: 1278441751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_161
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 193
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b41e44316dfa4da49badd157fbcfee6e
+      internalID: 1935841139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_162
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 131
+        width: 17
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4500317fccff0b448b8d5975e6b894e9
+      internalID: 2056476798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_163
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 137
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1413e2e74f8d9ae4288e52f7991c82b4
+      internalID: 192050850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_164
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 128
+        width: 30
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 280aa18b1e816ca48bfb20f1c2cfbe62
+      internalID: 949224183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_165
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 91
+        width: 17
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c60456f6ab661b48be5e917348c3981
+      internalID: -1007586194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel_Magic_Effects_Animations_166
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 0
+        width: 26
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d40908c5cf2685244bafb80bd0c829a7
+      internalID: -1362360852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Pixel_Magic_Effects_Animations_0: -836155004
+      Pixel_Magic_Effects_Animations_1: 393393431
+      Pixel_Magic_Effects_Animations_10: -1242487819
+      Pixel_Magic_Effects_Animations_100: 334116136
+      Pixel_Magic_Effects_Animations_101: -475925029
+      Pixel_Magic_Effects_Animations_102: -1204333188
+      Pixel_Magic_Effects_Animations_103: -1547013712
+      Pixel_Magic_Effects_Animations_104: 1719312026
+      Pixel_Magic_Effects_Animations_105: -760349872
+      Pixel_Magic_Effects_Animations_106: 2043452826
+      Pixel_Magic_Effects_Animations_107: -1190017913
+      Pixel_Magic_Effects_Animations_108: -796976185
+      Pixel_Magic_Effects_Animations_109: 758442402
+      Pixel_Magic_Effects_Animations_11: -186084616
+      Pixel_Magic_Effects_Animations_110: -2028627538
+      Pixel_Magic_Effects_Animations_111: -12332653
+      Pixel_Magic_Effects_Animations_112: 39134736
+      Pixel_Magic_Effects_Animations_113: -2139980199
+      Pixel_Magic_Effects_Animations_114: -992414034
+      Pixel_Magic_Effects_Animations_115: -1578713647
+      Pixel_Magic_Effects_Animations_116: -983231261
+      Pixel_Magic_Effects_Animations_117: -864760918
+      Pixel_Magic_Effects_Animations_118: 1412129368
+      Pixel_Magic_Effects_Animations_119: -1454017919
+      Pixel_Magic_Effects_Animations_12: 105198721
+      Pixel_Magic_Effects_Animations_120: 1358076888
+      Pixel_Magic_Effects_Animations_121: -824416596
+      Pixel_Magic_Effects_Animations_122: -366206208
+      Pixel_Magic_Effects_Animations_123: 386450844
+      Pixel_Magic_Effects_Animations_124: 580104654
+      Pixel_Magic_Effects_Animations_125: 975603661
+      Pixel_Magic_Effects_Animations_126: 1300420765
+      Pixel_Magic_Effects_Animations_127: 1826550010
+      Pixel_Magic_Effects_Animations_128: -430406366
+      Pixel_Magic_Effects_Animations_129: 962203130
+      Pixel_Magic_Effects_Animations_13: -483160517
+      Pixel_Magic_Effects_Animations_130: 1766276234
+      Pixel_Magic_Effects_Animations_131: -1591650036
+      Pixel_Magic_Effects_Animations_132: -473775473
+      Pixel_Magic_Effects_Animations_133: 300699078
+      Pixel_Magic_Effects_Animations_134: -996693836
+      Pixel_Magic_Effects_Animations_135: 349100631
+      Pixel_Magic_Effects_Animations_136: -11912835
+      Pixel_Magic_Effects_Animations_137: -1844778923
+      Pixel_Magic_Effects_Animations_138: 358889986
+      Pixel_Magic_Effects_Animations_139: 790949335
+      Pixel_Magic_Effects_Animations_14: 1680010742
+      Pixel_Magic_Effects_Animations_140: -272386797
+      Pixel_Magic_Effects_Animations_141: 387964212
+      Pixel_Magic_Effects_Animations_142: -272099174
+      Pixel_Magic_Effects_Animations_143: 1324201373
+      Pixel_Magic_Effects_Animations_144: 815881705
+      Pixel_Magic_Effects_Animations_145: -1212570686
+      Pixel_Magic_Effects_Animations_146: -1688848432
+      Pixel_Magic_Effects_Animations_147: -1651598838
+      Pixel_Magic_Effects_Animations_148: -673338467
+      Pixel_Magic_Effects_Animations_149: -1011172531
+      Pixel_Magic_Effects_Animations_15: 368777104
+      Pixel_Magic_Effects_Animations_150: 1253900306
+      Pixel_Magic_Effects_Animations_151: -1086851797
+      Pixel_Magic_Effects_Animations_152: -84408994
+      Pixel_Magic_Effects_Animations_153: -1481526915
+      Pixel_Magic_Effects_Animations_154: -1883585546
+      Pixel_Magic_Effects_Animations_155: 1661113054
+      Pixel_Magic_Effects_Animations_156: -1615130068
+      Pixel_Magic_Effects_Animations_157: 908321444
+      Pixel_Magic_Effects_Animations_158: 1013379517
+      Pixel_Magic_Effects_Animations_159: -448171656
+      Pixel_Magic_Effects_Animations_16: 1110808449
+      Pixel_Magic_Effects_Animations_160: 1278441751
+      Pixel_Magic_Effects_Animations_161: 1935841139
+      Pixel_Magic_Effects_Animations_162: 2056476798
+      Pixel_Magic_Effects_Animations_163: 192050850
+      Pixel_Magic_Effects_Animations_164: 949224183
+      Pixel_Magic_Effects_Animations_165: -1007586194
+      Pixel_Magic_Effects_Animations_166: -1362360852
+      Pixel_Magic_Effects_Animations_17: 1359159808
+      Pixel_Magic_Effects_Animations_18: -2008124621
+      Pixel_Magic_Effects_Animations_19: -466299207
+      Pixel_Magic_Effects_Animations_2: -1959416180
+      Pixel_Magic_Effects_Animations_20: 1292175489
+      Pixel_Magic_Effects_Animations_21: -1657443290
+      Pixel_Magic_Effects_Animations_22: -841550041
+      Pixel_Magic_Effects_Animations_23: -913036052
+      Pixel_Magic_Effects_Animations_24: -594803706
+      Pixel_Magic_Effects_Animations_25: -578040344
+      Pixel_Magic_Effects_Animations_26: -378984086
+      Pixel_Magic_Effects_Animations_27: 263612866
+      Pixel_Magic_Effects_Animations_28: -908278684
+      Pixel_Magic_Effects_Animations_29: 535985800
+      Pixel_Magic_Effects_Animations_3: 955985970
+      Pixel_Magic_Effects_Animations_30: 199097738
+      Pixel_Magic_Effects_Animations_31: 1436779888
+      Pixel_Magic_Effects_Animations_32: 1393073471
+      Pixel_Magic_Effects_Animations_33: -455097938
+      Pixel_Magic_Effects_Animations_34: 923294329
+      Pixel_Magic_Effects_Animations_35: -363259111
+      Pixel_Magic_Effects_Animations_36: 2141680739
+      Pixel_Magic_Effects_Animations_37: 802148767
+      Pixel_Magic_Effects_Animations_38: -1110996575
+      Pixel_Magic_Effects_Animations_39: -1749301104
+      Pixel_Magic_Effects_Animations_4: -343827462
+      Pixel_Magic_Effects_Animations_40: -102537177
+      Pixel_Magic_Effects_Animations_41: -578330636
+      Pixel_Magic_Effects_Animations_42: 912577023
+      Pixel_Magic_Effects_Animations_43: 1881921032
+      Pixel_Magic_Effects_Animations_44: 1387319679
+      Pixel_Magic_Effects_Animations_45: 795863914
+      Pixel_Magic_Effects_Animations_46: -147412798
+      Pixel_Magic_Effects_Animations_47: -529607157
+      Pixel_Magic_Effects_Animations_48: 1189049981
+      Pixel_Magic_Effects_Animations_49: 1631055233
+      Pixel_Magic_Effects_Animations_5: -95580871
+      Pixel_Magic_Effects_Animations_50: 637385253
+      Pixel_Magic_Effects_Animations_51: 964179667
+      Pixel_Magic_Effects_Animations_52: 114752548
+      Pixel_Magic_Effects_Animations_53: 210586708
+      Pixel_Magic_Effects_Animations_54: 1355070561
+      Pixel_Magic_Effects_Animations_55: 2127050527
+      Pixel_Magic_Effects_Animations_56: 1377505082
+      Pixel_Magic_Effects_Animations_57: 1387522419
+      Pixel_Magic_Effects_Animations_58: 580797870
+      Pixel_Magic_Effects_Animations_59: -1166405598
+      Pixel_Magic_Effects_Animations_6: 1396427930
+      Pixel_Magic_Effects_Animations_60: 244912146
+      Pixel_Magic_Effects_Animations_61: -2008478885
+      Pixel_Magic_Effects_Animations_62: 1586085298
+      Pixel_Magic_Effects_Animations_63: 629848032
+      Pixel_Magic_Effects_Animations_64: -1009715346
+      Pixel_Magic_Effects_Animations_65: -363164677
+      Pixel_Magic_Effects_Animations_66: -1290260278
+      Pixel_Magic_Effects_Animations_67: 423974615
+      Pixel_Magic_Effects_Animations_68: -1201893411
+      Pixel_Magic_Effects_Animations_69: -1990884877
+      Pixel_Magic_Effects_Animations_7: -870502864
+      Pixel_Magic_Effects_Animations_70: -925568523
+      Pixel_Magic_Effects_Animations_71: 1588471866
+      Pixel_Magic_Effects_Animations_72: -827656057
+      Pixel_Magic_Effects_Animations_73: 1800094663
+      Pixel_Magic_Effects_Animations_74: 980890399
+      Pixel_Magic_Effects_Animations_75: 1357321773
+      Pixel_Magic_Effects_Animations_76: 130916812
+      Pixel_Magic_Effects_Animations_77: 1682011362
+      Pixel_Magic_Effects_Animations_78: 405966828
+      Pixel_Magic_Effects_Animations_79: -1548621641
+      Pixel_Magic_Effects_Animations_8: -1768502223
+      Pixel_Magic_Effects_Animations_80: -1304176958
+      Pixel_Magic_Effects_Animations_81: -1630735613
+      Pixel_Magic_Effects_Animations_82: 1269856772
+      Pixel_Magic_Effects_Animations_83: -1474296555
+      Pixel_Magic_Effects_Animations_84: 2127111160
+      Pixel_Magic_Effects_Animations_85: 597730073
+      Pixel_Magic_Effects_Animations_86: -135557698
+      Pixel_Magic_Effects_Animations_87: -981741928
+      Pixel_Magic_Effects_Animations_88: 1042580661
+      Pixel_Magic_Effects_Animations_89: 1127573820
+      Pixel_Magic_Effects_Animations_9: 1117486553
+      Pixel_Magic_Effects_Animations_90: 1719876453
+      Pixel_Magic_Effects_Animations_91: -545305803
+      Pixel_Magic_Effects_Animations_92: 46148139
+      Pixel_Magic_Effects_Animations_93: 933917641
+      Pixel_Magic_Effects_Animations_94: 1411568982
+      Pixel_Magic_Effects_Animations_95: -755869149
+      Pixel_Magic_Effects_Animations_96: 747967125
+      Pixel_Magic_Effects_Animations_97: 2025396724
+      Pixel_Magic_Effects_Animations_98: 1077857723
+      Pixel_Magic_Effects_Animations_99: 1766021597
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
