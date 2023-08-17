@@ -29,37 +29,23 @@ public class Unit : MonoBehaviour //variable fields for each unit
     [SerializeField]
     public int strength = 1;
 
-    //[SerializeField]
-    //private int perception = 1;
-
     [SerializeField]
     public int endurance = 1;
 
     [SerializeField]
    public int intelligence = 1;
 
-    //[SerializeField]
-    //private int agility = 1;
 
-    //[SerializeField]
-    //private int luck = 1;
 
 //loot stats
     public int expDrop;
 
 //totaled stats
     [HideInInspector]
-    public int attack /*= strength + weaponDamage + strMod*/;
+    public int attack ;
     [HideInInspector]
-    public int defence/*= armorClass + defMod*/;
-    //public int accuracy = perception - armorVision ;
-    //public int evasion = agility - armorWeight;
-    //public int speed = agility - armorWeight ;
-    //public int resistance = luck + lckMod ;
-    //public int critical = luck + critMod ; 
-
-    //public int protectedRounds;
-    //public int protectedDefenseIncrease;
+    public int defence;
+  
 
     //equipment stats
     public Weapon equippedWeapon;
@@ -91,7 +77,7 @@ public class Unit : MonoBehaviour //variable fields for each unit
 
     // ** ACTION MOVES ** //
 
-    public int TakeDamage(int dmg)
+    public int TakeDamage(int dmg) //used to calculate damage. Attacks must do at least 1 damage, and HP can't be negative (yet). 
     {
         if (dmg <= 0)
             dmg = 1;
@@ -99,37 +85,36 @@ public class Unit : MonoBehaviour //variable fields for each unit
         currentHp -= dmg;
 
         if (currentHp < 0)
-            currentHp = 0; //prevents HP from falling below 0
+            currentHp = 0; 
 
         return dmg;
     }
 
     
-    public void Heal(int amount){
+    public void Heal(int amount){ //used to restore current HP, Current HP can't exceed maximum HP (yet)
         currentHp += amount;
         if (currentHp > maxHp)
             currentHp = maxHp;
     }
 
      public void Block(){
-       // playerUnit.defence *= 2;
     }
 
-    public void DrainStamina(int amount)
+    public void DrainStamina(int amount) //used to drain stamina, stamina can't be negative
     {
         currentStamina -= amount;
         if (currentStamina < 0)
             currentStamina = 0;
     }
 
-      public void RestoreStamina(int amount)
+      public void RestoreStamina(int amount) //used to restore stamina, current stamina can't exceed max stamina
     {
         currentStamina += amount;
         if (currentStamina >= maxStamina)
             currentStamina = maxStamina;
     }
 
-    public void DeductMP(int amount)
+    public void DeductMP(int amount) //deduct MP, MP can't be negative
 {
     currentMp -= amount;
     if (currentMp < 0)
@@ -139,24 +124,15 @@ public class Unit : MonoBehaviour //variable fields for each unit
     //** STATUS EFFECTS ** // 
     
 
-       public bool IsKo()
+       public bool IsKo() //a unit with no HP is K.O, K.O'd unit's can't fight 
     {
         return currentHp <= 0;
     }
 
-    /* public bool IsDead() //Idea for a mechanic, not implemented
-    {
-        return currentHp <= -maxHP ;
-    } */
 
-     public bool IsExhausted()
+     public bool IsExhausted() //A unit with no stamina is exhausted, exhausted units can't use melee attacks 
     {
         return currentStamina <= 0;
     } 
-
-    // ** vv EQUIPMENT vv ** //
-
-
-
-    
+  
 }

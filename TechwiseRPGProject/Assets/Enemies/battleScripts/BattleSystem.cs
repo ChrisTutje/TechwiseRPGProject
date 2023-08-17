@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public enum BattleState { START, PLAYERTURN, ENEMYTURN, VICTORY, DEFEAT, FLEE } //list of phases
+public enum BattleState { START, PLAYERTURN, ENEMYTURN, VICTORY, DEFEAT, FLEE } //list of Battle Phases
 
 public class BattleSystem : MonoBehaviour
 {
@@ -103,14 +103,14 @@ public class BattleSystem : MonoBehaviour
 
     }
 
-       IEnumerator PlayerBlock() { //blocking action
+       IEnumerator PlayerBlock() { //blocking action, double's unit defence, restore some stamina, and revert defence when done
        int originalDefence = playerUnit.defence; 
 
        blockSFX.Play();
 
         playerUnit.Block();
-        playerUnit.defence *= 2; //double unit's defence while blocking
-        playerUnit.RestoreStamina(1); //restore unit's stamina 
+        playerUnit.defence *= 2; 
+        playerUnit.RestoreStamina(2); 
         playerHUD.SetStamina(playerUnit.currentStamina);
 
         dialogueText.text = playerUnit.unitName + " defends!";
@@ -121,7 +121,7 @@ public class BattleSystem : MonoBehaviour
         state = BattleState.ENEMYTURN;
         StartCoroutine(EnemyTurn());
 
-        playerUnit.defence = originalDefence; //revert the players defence back after blocking
+        playerUnit.defence = originalDefence; 
     }
 
         IEnumerator PlayerRest() {
@@ -137,7 +137,7 @@ public class BattleSystem : MonoBehaviour
         StartCoroutine(EnemyTurn());
     }
 
-    IEnumerator PlayerCharge() { 
+    IEnumerator PlayerCharge() { //temporarily doubles unit's attack and halves their defence at high stamina cost 
        int originalAttack = playerUnit.attack;
        int originalDefence = playerUnit.defence;
        int staminaCost = 4;
@@ -182,7 +182,7 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
-       IEnumerator PlayerHeavyAttack() { 
+       IEnumerator PlayerHeavyAttack() { //Heavy attack action. higher stamina cost than fight, and boosts PlayerAttack by 1.5 rounded down
        int originalAttack = playerUnit.attack;
        int originalDefence = playerUnit.defence;
        int staminaCost = 2;
@@ -199,9 +199,9 @@ public class BattleSystem : MonoBehaviour
         } else {
             attackSfx.Play();
             if (playerUnit.attack % 2 == 0) {
-                playerUnit.attack = playerUnit.attack + playerUnit.attack / 2; 
+                 playerUnit.attack += playerUnit.attack / 2; 
            } else {
-                playerUnit.attack = (playerUnit.attack + 1) / 2;
+                playerUnit.attack += (playerUnit.attack + 1) / 2;
             }
             int damageToEnemy = playerUnit.attack - enemyUnit.defence;
             int actualDamage = enemyUnit.TakeDamage(damageToEnemy);
@@ -251,7 +251,7 @@ public class BattleSystem : MonoBehaviour
         
     }
 
-    IEnumerator PlayerRevitalize()
+    IEnumerator PlayerRevitalize() //healing action that also restores stamina
 {
     int mpCost = 16;
     int staminaRestore = 4;
@@ -281,7 +281,7 @@ public class BattleSystem : MonoBehaviour
     }
 }
 
-    IEnumerator PlayerFireBomb()
+    IEnumerator PlayerFireBomb() //deals magic damage and drains enemy stamina
 {
     int mpCost = 12;
 
@@ -320,7 +320,7 @@ public class BattleSystem : MonoBehaviour
     }
 } 
 
-        IEnumerator PlayerGodlyStrike() { 
+        IEnumerator PlayerGodlyStrike() { //deals heavy magic damage
         int mpCost = 24;
 
         if (playerUnit.currentMp >= mpCost) {
@@ -355,15 +355,13 @@ public class BattleSystem : MonoBehaviour
         
     } 
 
-   
-
-   IEnumerator PlayerFlee()
+   IEnumerator PlayerFlee() //flee action, uses a virtual D20 to calculate escape chance, more difficult with higher level enemies 
 {
     dialogueText.text = playerUnit.unitName + " attempts to flee...";
 
     yield return new WaitForSeconds(1f);
 
-   float escapeSuccess = randomEvents.d20() /* + ((playerUnit.speed / 2) + (playerUnit.luck / 2)) */;
+   float escapeSuccess = randomEvents.d20();
    float escapeFail = enemyUnit.unitLevel;
     if (escapeSuccess >= escapeFail) // Escape rate
     {
@@ -381,7 +379,7 @@ public class BattleSystem : MonoBehaviour
     }
 }
 
-IEnumerator EnemyTurn() {
+IEnumerator EnemyTurn() { //enemy turn and A.I. The enemy will attack until they are exhausted, then they will rest
         int damageToPlayer =  enemyUnit.attack - playerUnit.defence;
         int actualDamage = playerUnit.TakeDamage(damageToPlayer);
         int staminaCost = 1;
@@ -408,7 +406,6 @@ IEnumerator EnemyTurn() {
         yield return new WaitForSeconds(1f);
 
         if(playerUnit.IsKo()) {
-            //playerHUD.SetStatusEffects(playerUnit);
             state = BattleState.DEFEAT;
             EndBattle();
         } else {
@@ -428,7 +425,7 @@ IEnumerator EnemyTurn() {
 
     }
 
-    IEnumerator EnemyRest() {
+    IEnumerator EnemyRest() { //enemy rest action to restore stamina 
         int staminaRecovery = 4;
         enemyUnit.RestoreStamina(staminaRecovery);
         enemyHUD.SetStamina(enemyUnit.currentStamina);
@@ -441,7 +438,7 @@ IEnumerator EnemyTurn() {
         PlayerTurn();
     }
 
-    void EndBattle() {
+    void EndBattle() { 
         if(state == BattleState.VICTORY) {
             battleTheme.Stop();
             victoryFanfare.Play(); //switch to the victory fanfare
@@ -454,7 +451,7 @@ IEnumerator EnemyTurn() {
             
 
         } else if (state == BattleState.DEFEAT){
-            battleTheme.Stop(); //switch to the game over music
+            battleTheme.Stop(); 
             dialogueText.text = "Get gud, skrub.";
             SceneManager.LoadScene("Game_Over");
 
@@ -463,24 +460,36 @@ IEnumerator EnemyTurn() {
 
     }
 
-    IEnumerator SwitchGame()
+    IEnumerator SwitchGame() //transition from battle to the overworld
     {
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene("MainGame");
     }
 
-    IEnumerator SwitchGameVictory()
+   IEnumerator SwitchGameVictory() //transition from battle to either the overworld or ending credits
+{
+    
+
+    string currentSceneName = SceneManager.GetActiveScene().name;
+
+    if (currentSceneName == "FelipeBossBattle")
     {
         yield return new WaitForSeconds(40f);
         SceneManager.LoadScene("Credits");
     }
+    else if (currentSceneName == "BattleScene")
+    {
+        yield return new WaitForSeconds(4f);
+        SceneManager.LoadScene("MainGame");
+    }
+}
 
     public int roundCounter = 1;
 
 
     //**vvv Logic for Action Moves go here vvv **// 
 
-    public void OnAttackButton(){
+    public void OnAttackButton(){ //logic for button presses
         if (state != BattleState.PLAYERTURN)
         return;
 
