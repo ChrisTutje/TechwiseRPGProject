@@ -21,6 +21,7 @@ public class Game : MonoBehaviour
     [SerializeField] private Map startingMap;
     [SerializeField] private GameObject playerPrefab;
     [SerializeField] private  Vector2Int startingCell;
+    [SerializeField] private GameObject cameraPrefab;
 
 
         private void Awake()
@@ -33,23 +34,46 @@ public class Game : MonoBehaviour
         {
             GameObject gameObject = Instantiate(playerPrefab, Map.Grid.GetCellCenter2D(startingCell), Quaternion.identity);
             Player= gameObject.GetComponent<Player>();
+
+
+        }
+         if (Camera.main == null && cameraPrefab != null)
+        {
+            GameObject cameraObject = Instantiate(cameraPrefab);
+        CameraFollow cameraFollow = cameraObject.GetComponent<CameraFollow>();
+        if (cameraFollow != null)
+        {
+            cameraFollow.target = Player.transform;
+        }
+        }
+            DontDestroyOnLoad(this);
+            DontDestroyOnLoad(Player);
         }
 
-
-        }   
+          
         
         private void Update()
         {
             if(Input.GetKeyDown(KeyCode.B))
             {
-                //StartBattle();
+                StartBattle();
             }
 
             if(Input.GetKeyDown(KeyCode.E))
             {
-                //EndBattle()
+                EndBattle();
             }
         }
+
+        private void StartBattle()
+        {
+            SceneManager.LoadScene("BattleScene");
+        }
+        private void EndBattle()
+        {
+            SceneManager.LoadScene("MainGame");
+        }
+
 
 }
 
