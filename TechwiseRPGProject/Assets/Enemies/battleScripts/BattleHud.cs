@@ -94,7 +94,7 @@ public void SetEXP(int exp) {
     expTracker.text = exp.ToString();
 }
 
- public string SetStatusEffects(Unit unit) {
+ public string SetStatusEffects(Unit unit) { //updates the Status Effect window upon gaining a status effect
     string statusEffectsText = "";
 
         if (unit.IsExhausted())
@@ -106,11 +106,6 @@ public void SetEXP(int exp) {
         {
            statusEffectsText += "KO\n";
         }
-
-        //if (unit.protectedRounds > 0)
-    //{
-        //statusEffectsText += "Protected (" + unit.protectedRounds + " rounds)\n";
-    //}
 
         return statusEffectsText;
 } 
