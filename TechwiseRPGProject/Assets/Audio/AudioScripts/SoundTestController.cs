@@ -5,7 +5,7 @@ public class SoundTestController : MonoBehaviour
 {
     public Text trackSelectionText; 
     public AudioClip[] musicTracks;
-    public AudioSource audioSource0; //I tried making this section an array, however it created index errors in between objects
+    public AudioSource audioSource0; //I tried making this section a list, however it created unexepected errors 
     public AudioSource audioSource1;
     public AudioSource audioSource2;
     public AudioSource audioSource3;
@@ -34,7 +34,7 @@ public class SoundTestController : MonoBehaviour
         InitializePitch();
     }
 
-    public void Play()
+    public void Play() //logic for Play button
     {
         StopAllAudio();
 
@@ -46,7 +46,7 @@ public class SoundTestController : MonoBehaviour
         }
     }
 
-    public void Stop()
+    public void Stop() //logic for Stop button
     {
         if (currentAudioSource != null)
         {
@@ -54,14 +54,14 @@ public class SoundTestController : MonoBehaviour
         }
     }
 
-    public void NextTrack()
+    public void NextTrack() //logic for Next button
     {
         StopAllAudio();
         currentTrackIndex = (currentTrackIndex + 1) % musicTracks.Length;
         UpdateTrackSelectionText();
     }
 
-    public void PreviousTrack()
+    public void PreviousTrack() //logic for Previous button 
     {
         StopAllAudio();
         currentTrackIndex = (currentTrackIndex - 1 + musicTracks.Length) % musicTracks.Length;
@@ -76,7 +76,7 @@ public class SoundTestController : MonoBehaviour
         }
     }
 
-    private AudioSource GetCurrentAudioSource()
+    private AudioSource GetCurrentAudioSource() //uses switch statements instead of lists, because lists caused errors 
     {
         switch (currentTrackIndex)
         {
@@ -102,7 +102,7 @@ public class SoundTestController : MonoBehaviour
         }
     }
 
-    private void UpdateTrackSelectionText()
+    private void UpdateTrackSelectionText() //displays the selected track title
     {
         if (currentTrackIndex >= 0 && currentTrackIndex < musicTracks.Length)
         {
@@ -110,7 +110,7 @@ public class SoundTestController : MonoBehaviour
         }
     }
 
-    private void InitializePitch()
+    private void InitializePitch() //used with the Playbackspeed slider 
 {
     audioSource0.pitch = 1.0f;
     audioSource1.pitch = 1.0f;

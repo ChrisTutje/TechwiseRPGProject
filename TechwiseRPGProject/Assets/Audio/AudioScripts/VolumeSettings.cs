@@ -19,19 +19,19 @@ public class volumeSettings : MonoBehaviour
         }
     }
 
-    public void setMusicVolume() {
+    public void setMusicVolume() {  //logic for music volume slider, uses Log because system volume doesn't use linear scale
         float volume = musicVolumeSlider.value;
         audioMixer.SetFloat("musicVolume", Mathf.Log10(volume)*20);
         PlayerPrefs.SetFloat("musicVol", volume);
     }
 
-    public void setSfxVolume() {
+    public void setSfxVolume() { //logic for SFX slider
         float volume = sfxVolumeSlider.value;
         audioMixer.SetFloat("sfxVolume", Mathf.Log10(volume)*20);
         PlayerPrefs.SetFloat("sfxVol", volume);
     }
 
-    private void loadVolume() {
+    private void loadVolume() { //keeps user volume changes persistent 
         musicVolumeSlider.value = PlayerPrefs.GetFloat("musicVol");
         sfxVolumeSlider.value = PlayerPrefs.GetFloat("sfxVol");
 
