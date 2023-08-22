@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 987d847d6ed28de43a23abca658c20eb
+guid: 2fc4bd7d7b32b8e45812407b5fbc2c53
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: small_sting_hit_0
+      name: _side attack_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 19
-        width: 9
-        height: 16
+        x: 4
+        y: 80
+        width: 44
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 76c8beff1939a1e4cbc144ba9493034a
-      internalID: -1896808625
+      spriteID: fd311448b7986dd40aaf5e4d58a47e4f
+      internalID: 874602381
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: small_sting_hit_1
+      name: _side attack_1
       rect:
         serializedVersion: 2
-        x: 29
-        y: 4
-        width: 19
-        height: 46
+        x: 69
+        y: 80
+        width: 36
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e662fc0e2d1afe54abb76b8eb563b48e
-      internalID: 2009843245
+      spriteID: 7b85185a2803f0446b74ee617d5bece2
+      internalID: 1448020976
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: small_sting_hit_2
+      name: _side attack_2
       rect:
         serializedVersion: 2
-        x: 53
-        y: 1
-        width: 23
-        height: 52
+        x: 8
+        y: 16
+        width: 33
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,29 +161,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e779767a4bbd09498b6ff8f9637f1f7
-      internalID: 1114379590
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: small_sting_hit_3
-      rect:
-        serializedVersion: 2
-        x: 78
-        y: 0
-        width: 26
-        height: 53
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e6a363784b03b46429ac3e675ea1caf8
-      internalID: -625464595
+      spriteID: 7193670d59078024292e58d1c80e99a6
+      internalID: 151620008
       vertices: []
       indices: 
       edges: []
@@ -199,10 +178,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      small_sting_hit_0: -1896808625
-      small_sting_hit_1: 2009843245
-      small_sting_hit_2: 1114379590
-      small_sting_hit_3: -625464595
+      _side attack_0: 874602381
+      _side attack_1: 1448020976
+      _side attack_2: 151620008
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
