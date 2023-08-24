@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa03b037a7084ad4d870a4bdf7614798, type: 3}
+  m_Name: JasonDialogue
+  m_EditorClassIdentifier: 
+  dialogues:
+  - sprite: {fileID: -1939426223, guid: 27f1c02737eb53a43bb5e8e07621ff20, type: 3}
+    name: Jason
+    message: Oh good! You're awake(Press Enter to advance)
+  - sprite: {fileID: -1939426223, guid: 27f1c02737eb53a43bb5e8e07621ff20, type: 3}
+    name: Jason
+    message: 'I need you to defeat 3 lesser demons to become strong enough to challenge
+      felipe. '
+  - sprite: {fileID: -1939426223, guid: 27f1c02737eb53a43bb5e8e07621ff20, type: 3}
+    name: Jason
+    message: Once you do this, Our town will be safe once more.
