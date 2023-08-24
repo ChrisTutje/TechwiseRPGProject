@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/PlayerMovementtester.unity
     guid: a1bdb3999e6e0c54c868686b93f7c7ac
+  - enabled: 1
+    path: Assets/FelipeBossBattle.unity
+    guid: 12bcec35ea4b1df4d842bb8cd659a4b8
   m_configObjects: {}

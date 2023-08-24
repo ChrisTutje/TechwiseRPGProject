@@ -61,11 +61,20 @@ public class Game : MonoBehaviour
             {
                 StartBattle();
             }
+             if(Input.GetKeyDown(KeyCode.N))
+            {
+                StartBossBattle();
+            }
 
             if(Input.GetKeyDown(KeyCode.Space))
             {
                 EndBattle();
             }
+            if(Input.GetKeyDown(KeyCode.C))
+            {
+                RollCredits();
+            }
+            
         }
         public static void StartDialogue(DialogueScene sceneToPlay)
                 {
@@ -80,9 +89,17 @@ public class Game : MonoBehaviour
         {
             SceneManager.LoadScene("BattleScene");
         }
+        private void StartBossBattle()
+        {
+            SceneManager.LoadScene("FelipeBossBattle");
+        }
         private void EndBattle()
         {
             SceneManager.LoadScene("MainGame");
+        }
+        private void RollCredits()
+        {
+            SceneManager.LoadScene("Credits");
         }
 
 
