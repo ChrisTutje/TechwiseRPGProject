@@ -12,4 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa03b037a7084ad4d870a4bdf7614798, type: 3}
   m_Name: FelipeDialogue
   m_EditorClassIdentifier: 
-  dialogues: []
+  dialogues:
+  - sprite: {fileID: 21300000, guid: 24b312d1d18c4f143934b35ba9029a1c, type: 3}
+    name: Felipe the Nullifier
+    message: 'I have Trampled Worlds, Found the One Piece, Unleashed my BANKAI... '
+  - sprite: {fileID: 21300000, guid: 24b312d1d18c4f143934b35ba9029a1c, type: 3}
+    name: Felipe the Nullifier
+    message: And you think you can defeat me?
+  - sprite: {fileID: 21300000, guid: 24b312d1d18c4f143934b35ba9029a1c, type: 3}
+    name: Felipe the Nullifier
+    message: As my duty as the nullifier, I will bring you to your end.
