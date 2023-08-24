@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public interface IInteractable
-{  
-    
-    Interaction Interaction {get; }
+{
+    ScriptableObject Interaction { get; }
     void Interact();
-
-  }
+}

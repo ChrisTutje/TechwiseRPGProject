@@ -16,6 +16,8 @@ public class Game : MonoBehaviour
    public static GameState State {get; private set;}
     public static Map Map {get; private set;}
     public static Player Player {get; private set; }
+
+    public static DialogueWindow dialogueWindow{get; private set;}
     public  Grid Grid {get;private set;} //making a script just to pull the grid- so i dont have to do this same 4 lines of code in every script.
 
     [SerializeField] private Map startingMap;
@@ -26,6 +28,7 @@ public class Game : MonoBehaviour
 
         private void Awake()
         {
+            dialogueWindow = FindObjectOfType<DialogueWindow>();
         if (Map== null)
             {
                 Map = Instantiate(startingMap);
@@ -59,12 +62,20 @@ public class Game : MonoBehaviour
                 StartBattle();
             }
 
-            if(Input.GetKeyDown(KeyCode.E))
+            if(Input.GetKeyDown(KeyCode.Space))
             {
                 EndBattle();
             }
         }
-
+        public static void StartDialogue(DialogueScene sceneToPlay)
+                {
+                    State = GameState.Cutscene;
+                    dialogueWindow.Open(sceneToPlay);
+                }
+    public static void EndDialogue()
+    {
+        State = GameState.World;
+    }
         private void StartBattle()
         {
             SceneManager.LoadScene("BattleScene");
