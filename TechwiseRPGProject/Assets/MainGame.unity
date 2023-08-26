@@ -5211,7 +5211,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2069635316}
         m_TargetAssemblyTypeName: BatttlePauseMenu, Assembly-CSharp
-        m_MethodName: QuitGame
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

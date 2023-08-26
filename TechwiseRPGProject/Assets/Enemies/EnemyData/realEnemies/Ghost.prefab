@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6323021816030238425}
   - component: {fileID: 7281407778673716511}
   m_Layer: 5
-  m_Name: Slime
+  m_Name: Ghost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -111,7 +111,7 @@ MonoBehaviour:
   equippedArmor:
     armorName: 
     armorClass: 0
-    armorWeight: 0
+    armorWeight: 1
 --- !u!95 &7281407778673716511
 Animator:
   serializedVersion: 5
